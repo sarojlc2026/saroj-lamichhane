@@ -1,146 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home — Saroj Lamichhane</title>
-    <meta name="description" content="Open, faculty-executable systems for digital accessibility compliance and structured AI integration in higher education course design.">
-    <style>
-:root{--ink:#1f2933;--muted:#52606d;--accent:#1a3a5c;--link:#0b5394;--line:#d9e2ec;--bg:#fff;--soft:#f5f7fa;--focus:#b45309}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessible and AI-Enhanced Course Design, Saroj Lamichhane</title>
+<meta name="description" content="Open, faculty-executable systems for digital accessibility compliance and structured AI integration in higher education course design. Free self-paced course and open resources.">
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);
- font:400 1.0625rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.75rem 1.25rem;z-index:100;text-decoration:none}
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
 .skip:focus{left:0}
-a{color:var(--link)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-.wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
-header.site{border-bottom:1px solid var(--line);background:var(--bg)}
-.brand{display:block;padding:1.5rem 0 .5rem;font-size:1.25rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.01em}
-.brand span{display:block;font-size:.9375rem;font-weight:400;color:var(--muted);letter-spacing:0}
-nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1.75rem;margin:0;padding:0 0 .75rem}
-nav.site a{display:inline-block;padding:.4rem 0;color:var(--ink);text-decoration:none;font-size:1rem;border-bottom:3px solid transparent}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
 nav.site a:hover{border-bottom-color:var(--line)}
-nav.site a[aria-current="page"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
 main{padding:2.5rem 0 4rem}
-h1{font-size:2.125rem;line-height:1.2;letter-spacing:-.02em;margin:0 0 .5rem;color:var(--accent)}
-.lede{font-size:1.1875rem;color:var(--muted);max-width:44rem;margin:0 0 2rem}
-h2{font-size:1.5rem;line-height:1.25;margin:2.75rem 0 .75rem;color:var(--accent);letter-spacing:-.01em}
-h3{font-size:1.1875rem;margin:2rem 0 .5rem}
-p,li{max-width:44rem}
-ul,ol{padding-left:1.25rem}
-li{margin:.35rem 0}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.25rem;margin:2rem 0;padding:0;list-style:none}
-.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.25rem}
-.stats b{display:block;font-size:2rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
-.stats span{color:var(--muted);font-size:.9375rem}
-.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0;background:var(--bg)}
-.card h3{margin-top:0}
-.meta{font-size:.9375rem;color:var(--muted);margin:.25rem 0 1rem}
-.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .7rem;color:var(--muted);margin:0 .3rem .3rem 0}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
 .dl{margin:1rem 0 0;padding:0;list-style:none}
-.dl li{margin:.4rem 0}
-.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.25rem;margin:1.5rem 0}
-.note p{margin:.4rem 0}
-.todo{background:#fff8e6;border-left:4px solid var(--focus);padding:1.1rem 1.25rem;margin:1.5rem 0;font-size:.9375rem}
-.todo p{margin:.35rem 0}
-blockquote{margin:1.25rem 0;padding:.25rem 0 .25rem 1.25rem;border-left:3px solid var(--line);color:var(--muted);font-style:normal}
-footer.site{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.9375rem}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"\2610";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
 footer.site a{color:var(--link)}
-@media (max-width:34rem){h1{font-size:1.75rem}.wrap{padding:0 1.1rem}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}blockquote.pull{border:0;border-left:5px solid var(--accent2);background:var(--soft);margin:2rem 0;padding:1.4rem 1.6rem;max-width:46rem}
+blockquote.pull p{margin:0;font-size:1.3125rem;line-height:1.45;font-weight:600;color:var(--accent);letter-spacing:-.012em;max-width:none}
+p.why{background:var(--soft);border-left:4px solid var(--line);padding:.85rem 1.1rem;margin:.7rem 0 1.6rem;font-size:.9875rem}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
 </style>
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to main content</a>
-    <header class="site">
-      <div class="wrap"> <a class="brand" href="index.html">Saroj Lamichhane<span>Accessible
-            and AI-Enhanced Course Design</span></a>
-        <nav class="site" aria-label="Main">
-          <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="resources.html">&nbsp;Open Resources&nbsp; </a></li>
-            <li><a href="training-course.html">Training Course</a></li>
-            <li><a href="case-studies.html">&nbsp;Case Studies&nbsp; </a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main">
-      <div class="wrap">
-        <h1>Accessible and AI-Enhanced Course Design</h1>
-        <p class="lede" style="width: 1170px;">I build open, faculty-executable
-          systems that let universities bring their own digital courses into
-          compliance with federal accessibility standards, and integrate
-          generative AI into coursework in a way that requires <b>student
-            thinking </b>rather than replacing it.</p>
-        <p class="meta">Curriculum Coordinator, Institutional Effectiveness,
-          Research, and Planning<br>
-          Texas A&amp;M University-Texarkana</p>
-        <h2>By the numbers</h2>
-        <ul class="stats">
-          <li><b>34</b><span>post-secondary courses audited against WCAG 2.1
-              Level AA</span></li>
-          <li><b>139</b><span>faculty trained to build accessible courses
-              themselves</span></li>
-          <li><b>4 states</b><span>where faculty have adopted these methods
-              independently</span></li>
-        </ul>
-        <h2>The problem</h2>
-        <p>Every public college and university in the United States must bring
-          its digital course materials to WCAG 2.1 Level AA,&nbsp; by <strong>April
-            26, 2027</strong> for entities serving populations of 50,000 or
-          more, and <strong>April 26, 2028</strong> for smaller entities and
-          special district governments.</p>
-        <p>Most institutions will not make it with the staff they have. When the
-          Department of Justice extended those deadlines in April 2026, it said
-          why: covered entities lacked sufficient staff, and available
-          technology could not close the gap. The Department found that current
-          technology, including generative AI, <q>cannot reliably automate the
-            remediation of STEM materials at scale, and human oversight is
-            required to ensure accessibility.</q></p>
-        <p>Commercial remediation is priced per document and recurs every term.
-          The institutions furthest from compliance are the least able to buy
-          it.</p>
-        <h2>The approach</h2>
-        <p>I work on the assumption that compliance has to be produced by the
-          people who build courses, not purchased repeatedly from vendors. That
-          means four things, all of them open and free to use:</p>
-        <ul>
-          <li><strong>An audit protocol</strong> that turns WCAG 2.1 AA into a
-            course-by-course remediation sequence an institution can run with
-            its own staff</li>
-          <li><strong>A faculty training curriculum</strong> that transfers
-            remediation capability to instructors</li>
-          <li><strong>The Bloom's-AI Integration Model</strong>, a
-            human-in-the-loop protocol for coursework</li>
-          <li><strong>STEM remediation templates</strong> for the document types
-            automation handles worst — chemical structures, mathematical
-            notation, database schemas, anatomical diagrams</li>
-        </ul>
-        <p><a href="resources.html">Browse the open resources</a></p>
-        <h2>Where this has been used</h2>
-        <p>These materials have been adopted by faculty at institutions I have
-          never worked for, in Texas, Kentucky, New York, and Pennsylvania,
-          including a computer science professor at the University of North
-          Texas who found the frameworks through a conference presentation and
-          applied them to 140 of his own students.</p>
-        <p><a href="case-studies.html">See case studies and outcomes</a></p>
-      </div>
-    </main>
-    <footer class="site">
-      <div class="wrap">
-        <p><strong>Accessibility of this site.</strong> Built to WCAG 2.1 Level
-          AA. If you encounter a barrier, please <a href="mailto:sarojlc15@gmail.com">let
-            me know</a> and I will fix it.</p>
-        <p>Open resources on this site are licensed <a href="https://creativecommons.org/licenses/by/4.0/"
-            rel="license">CC BY 4.0</a>. Attribution appreciated; permission not
-          required.</p>
-        <p><a href="mailto:sarojlc15@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/sarojlc15/?skipRedirect=true">LinkedIn</a>
-          · <a href="https://github.com/sarojlc2026/saroj-lamichhane">GitHub</a></p>
-      </div>
-    </footer>
-  </body>
-</html>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><div class="hdr">
+  <a class="brand" href="index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+  <nav class="site" aria-label="Main"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="course/index.html">Free Course</a></li><li><a href="resources.html">Resources</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li></ul></nav>
+</div></div></header>
+<main id="main">
+    <div class="hero"><div class="wrap">
+      <p class="badge">Free and open</p>
+      <h1>Accessible and AI-Enhanced Course Design</h1>
+      <p class="lede">Open, faculty-executable systems that let institutions bring their own digital courses into compliance with federal accessibility standards, and integrate generative AI into coursework in a way that requires student thinking rather than replacing it.</p>
+      <p class="meta">Curriculum Coordinator, Institutional Effectiveness, Research, and Planning<br>Texas A&amp;M University-Texarkana</p>
+      <p><a class="btn" href="course/index.html">Take the free course</a> <a class="btn alt" href="resources.html">Browse the resources</a></p>
+    </div></div>
+<div class="wrap">
+<ul class="stats">
+      <li><b>34</b><span>post-secondary courses audited against WCAG 2.1 Level AA</span></li>
+      <li><b>136</b><span>faculty trained to build accessible courses themselves</span></li>
+      <li><b>22</b><span>course sections redesigned to WCAG 2.1 Level AA</span></li>
+    </ul>
+
+    <div class="note">
+      <p><strong>A free, self-paced course.</strong> Four video modules covering Word, PowerPoint and PDF, the three formats faculty actually build instructional materials in, with captions, full transcripts, practice files and knowledge checks. Six companion guides extend it to alternative text, captioning, LMS structure, auditing and generative AI in assignment design. No login, no cost, no institutional agreement.</p>
+      <p><a class="btn" href="course/index.html">Start the course</a></p>
+    </div>
+
+    <h2 id="problem">The problem</h2>
+    <p>Every public college, university and school district in the United States must bring its digital course materials to <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 Level AA</a>, the W3C standard adopted as the technical benchmark in the Department of Justice's <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">Title II web and mobile accessibility rule</a>. The deadlines are April 26, 2027 for entities serving populations of 50,000 or more, and April 26, 2028 for smaller entities and special district governments.</p>
+    <p>Most institutions will not make it with the staff they have. When the Department extended those deadlines in April 2026, it said why: covered entities lacked sufficient staff, and available technology could not close the gap. The Department found that current technology, including generative AI, cannot reliably automate the remediation of STEM materials at scale, and that human oversight is required to ensure accessibility.</p>
+    <p>Commercial remediation is priced per document and recurs every term. The institutions furthest from compliance are the least able to buy it, and nothing they buy accumulates: an institution in its third year of paying a vendor is no more capable than it was in its first.</p>
+
+    <blockquote class="pull">
+      <p>Compliance has to be produced by the people who build courses, not purchased repeatedly from vendors.</p>
+    </blockquote>
+
+    <h2 id="approach">The approach</h2>
+    <p>That principle produces four things, all of them open and free to use, and each published here in full. They share one design idea: intervene before a barrier is created rather than after somebody finds it.</p>
+
+    <h3>An audit protocol</h3>
+    <p>Turns WCAG 2.1 Level AA into a course-by-course remediation sequence an institution can run with its own staff.</p>
+    <p class="why"><strong>Why it helps.</strong> Automated checkers return thousands of undifferentiated errors, which tells a dean nothing and tells a faculty member only that they have failed. This classifies every finding by consequence to students and records who can actually fix it, so remediation starts with the locked midterm rather than with a missing document title, and so the work goes to the person able to do it.</p>
+
+    <h3>A faculty training curriculum</h3>
+    <p>Transfers remediation capability to instructors, so compliance is produced by the people building courses. Published in full as a <a href="course/index.html">free self-paced course</a> covering Word, PowerPoint and PDF, the three formats faculty actually build in. Excellent free training already exists for <em>web</em> accessibility, including the <a href="https://www.w3.org/WAI/courses/foundations-course/">W3C Foundations course</a>. Equivalent open training for the document formats is scarce, and that is the gap this fills.</p>
+    <p class="why"><strong>Why it works where other training does not.</strong> It is organised by the file types faculty already make, not by the success criteria of the standard, so nobody has to learn a compliance vocabulary before fixing their first document. Every module ends on a real file of the participant's own rather than a sample, because nobody transfers a skill they only practised on someone else's work. And nothing in it depends on a particular institution's LMS, branding or policy, which is why it can be published openly and used anywhere.</p>
+
+    <h3>The Bloom's-AI Integration Model</h3>
+    <p>A human-in-the-loop protocol for course design, applied to how assignments are built rather than to how students are policed.</p>
+    <p class="why"><strong>Why it matters now.</strong> The same Department of Justice finding that drove the deadline extension, that automated tools cannot be relied on without human oversight, is the argument this model makes about coursework: the value is in the human judgment applied to machine output, not in the output. So the model changes what is assessed. If the graded artifact is the answer, a model can produce it. If it is the student's engagement with an answer, finding its error, adapting it to a new constraint, judging it against criteria, the model cannot, because that requires holding the subject in your head.</p>
+
+    <h3>STEM remediation templates</h3>
+    <p>For the document types automation handles worst: chemical structures, mathematical notation, database schemas, anatomical diagrams.</p>
+    <p class="why"><strong>Why faculty need them.</strong> General accessibility guidance was written for photographs and simple charts, and applied to a structural formula it produces "diagram of a benzene ring", which is accurate and useless. These give the notation routes and description templates for the material that general guidance leaves an instructor to invent alone, including how to describe a diagram without handing students the answer it is meant to assess.</p>
+
+    <h3>What comes next</h3>
+    <p>All four operate at the point where courses are built or checked. There is a stage before that, and it is where the decisions actually get made.</p>
+    <p class="why"><strong>Where accessibility currently enters.</strong> Institutions offering distance education across state lines must adhere to the Council of Regional Accrediting Commissions' <a href="https://www.nc-sara.org/sites/default/files/files/2019-08/C-RAC%20Guidelines(2011).pdf">Interregional Guidelines for the Evaluation of Distance Education</a>, the instrument behind reciprocity agreements covering some 2,200 institutions across 49 states. Across nine hallmarks of quality, including one devoted entirely to curricula, the guidelines do not mention accessibility, disability or assistive technology. They were last updated in 2011, seven years before WCAG 2.1 existed. The <a href="https://download.hlcommission.org/EvalofDistanceEducation_STA_2021.pdf">proposed 2021 replacement</a> mentions accessibility twice in twenty-three guidelines, once listing it among student support services alongside tutoring and coaching.</p>
+    <p>So accessibility is not ignored. It arrives late, after programs are approved and courses are built, which is why the work is done repeatedly and by the institutions least able to afford it. A program-level framework, addressing accessibility during academic program design rather than after it, is in development and will be published here alongside the others.</p>
+    <p><a class="btn alt" href="resources.html">Browse the open resources</a></p>
+
+    <h2 id="published">What is published here</h2>
+    <p>Everything described above is on this site, at no cost and with no login. The <a href="course/index.html">course</a> is the training curriculum in full, with video, captions, transcripts, practice files and knowledge checks. The <a href="resources.html">resources</a> are the frameworks as readable pages, with Word and tagged PDF versions for anyone who wants to print or adapt them. The <a href="case-studies.html">case studies</a> describe four pieces of work in enough detail to judge the method.</p>
+    <p class="meta">These are working documents rather than finished publications. They are revised as the underlying research develops, as the regulatory picture changes, and whenever someone using them reports a problem. Version numbers are on each one, and corrections are credited. If something here is wrong or unclear, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane</a>.</p>
+</div>
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it</a> and it will be fixed.</p>
+<p><strong>Use and attribution.</strong> The four frameworks published on the Resources pages, the audit protocol, the STEM remediation protocol, the diagram alternative text guide and the Bloom's-AI Integration Model, are the work of Saroj Lamichhane and are offered under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: adapt them, teach with them, attribution appreciated and permission not required.</p><p>The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so if you intend to redistribute the course itself, or host a copy under your own institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane</a> and the current position will be confirmed.</p>
+
+<p><a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p>
+</div></footer>
+</body></html>

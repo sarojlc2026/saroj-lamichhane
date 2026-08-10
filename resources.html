@@ -3,119 +3,209 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Open Resources — Saroj Lamichhane</title>
-<meta name="description" content="Free, openly licensed accessibility audit protocols, AI integration frameworks, and STEM remediation guides for higher education faculty.">
+<title>Open Resources, Saroj Lamichhane</title>
+<meta name="description" content="Four open frameworks for accessible course design, published as readable web pages with Word and tagged PDF alternatives. Audit protocol, STEM notation remediation, scientific diagram alternative text, and a Bloom's-based model for generative AI in coursework.">
 <style>
-:root{--ink:#1f2933;--muted:#52606d;--accent:#1a3a5c;--link:#0b5394;--line:#d9e2ec;--bg:#fff;--soft:#f5f7fa;--focus:#b45309}
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);
- font:400 1.0625rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.75rem 1.25rem;z-index:100;text-decoration:none}
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
 .skip:focus{left:0}
-a{color:var(--link)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-.wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
-header.site{border-bottom:1px solid var(--line);background:var(--bg)}
-.brand{display:block;padding:1.5rem 0 .5rem;font-size:1.25rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.01em}
-.brand span{display:block;font-size:.9375rem;font-weight:400;color:var(--muted);letter-spacing:0}
-nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1.75rem;margin:0;padding:0 0 .75rem}
-nav.site a{display:inline-block;padding:.4rem 0;color:var(--ink);text-decoration:none;font-size:1rem;border-bottom:3px solid transparent}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
 nav.site a:hover{border-bottom-color:var(--line)}
-nav.site a[aria-current="page"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
 main{padding:2.5rem 0 4rem}
-h1{font-size:2.125rem;line-height:1.2;letter-spacing:-.02em;margin:0 0 .5rem;color:var(--accent)}
-.lede{font-size:1.1875rem;color:var(--muted);max-width:44rem;margin:0 0 2rem}
-h2{font-size:1.5rem;line-height:1.25;margin:2.75rem 0 .75rem;color:var(--accent);letter-spacing:-.01em}
-h3{font-size:1.1875rem;margin:2rem 0 .5rem}
-p,li{max-width:44rem}
-ul,ol{padding-left:1.25rem}
-li{margin:.35rem 0}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.25rem;margin:2rem 0;padding:0;list-style:none}
-.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.25rem}
-.stats b{display:block;font-size:2rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
-.stats span{color:var(--muted);font-size:.9375rem}
-.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0;background:var(--bg)}
-.card h2{margin-top:0;font-size:1.3125rem}
-.meta{font-size:.9375rem;color:var(--muted);margin:.25rem 0 1rem}
-.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .7rem;color:var(--muted);margin:0 .3rem .3rem 0}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
 .dl{margin:1rem 0 0;padding:0;list-style:none}
-.dl li{margin:.4rem 0}
-.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.25rem;margin:1.5rem 0}
-.note p{margin:.4rem 0}
-.todo{background:#fff8e6;border-left:4px solid var(--focus);padding:1.1rem 1.25rem;margin:1.5rem 0;font-size:.9375rem}
-.todo p{margin:.35rem 0}
-blockquote{margin:1.25rem 0;padding:.25rem 0 .25rem 1.25rem;border-left:3px solid var(--line);color:var(--muted);font-style:normal}
-footer.site{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.9375rem}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"±0";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
 footer.site a{color:var(--link)}
-@media (max-width:34rem){h1{font-size:1.75rem}.wrap{padding:0 1.1rem}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}.fmt{list-style:none;padding:0;margin:1.1rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.5rem .9rem;text-decoration:none;background:var(--soft);font-size:.9375rem}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+.card h2 a{text-decoration:none;color:var(--accent)}
+.card h2 a:hover{text-decoration:underline}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
-    <nav class="site" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="resources.html" aria-current="page">Open Resources</a></li><li><a href="training-course.html">Training Course</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li></ul></nav>
-  </div>
-</header>
+<header class="site"><div class="wrap"><div class="hdr">
+  <a class="brand" href="index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+  <nav class="site" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="course/index.html">Free Course</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li></ul></nav>
+</div></div></header>
 <main id="main">
   <div class="wrap">
-
     <h1>Open Resources</h1>
-    <p class="lede">Everything here is free to download, adapt, and use. No login, no institutional agreement, no cost. If you are a faculty member trying to make your own course accessible and you have no instructional design office to call, these were written for you.</p>
-    <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0</a>. Version history and source files: <a href="REPLACE_GITHUB">GitHub repository</a>.</p>
+    <p class="lede">Four frameworks, each published as a page you can read straight through, with Word and tagged PDF versions if you would rather print one or adapt it for your own institution. No login, no cost, no institutional agreement.</p>
+    <p>If you are a faculty member trying to make your own course accessible and you have no instructional design office to call, these were written for you. Licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
+
+    <div class="note">
+      <p><strong>Reading these on the web is the accessible route.</strong> A web page reflows on a phone, scales to 200 percent without blurring, and works with every screen reader without depending on how your PDF viewer handles tags. The Word and PDF versions are offered as alternatives for printing and adaptation, not as the primary format. That is the same argument these documents make about your course materials, so it would be strange to do otherwise here.</p>
+    </div>
 
     <div class="card">
-      <h2>Multi-Course Accessibility Audit Protocol</h2>
-      <p class="meta">Applied across 34 post-secondary courses in STEM, nursing and health sciences, business, and humanities</p>
-      <p>A structured method for auditing digital course shells against WCAG 2.1 Level AA and producing a prioritised remediation sequence rather than an undifferentiated list of errors. Classifies failures by type and severity so an institution can decide what to fix first.</p>
-      <p><span class="tag">Audit rubric</span><span class="tag">Failure-type taxonomy</span><span class="tag">Course logging template</span><span class="tag">Remediation priority matrix</span></p>
-      <ul class="dl">
-        <li><a href="REPLACE_FILE_AUDIT_PDF">Download the audit protocol (PDF)</a></li>
-        <li><a href="REPLACE_FILE_AUDIT_XLSX">Download the course logging template (XLSX)</a></li>
+      <h2><a href="resources/multi-course-audit-protocol.html">Multi-Course Accessibility Audit Protocol</a></h2>
+      <p class="meta">Version 1.0 · About 14 minutes to read</p>
+      <p>A survey method for auditing course shells against WCAG 2.1 Level AA that produces a prioritised remediation sequence rather than an undifferentiated error list. Findings are classified by consequence, blocking, degrading or cosmetic, and logged with an estimate of who can actually fix each one, which is the field most audits omit and the one that determines whether anything happens.</p>
+      <p>Written up from the working instrument used across an audit of 34 courses spanning STEM, health and nursing, business, and humanities.</p>
+      <ul class="fmt">
+        <li><a href="resources/multi-course-audit-protocol.html">Read the protocol</a></li>
+        <li><a href="course/files/04 - Multi-Course Accessibility Audit Protocol.docx">Word (DOCX)</a></li>
+        <li><a href="course/files/04 - Multi-Course Accessibility Audit Protocol.pdf">Tagged PDF</a></li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>Bloom's-AI Integration Model</h2>
-      <p class="meta">A human-in-the-loop protocol for coursework in the era of generative AI</p>
-      <p>Rather than prohibiting AI use or permitting it without structure, assignments are rebuilt so that what gets assessed is the student's engagement with the output: prompting, identifying defects, and explaining corrections. Mapped to Bloom's Taxonomy so the cognitive demand is explicit at each level.</p>
-      <p><span class="tag">Framework documentation</span><span class="tag">Assignment redesign templates</span><span class="tag">Sample rubrics</span><span class="tag">Worked examples</span></p>
-      <ul class="dl">
-        <li><a href="REPLACE_FILE_BLOOM_PDF">Download the framework (PDF)</a></li>
-        <li><a href="REPLACE_FILE_BLOOM_DOCX">Download assignment templates (DOCX)</a></li>
+      <h2><a href="resources/stem-document-remediation-protocol.html">STEM Document Remediation Protocol</a></h2>
+      <p class="meta">Version 1.0 · About 12 minutes to read</p>
+      <p>Most instructors paste equations in as pictures, because that is what the software makes easy. A screen reader announces nothing, the image blurs when enlarged, and it will not reflow on the phone most students actually read on. This sets out four practical routes to accessible notation, the Word equation editor, LaTeX, the LMS editor, and remediating what you already have, with plain-text conventions for fallbacks and a section on laboratory and procedural documents where a student who cannot read a safety step is not merely inconvenienced.</p>
+      <ul class="fmt">
+        <li><a href="resources/stem-document-remediation-protocol.html">Read the protocol</a></li>
+        <li><a href="course/files/01 - STEM Document Remediation Protocol.docx">Word (DOCX)</a></li>
+        <li><a href="course/files/01 - STEM Document Remediation Protocol.pdf">Tagged PDF</a></li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>STEM Accessibility Remediation Guides</h2>
-      <p class="meta">The document types automated tools handle worst — written for instructors, not developers</p>
-      <ul>
-        <li><strong>MathML and LaTeX protocol</strong> — moving equations out of images so they are machine-readable and reflow on a phone</li>
-        <li><strong>Structural alternative text for scientific diagrams</strong> — describing molecular structure, connectivity, and geometry rather than describing a picture</li>
-        <li><strong>UML, schema, and code-block alternative text</strong> — for computing courses</li>
-        <li><strong>Anatomical and laboratory diagram guidance</strong> — including how to write alt text that does not disclose assessment answers</li>
+      <h2><a href="resources/diagram-alternative-text-guide.html">Scientific Diagram Alternative Text Guide</a></h2>
+      <p class="meta">Version 1.0 · About 12 minutes to read</p>
+      <p>Published alternative text guidance was written for photographs. Applied to a structural formula it produces "diagram of a benzene ring", which is accurate and useless. This guide gives templates by diagram type, single molecules, reaction schemes, curly-arrow mechanisms, apparatus and titration curves, and addresses a problem most guidance ignores entirely: how to describe a diagram without handing the answer to the students an accommodation exists to support.</p>
+      <ul class="fmt">
+        <li><a href="resources/diagram-alternative-text-guide.html">Read the guide</a></li>
+        <li><a href="course/files/02 - Scientific Diagram Alternative Text Guide.docx">Word (DOCX)</a></li>
+        <li><a href="course/files/02 - Scientific Diagram Alternative Text Guide.pdf">Tagged PDF</a></li>
       </ul>
-      <ul class="dl"><li><a href="REPLACE_FILE_STEM_ZIP">Download the STEM remediation pack (ZIP)</a></li></ul>
     </div>
 
     <div class="card">
-      <h2>Accessible Document Templates</h2>
-      <p class="meta">Start here and the course starts out accessible</p>
-      <p>Word, PowerPoint, and PDF templates with correct semantic heading structure, tagging, and reading order already in place.</p>
-      <ul class="dl"><li><a href="REPLACE_FILE_TEMPLATES_ZIP">Download the template pack (ZIP)</a></li></ul>
+      <h2><a href="resources/blooms-ai-integration-model.html">The Bloom's-AI Integration Model</a></h2>
+      <p class="meta">Version 1.0 · About 11 minutes to read</p>
+      <p>Institutions are splitting into prohibition on one side and unstructured permission on the other, and both are failing. This model does a third thing: it changes what is assessed. If the graded artifact is the answer, a model can produce it. If the graded artifact is the student's engagement with an answer, finding its error, adapting it to a new constraint, judging it against criteria, the model cannot, because that requires holding the subject in your head.</p>
+      <p>Includes a mapping of each Bloom's level to an AI-interaction task, a one-page assignment template, worked chemistry examples at the Analyze and Apply levels, and a rubric.</p><p class="meta">Developed from <cite>A Holistic Framework for AI-Enhanced, Accessible Online Course Design</cite>, presented at OLC Innovate 2026 following peer review.</p>
+      <ul class="fmt">
+        <li><a href="resources/blooms-ai-integration-model.html">Read the model</a></li>
+        <li><a href="course/files/03 - Blooms-AI Integration Model for Science Courses.docx">Word (DOCX)</a></li>
+        <li><a href="course/files/03 - Blooms-AI Integration Model for Science Courses.pdf">Tagged PDF</a></li>
+      </ul>
     </div>
+
+    <h2 id="in-development">In development: accessibility at the program-design stage</h2>
+    <p>The four frameworks above all operate once a course exists or is being built. There is an earlier stage, and it is where accessibility is currently absent.</p>
+    <p>Institutions offering distance education across state lines adhere to the Council of Regional Accrediting Commissions' <a href="https://www.nc-sara.org/sites/default/files/files/2019-08/C-RAC%20Guidelines(2011).pdf">Interregional Guidelines for the Evaluation of Distance Education</a> as a condition of reciprocity, covering roughly 2,200 institutions across 49 states and more than three million students studying exclusively at a distance. Across nine hallmarks and some seventy criteria, including a hallmark devoted to curricula, the guidelines do not mention accessibility, disability or assistive technology. They were last updated in 2011. The <a href="https://download.hlcommission.org/EvalofDistanceEducation_STA_2021.pdf">proposed 2021 successor</a> mentions accessibility twice in twenty-three guidelines, once as a student support service listed with advising and tutoring.</p>
+    <p>The effect reaches state policy. When Texas revised its <a href="https://reportcenter.highered.texas.gov/agency-publication/miscellaneous/principles-of-good-practice-for-academic-degree-and-certificate-programs-and-credit-courses-offered-at-a-distance-2023/">Principles of Good Practice</a> in 2023, its one curriculum-level accessibility principle could be traced only to a voluntary quality rubric, because the interregional guidelines contained nothing to trace it to.</p>
+    <p>A program-level accessibility framework is being developed to address this: a way for institutions to settle accessibility once, during program design and approval, rather than repeatedly during course remediation. It will be published here under the same licence as the others when it is ready.</p>
+    <p class="meta">Nothing is being claimed for it yet. It is listed here because the gap it addresses is documented and worth knowing about whether or not this particular framework turns out to be the answer.</p>
+
+    <h2 id="course">The full training course</h2>
+    <p>The faculty training curriculum these frameworks came out of is published in full, with video, captions, transcripts, activities and knowledge checks. Ten modules, roughly four and a half hours, free and with no registration.</p>
+    <p><a class="btn" href="course/index.html">Go to the course</a></p>
+
+    <h2 id="templates">Accessible document templates</h2>
+    <p>Start from one of these and the accessibility work is already done. Heading structure, document title, language and reading order are set correctly, so you inherit the structure rather than repairing it later. Replace the content and keep the styles.</p>
+    <ul class="fmt">
+      <li><a href="course/files/Accessible Syllabus Template.docx">Syllabus template (DOCX)</a></li>
+      <li><a href="course/files/Accessible Lecture Slide Template.pptx">Lecture slide template (PPTX)</a></li>
+      <li><a href="course/files/Accessibility Course Review.xlsx">Course review workbook (XLSX)</a></li>
+    </ul>
+    <p class="meta">Use the built-in heading styles rather than formatting text to look like headings, and the file stays accessible as you edit it. Modules <a href="course/module-2.html">2</a> and <a href="course/module-3.html">3</a> of the course explain why, and how to do the same to a document you already have.</p>
+
+    <h2 id="presentation">Conference presentation</h2>
+    <p>The framework behind the Bloom's-AI Integration Model, as presented at OLC Innovate 2026 following peer review.</p>
+    <ul class="fmt">
+      <li><a href="course/files/OLC Innovate 2026 - AI-Enhanced Accessible Course Design.pptx">A Holistic Framework for AI-Enhanced, Accessible Online Course Design (PPTX)</a></li>
+    </ul>
+
 
   </div>
 </main>
-<footer class="site">
-  <div class="wrap">
-    <p><strong>Accessibility of this site.</strong> Built to WCAG 2.1 Level AA. If you encounter a barrier, please <a href="mailto:REPLACE_EMAIL">let me know</a> and I will fix it.</p>
-    <p>Open resources on this site are licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Attribution appreciated; permission not required.</p>
-    <p><a href="mailto:REPLACE_EMAIL">Email</a> · <a href="REPLACE_LINKEDIN">LinkedIn</a> · <a href="REPLACE_GITHUB">GitHub</a></p>
-  </div>
-</footer>
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it</a> and it will be fixed.</p>
+<p><strong>Use and attribution.</strong> The four frameworks published on the Resources pages, the audit protocol, the STEM remediation protocol, the diagram alternative text guide and the Bloom's-AI Integration Model, are the work of Saroj Lamichhane and are offered under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: adapt them, teach with them, attribution appreciated and permission not required.</p><p>The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so if you intend to redistribute the course itself, or host a copy under your own institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane</a> and the current position will be confirmed.</p>
+
+<p><a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p>
+</div></footer>
 </body>
 </html>

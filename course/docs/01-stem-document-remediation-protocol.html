@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STEM Document Remediation Protocol, Digital Accessibility for Faculty</title>
+<meta name="description" content="STEM Document Remediation Protocol. Course document, readable in full on this page.">
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
+.skip:focus{left:0}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
+nav.site a:hover{border-bottom-color:var(--line)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+main{padding:2.5rem 0 4rem}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
+.dl{margin:1rem 0 0;padding:0;list-style:none}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"\2610";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
+footer.site a{color:var(--link)}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}
+.q{border:1px solid var(--line);border-radius:6px;padding:1rem 1.1rem;margin:1.1rem 0;background:#fff}
+.q legend{font-weight:600;padding:0 .4rem;line-height:1.45}
+.q .opt{margin:.55rem 0;display:flex;gap:.6rem;align-items:flex-start}
+.q .opt input{margin-top:.3rem;width:1.05rem;height:1.05rem;flex:none}
+.q .opt label{cursor:pointer;line-height:1.5}
+.q .fb[hidden]{display:none}
+.q .fb{margin:.9rem 0 0;padding:.7rem .85rem;border-radius:5px;font-size:.95rem;border-left:4px solid}
+.q .fb.ok{background:#e7f4ea;border-left-color:#1a6b32;color:#12401f}
+.q .fb.no{background:#fdf0e6;border-left-color:#8a4b10;color:#5a2f08}
+.q .fb:focus{outline:3px solid var(--focus);outline-offset:2px}
+#quiz-status{font-weight:600}
+#quiz-status:focus{outline:3px solid var(--focus);outline-offset:3px}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.alt:hover{background:#f2f2ef}
+.warn{background:#fdf0e6;border-left:4px solid #8a4b10;padding:.7rem .85rem;border-radius:5px}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:1rem 1.3rem;margin:1.5rem 0;max-width:46rem}
+.toc h2{font-size:.9375rem;margin:0 0 .45rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem}
+.toc li{margin:.25rem 0}
+
+
+nav.pager a:hover{background:var(--soft);border-left-color:var(--accent2)}
+
+
+
+
+@media (max-width:40rem){}
+.fmt{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.6rem 1rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
+</style>
+<style>
+.docprev{max-width:46rem}
+.docprev table{width:100%}
+.docprev h2{font-size:1.3125rem;margin:2.2rem 0 .6rem}
+.docprev h3{font-size:1.0625rem;margin:1.6rem 0 .4rem}
+.fmt{list-style:none;padding:0;margin:1.4rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.55rem .95rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><div class="hdr">
+  <a class="brand" href="../../index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+  <nav class="site" aria-label="Main"><ul><li><a href="../../index.html">Home</a></li><li><a href="../index.html" aria-current="true">Free Course</a></li><li><a href="../../resources.html">Resources</a></li><li><a href="../../case-studies.html">Case Studies</a></li><li><a href="../../about.html">About</a></li></ul></nav>
+</div></div></header>
+<main id="main">
+  <div class="wrap narrow">
+    <nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Free Course</a></li><li aria-current="page">STEM Document Remediation Protocol</li></ol></nav>
+    <h1>STEM Document Remediation Protocol</h1>
+    <p class="lede">Course document, readable in full below. Nothing needs to be downloaded to read it.</p>
+    <div class="docprev">
+<h2>STEM Document Remediation Protocol</h2><p>Making mathematical and scientific notation accessible in digital course materials</p><h2>STEM Document Remediation Protocol</h2><p>Making mathematical and scientific notation accessible in digital course materials<br />
+Version 1.0 · Saroj Lamichhane · Licensed CC BY 4.0</p><h2>Who this is for</h2><p>Instructors who teach chemistry, physics, mathematics, biology, or engineering and who build their own course materials. It assumes no technical background, no instructional design support, and no budget.</p><p>If your equations are pictures, this document tells you how to stop that and what to do about the ones you already have.</p><h2>Why image-based notation fails</h2><p>Most instructors insert equations as images because that is what the software makes easy. Screenshot the equation, paste it in, move on. Four things break when you do.</p><p><strong>A screen reader announces nothing.</strong> An image of an equation is, to assistive technology, an image. A student using a screen reader hears “graphic” or silence. They cannot access the content at all.</p><p><strong>It does not scale.</strong> A student who enlarges text to 200 percent gets a blurred image. WCAG 2.1 Success Criterion 1.4.4 (Resize Text, Level AA) requires text to scale to 200 percent without loss of content or function. Images of text fail this.</p><p><strong>It does not reflow.</strong> Most students read course material on a phone. An image sized for a laptop runs off the screen and forces horizontal scrolling. This engages Success Criterion 1.4.10 (Reflow, Level AA).</p><p><strong>It is not searchable, selectable, or copyable.</strong> Students cannot search for a formula, copy it into a calculator, or paste it into their notes.</p><p>Success Criterion 1.4.5 (Images of Text, Level AA) states that text should be used to convey information rather than images of text, except where a particular presentation is essential. Mathematical notation is not an exception; it has a text-based representation.</p><h2>The standard: MathML</h2><p>MathML is the W3C markup language for mathematical notation. It is the accessible equivalent of writing an equation rather than photographing one. A screen reader with math support reads MathML aloud in mathematical language, and a student can navigate through the expression term by term rather than hearing it as one undifferentiated string.</p><p>You do not need to write MathML by hand. Every route below produces it for you.</p><h2>Four routes to accessible equations</h2><h3>Route 1: Microsoft Word equation editor</h3><p>The most practical route for most instructors, because you probably already use Word.</p><ol type="1"><li>Place the cursor where the equation goes</li><li>Insert → Equation (or Alt + <code>=</code>)</li><li>Type the equation using the editor, or paste LaTeX into it ,  Word accepts LaTeX input in the equation field</li><li>Save as <code>.docx</code>, not as PDF-by-printing</li></ol><p>Word stores equations in OMML, which converts to MathML when the file is exported to HTML or opened by assistive technology that supports it. Critically, the equation remains text: it scales, it reflows, and it is read aloud.</p><p><strong>Do not</strong> build an equation in Word, screenshot it, and paste the screenshot. This is the single most common error and it undoes everything.</p><h3>Route 2: LaTeX</h3><p>If you already write LaTeX, you are most of the way there.</p><ul><li><strong>Canvas, Blackboard, Moodle</strong> ,  the built-in equation editor accepts LaTeX and outputs MathML. In Canvas, click the equation icon in the Rich Content Editor and switch to advanced view for direct LaTeX entry.</li><li><strong>Standalone documents</strong> ,  compile with a converter that emits MathML. Pandoc will convert a LaTeX or Markdown source to HTML with MathML output.</li><li><strong>Web pages</strong> ,  MathJax renders LaTeX in the browser and exposes accessible MathML to screen readers.</li></ul><h3>Route 3: The LMS equation editor</h3><p>For instructors who write directly in the learning management system. Canvas, Blackboard, and Moodle all include an equation editor that produces accessible output. It is slower than typing LaTeX but requires nothing to be learned.</p><h3>Route 4: Remediating an existing image</h3><p>For material you already have and cannot rebuild immediately.</p><ol type="1"><li>Retype the equation using Route 1, 2, or 3 and delete the image, or</li><li>If the image must stay in the short term, provide the equation in text immediately adjacent to it, and give the image alternative text of <code>""</code> (empty) so it is not announced twice</li></ol><p>An equation in plain text near the image is a stopgap, not a solution, but it is far better than nothing and takes seconds.</p><h2>Notation conventions for plain-text fallbacks</h2><p>When you must express notation in plain text ,  in alternative text, a caption, or a discussion post ,  use these conventions consistently.</p><table><th scope="col"ead><tr class="header"><th scope="col">Element</th><th scope="col">Write as</th><th scope="col">Not as</th></tr></thead><tbody><tr class="odd"><td>Subscript</td><td><code>H2O</code> with 2 as a real subscript character, or “H two O” in speech text</td><td><code>H_2O</code></td></tr><tr class="even"><td>Superscript / charge</td><td><code>Ca2+</code> with proper formatting, or “calcium two plus”</td><td><code>Ca^2+</code></td></tr><tr class="odd"><td>Yields arrow</td><td>“yields” or “produces”</td><td><code>--&gt;</code></td></tr><tr class="even"><td>Reversible reaction</td><td>“is in equilibrium with”</td><td><code>&lt;--&gt;</code></td></tr><tr class="odd"><td>Physical state</td><td>“(aqueous)”, “(solid)”, “(gas)”, “(liquid)”</td><td><code>(</code><code>aq</code><code>)</code>, <code>(s)</code> unexpanded</td></tr><tr class="even"><td>Fraction</td><td>“the ratio of x to y” or “x over y”</td><td><code>x/y</code> where ambiguous</td></tr><tr class="odd"><td>Delta</td><td>“change in”</td><td><code>Δ</code> alone</td></tr></tbody></table><p>The principle: write what a competent instructor would say aloud, not what the symbol looks like.</p><h2>Laboratory and procedural documents</h2><p>Lab manuals and procedure guides fail for different reasons than equations do, and they matter more because a student who cannot read a procedure cannot safely complete it.</p><p><strong>Use real heading structure.</strong> Each section ,  Purpose, Materials, Safety, Procedure, Analysis ,  should be a Heading 2 applied from the styles menu, not bold text made larger. Screen reader users navigate by heading. Without headings they must read the entire document linearly to find step 7.</p><p><strong>Number steps with the automatic list tool.</strong> A numbered list built with the list button is announced as “list of twelve items, item one.” Numbers typed manually are announced as body text and the student loses their place.</p><p><strong>Put safety information in text, not in an image.</strong> Hazard symbols, warning boxes, and PPE requirements are frequently pasted as graphics. If a student cannot read the hazard warning, the document is not merely inaccessible, it is unsafe.</p><p><strong>Do not use colour alone.</strong> “Complete the steps highlighted in red” fails Success Criterion 1.4.1 (Use of Color, Level A). Add a text label: “Steps marked <strong>Required</strong> must be completed before proceeding.”</p><p><strong>Give data tables real headers.</strong> Select the header row and mark it as a header row in the table properties. A screen reader then announces the column name with each value, so a student hears “Trial 2, mass 4.1 grams” rather than “4.1.”</p><h2>Testing what you have produced</h2><p>Two checks, five minutes each.</p><p><strong>Automated.</strong> Run the built-in accessibility checker. In Word: <strong>Review → Check Accessibility</strong>. In Canvas: the accessibility checker icon in the Rich Content Editor. Resolve every error. Warnings require judgment; errors do not.</p><p><strong>Manual.</strong> Enlarge the page to 200 percent. Does the equation stay sharp and stay on screen? Then read the document with a screen reader ,  NVDA is free on Windows, VoiceOver is built into macOS at Command + F5. Listen to one equation. If you hear “graphic” or nothing, the equation is still an image.</p><h2>WCAG 2.1 criteria addressed</h2><table><th scope="col"ead><tr class="header"><th scope="col">Criterion</th><th scope="col">Level</th><th scope="col">What this protocol addresses</th></tr></thead><tbody><tr class="odd"><td>1.1.1 Non-text Content</td><td>A</td><td>Equations and diagrams carry text equivalents</td></tr><tr class="even"><td>1.3.1 Info and Relationships</td><td>A</td><td>Headings, lists, and table headers are structural, not visual</td></tr><tr class="odd"><td>1.4.1 Use of Color</td><td>A</td><td>Colour is not the sole means of conveying information</td></tr><tr class="even"><td>1.4.4 Resize Text</td><td>AA</td><td>Notation scales to 200 percent without loss</td></tr><tr class="odd"><td>1.4.5 Images of Text</td><td>AA</td><td>Notation is text, not a picture of text</td></tr><tr class="even"><td>1.4.10 Reflow</td><td>AA</td><td>Content reflows on small screens without horizontal scrolling</td></tr></tbody></table><h2>A realistic order of work</h2><p>You cannot remediate everything at once. Remediate in this order.</p><ol type="1"><li><strong>Assessments and lab procedures.</strong> A student who cannot read a quiz question or a safety step is harmed immediately.</li><li><strong>Documents students must read to proceed</strong> ,  syllabus, module instructions, assignment prompts.</li><li><strong>Core instructional content</strong> ,  lecture notes, worked examples.</li><li>Supplementary material.</li></ol><p>Within each tier, fix images of text before anything else. It is the highest-impact change and usually the fastest.</p><p>Feedback on this protocol is welcome and will be credited in future versions.</p>
+
+    </div>
+    <h2 id="download">Download this document</h2>
+    <p>The editable original, if you want to print it, adapt it, or work through it offline.</p>
+    <ul class="fmt"><li><a href="../files/01%20-%20STEM%20Document%20Remediation%20Protocol.docx">Word document (DOCX)</a></li></ul>
+    <div class="note"><p>Something unclear, or wrong? Reports are welcome and corrections are credited. <a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p></div>
+    <nav class="pager" aria-label="Course navigation"><a rel="prev" href="../index.html"><span class="lbl">&#8592; Back to</span><span class="ttl">The course</span></a><span></span></nav>
+  </div>
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it</a> and it will be fixed.</p>
+<p><a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,382 @@
+WEBVTT
+
+00:00:01.433 --> 00:00:04.066
+-[Narrator] Welcome to Module 3 Accessible Microsoft
+
+00:00:04.066 --> 00:00:07.432
+PowerPoint Documents. In this video, you will
+
+00:00:07.433 --> 00:00:09.299
+learn how to make your PowerPoint documents
+
+00:00:09.300 --> 00:00:10.833
+accessible to all learners.
+
+00:00:13.133 --> 00:00:15.599
+In this section, we will set your document title
+
+00:00:15.600 --> 00:00:19.300
+and language. Setting the document title in
+
+00:00:19.300 --> 00:00:22.033
+PowerPoint is much like we did in Word. In your
+
+00:00:22.033 --> 00:00:26.399
+PowerPoint presentation, Click File, then select
+
+00:00:26.400 --> 00:00:30.233
+Info. From the right-hand panel, locate the
+
+00:00:30.233 --> 00:00:33.766
+Properties section. Click on the space indicated to
+
+00:00:33.766 --> 00:00:38.466
+the right of Title. Enter a descriptive title here,
+
+00:00:38.600 --> 00:00:41.333
+such as "Accessible Slide Design."
+
+00:00:43.566 --> 00:00:46.832
+To set the document language, go to the Review tab,
+
+00:00:47.466 --> 00:00:51.532
+select Language, and choose Set Proofing Language.
+
+00:00:52.766 --> 00:00:55.432
+From the list, select your desired language, such
+
+00:00:55.433 --> 00:00:59.533
+as English (United States). Check the box labeled
+
+00:00:59.833 --> 00:01:03.466
+"Do not check spelling or grammar," and then click
+
+00:01:03.466 --> 00:01:07.166
+OK to apply your settings. Now that we have
+
+00:01:07.166 --> 00:01:09.266
+given the title and set the preferred language for
+
+00:01:09.266 --> 00:01:12.066
+our PowerPoint, people can understand the document
+
+00:01:12.066 --> 00:01:14.599
+context without opening it and interpret the
+
+00:01:14.600 --> 00:01:19.466
+content accurately. In this section, we will set
+
+00:01:19.466 --> 00:01:24.066
+clear unique titles for each slide. Each slide
+
+00:01:24.066 --> 00:01:25.832
+requires a different title for accurate
+
+00:01:25.833 --> 00:01:29.133
+communication with assistive technologies. Slide
+
+00:01:29.133 --> 00:01:31.033
+titles can be checked by selecting View from the
+
+00:01:31.033 --> 00:01:34.733
+menu and clicking Outline View. A panel will
+
+00:01:34.733 --> 00:01:36.799
+appear to the left of the screen, indicating the
+
+00:01:36.800 --> 00:01:39.500
+names of each slide in the presentation, and they
+
+00:01:39.500 --> 00:01:42.733
+appear at the top of each slide. If there is a
+
+00:01:42.733 --> 00:01:44.933
+title duplication, it will need to be adjusted.
+
+00:01:45.600 --> 00:01:48.533
+For instance, if two slides are titled "Common
+
+00:01:48.533 --> 00:01:53.399
+Barriers," you could add "Part 1" and "Part 2,"
+
+00:01:53.700 --> 00:01:55.033
+like this example here.
+
+00:01:58.633 --> 00:02:01.599
+In this section, we will add alternative text and
+
+00:02:01.600 --> 00:02:06.100
+create accessible hyperlinks. Images, graphs, or
+
+00:02:06.100 --> 00:02:08.733
+charts should include alternative text or be
+
+00:02:08.733 --> 00:02:12.299
+described as decorative. To add alternative text,
+
+00:02:12.533 --> 00:02:15.299
+right-click on the image and select Alt Text in
+
+00:02:15.300 --> 00:02:18.133
+the pop-up menu. The Alt Text pane will show to
+
+00:02:18.133 --> 00:02:20.766
+the right of your screen. If the image contains
+
+00:02:20.766 --> 00:02:23.666
+meaningful information, add alternative text in
+
+00:02:23.666 --> 00:02:26.499
+the empty box describing the content and purpose.
+
+00:02:27.333 --> 00:02:30.333
+In this example, the alternative text would be
+
+00:02:30.866 --> 00:02:33.766
+"Students with disabilities drop out at about twice
+
+00:02:33.766 --> 00:02:38.066
+the rate of their non-disabled peers." It is a best
+
+00:02:38.066 --> 00:02:41.699
+practice to keep descriptive phrases brief. Do not
+
+00:02:41.700 --> 00:02:45.600
+begin the description with words "Image of ..." or
+
+00:02:46.033 --> 00:02:49.633
+"Picture of ..."; screen readers automatically use the
+
+00:02:49.633 --> 00:02:53.999
+term "Image." If the image is simply decorative, leave
+
+00:02:54.000 --> 00:02:57.600
+the description field box blank and check Mark as
+
+00:02:57.600 --> 00:03:00.933
+decorative; close the Alt Text pane to apply
+
+00:03:00.933 --> 00:03:01.433
+changes.
+
+00:03:03.466 --> 00:03:05.766
+Microsoft PowerPoint automatically creates a
+
+00:03:05.766 --> 00:03:08.966
+hyperlink when a URL is added to a slide. However,
+
+00:03:09.233 --> 00:03:12.266
+to meet accessibility requirements, hyperlinks
+
+00:03:12.266 --> 00:03:15.232
+must be clear and actionable, allowing users to
+
+00:03:15.233 --> 00:03:18.466
+understand where the link is leading them. To add
+
+00:03:18.466 --> 00:03:20.499
+meaningful language, right-click on the link.
+
+00:03:21.033 --> 00:03:23.899
+Select Edit. At the top of this window, you will
+
+00:03:23.900 --> 00:03:26.833
+enter a descriptive title such as "Visit the
+
+00:03:26.833 --> 00:03:31.733
+Official WCAG 2.1 guidelines from W3C"
+
+00:03:31.833 --> 00:03:36.333
+instead of "Click Here." "Visit the Official
+
+00:03:36.433 --> 00:03:41.633
+WCAG 2.1 guidelines from W3C" alerts someone
+
+00:03:41.633 --> 00:03:43.966
+listening to a screen reader that there is an
+
+00:03:43.966 --> 00:03:48.366
+actionable item in the document. Designing a
+
+00:03:48.366 --> 00:03:50.632
+visually appealing presentation can often go
+
+00:03:50.633 --> 00:03:54.333
+against accessibility requirements. Color choice
+
+00:03:54.333 --> 00:03:56.666
+combinations can create difficulty for users to
+
+00:03:56.666 --> 00:04:00.599
+read text on the screen. Background and font color
+
+00:04:00.600 --> 00:04:03.733
+should have clear contrast between them. Using a
+
+00:04:03.733 --> 00:04:08.366
+black background with a white font works well. For
+
+00:04:08.366 --> 00:04:11.766
+example, this due date is in a light red font on a
+
+00:04:11.766 --> 00:04:15.532
+yellow background. These colors do not provide a
+
+00:04:15.533 --> 00:04:19.799
+good contrast, making it difficult to read. A
+
+00:04:19.800 --> 00:04:22.300
+suggestion would be to make the font color black
+
+00:04:22.300 --> 00:04:24.733
+and bold and remove the background.
+
+00:04:28.566 --> 00:04:31.032
+In this section, we will adjust font size and
+
+00:04:31.033 --> 00:04:32.866
+fix reading order for accessibility.
+
+00:04:36.533 --> 00:04:39.899
+Let's change some fonts. From the Slides pane on the
+
+00:04:39.900 --> 00:04:42.433
+left side of the screen, right-click on the slide,
+
+00:04:42.433 --> 00:04:46.299
+and select Duplicate Slide. On the new slide, delete
+
+00:04:46.300 --> 00:04:51.366
+the top three items from the list; select all text,
+
+00:04:51.366 --> 00:04:55.832
+and set font size to 24. Now, go to the previous
+
+00:04:55.833 --> 00:05:00.833
+slide, and delete the bottom three items. Now,
+
+00:05:01.166 --> 00:05:03.466
+select the remaining text from the list and set
+
+00:05:03.466 --> 00:05:08.666
+font size to 24. Also, make sure each slide has a
+
+00:05:08.666 --> 00:05:12.632
+unique title. This will ensure that your text is
+
+00:05:12.633 --> 00:05:13.299
+accessible.
+
+00:05:17.100 --> 00:05:20.266
+After setting up clear, readable text, the next
+
+00:05:20.266 --> 00:05:22.566
+step is to verify the slides reading order.
+
+00:05:22.966 --> 00:05:25.666
+Verifying the read order of a slide is important,
+
+00:05:25.666 --> 00:05:28.466
+especially if additional content placeholders are
+
+00:05:28.466 --> 00:05:31.732
+added to the slide. To check or change a slide's
+
+00:05:31.733 --> 00:05:34.533
+reading order, in the Home tab at the top of your
+
+00:05:34.533 --> 00:05:38.466
+screen, click Arrange and click Selection Pane.
+
+00:05:38.966 --> 00:05:41.299
+Your Selection pane will show to the right of your
+
+00:05:41.300 --> 00:05:44.300
+screen, listing all content found on your slide.
+
+00:05:45.033 --> 00:05:47.566
+The screen reader will read content from bottom to
+
+00:05:47.566 --> 00:05:51.332
+top. In this example, right now the screen reader
+
+00:05:51.333 --> 00:05:56.133
+reads Picture 3, then Title 5, and finally
+
+00:05:56.433 --> 00:05:59.833
+Rectangle 3. To fix this in the Selection
+
+00:05:59.833 --> 00:06:03.233
+pane, first drag Title 5 down to the bottom;
+
+00:06:04.000 --> 00:06:07.366
+next, place Rectangle 3 just above Title 5;
+
+00:06:07.966 --> 00:06:11.932
+and keep Picture 3 above both objects. This
+
+00:06:11.933 --> 00:06:13.499
+sets the correct reading order.
+
+00:06:17.433 --> 00:06:19.766
+In this section, we will run the accessibility
+
+00:06:19.766 --> 00:06:22.366
+checker and fix remaining issues manually.
+
+00:06:24.733 --> 00:06:27.199
+As with all documents, accessibility should be
+
+00:06:27.200 --> 00:06:30.600
+checked. At the top of the screen, open the Review
+
+00:06:30.600 --> 00:06:35.900
+tab, then choose Check Accessibility. Any errors,
+
+00:06:35.900 --> 00:06:38.700
+warnings, and tips will show in the checker on the
+
+00:06:38.700 --> 00:06:42.533
+right side of your screen. In this example, I
+
+00:06:42.533 --> 00:06:45.933
+still have one accessibility issue, "Missing
+
+00:06:45.933 --> 00:06:50.533
+Slide Title". To fix it, select the error and then
+
+00:06:50.933 --> 00:06:54.899
+choose Set as Slide Title; click Approve and the
+
+00:06:54.900 --> 00:06:58.366
+issue will be resolved. While the PowerPoint
+
+00:06:58.366 --> 00:07:01.032
+accessibility checker is helpful, it does not
+
+00:07:01.033 --> 00:07:05.566
+evaluate everything. For example, it cannot verify
+
+00:07:05.566 --> 00:07:09.032
+the font style or the size of text elements. On
+
+00:07:09.033 --> 00:07:12.333
+Slide 6, some list items are set to 11 point
+
+00:07:12.333 --> 00:07:15.933
+font, but the checker does not flag that. To fix
+
+00:07:15.933 --> 00:07:20.999
+this, I will change them to 24 point. Therefore,
+
+00:07:21.000 --> 00:07:23.700
+it is important for content creators to manually
+
+00:07:23.700 --> 00:07:26.833
+verify appropriate font styles and sizes are used,
+
+00:07:27.166 --> 00:07:29.899
+and that color contrast meets accessibility
+
+00:07:29.900 --> 00:07:30.466
+standards.

@@ -1,0 +1,68 @@
+00:00
+[On-screen title: Module 2 Accessible Microsoft Word Documents]
+ 
+Narrator: Welcome to Module 2 Accessible Microsoft Word Documents. In this video, you will learn how to make your Microsoft Word documents accessible to all learners.
+ 
+00:13
+[On-screen title: Document Title and Language]
+ 
+[On-screen: Microsoft Word interface is displayed]
+ 
+To set a document title in Microsoft Word, you will click File, then select Info. From the right-hand panel, locate the Properties section. Click on the space indicated to the right of Title. Enter a descriptive title here, such as "Accessibility Training Module 1.0."
+ 
+To set the document language, go to the Review tab. Select Language, and choose Set Proofing Language. From the list, select your desired language, such as English (United States). Check the box labeled, "Do not check spelling or grammar," and then click OK to apply your settings.
+ 
+Now your document has a title that will assist the screen reader in announcing the title and document clearly, and proper document language to pronounce words correctly and ensure assistive technologies deliver your content accurately.
+ 
+01:16
+[On-screen title: Word Styles and Hyperlinks]
+ 
+In this section, we will use Word Styles and review hyperlinks for accessibility. Let's structure a document with accessible hyperlinks, clear headings, and properly formatted lists so screen readers can navigate with ease.
+ 
+To insert an accessible hyperlink, we need to ensure that it is clear and actionable and not just a link.
+ 
+Start by selecting Insert from the menu, followed by the Links tab. From that dropdown menu, you will select Link. Then, another dropdown menu will appear; select Insert Link from the bottom of that menu.
+ 
+A window pops up to customize your hyperlink. Paste the link in the space indicated to the right of address at the bottom of the window. The important part is at the top of the window, where you will enter a descriptive title such as, "Visit the Library Website" instead of "Click Here."
+ 
+02:21
+[On-screen title: Headings]
+ 
+Rather than just changing the font size, it is important to apply true heading style.
+ 
+Start at the Home tab, open the Styles group, and select the heading level that fits your document structure. For example, use Heading 1 for your main title, Heading 2 for your major sections, and Heading 3 for your sub-sections.
+ 
+02:50
+[On-screen title: Lists]
+ 
+Bulleted or numbered lists should be formatted from the Paragraph group. Choose your list type from the dropdown menu: bullet, numbered, or multilevel. For lists, always use a bulleted or numbered list tool instead of typing symbols manually.
+ 
+03:14
+[On-screen title: Color Contrast and Table Properties]
+ 
+Design choices can make or break accessibility. With color contrast, text should clearly stand out from the background—at least a 4.5 to 1 ratio for normal text.
+ 
+03:44
+[On-screen title: Tables]
+ 
+Adding a table to your document always requires using the Insert tab from the menu. Do not draw or paste a table from another program. When you insert your table from the Table menu tab, always add clear header row and column data so screen readers can identify columns in context.
+ 
+04:20
+[On-screen title: Alternative Text]
+ 
+In this section, we will add alternative text to images and other objects. When using images or graphics, always include alternative text or alt text.
+ 
+For SmartArt, charts, and equations, right-click and select Edit Alt Text to describe what's shown. If the visual is decorative, mark it as such.
+ 
+05:33
+[On-screen title: Accessibility Checker and Manual Review]
+ 
+Once your document is complete, go to the Review tab and click Check Accessibility. The inspection panel will show errors, warnings, and tips.
+ 
+While the inspection panel shows issues like missing alt text or hard to read color contrast warnings, it does not include all requirements by the Web Content Accessibility Guidelines.
+ 
+Therefore, it is important to manually review your document content to identify and fix accessibility issues the checker may miss.
+ 
+06:35
+[On-screen: Technology Innovation and Digital Education (TIDE) – Texas A&M University-Texarkana]
+

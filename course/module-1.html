@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 1: Accessibility Overview, Saroj Lamichhane</title>
+<meta name="description" content="What accessibility means in a learning space, the principles behind the standard, and the vocabulary you will need for the rest of the course.">
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
+.skip:focus{left:0}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
+nav.site a:hover{border-bottom-color:var(--line)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+main{padding:2.5rem 0 4rem}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
+.dl{margin:1rem 0 0;padding:0;list-style:none}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"\2610";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
+footer.site a{color:var(--link)}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}
+.q{border:1px solid var(--line);border-radius:6px;padding:1rem 1.1rem;margin:1.1rem 0;background:#fff}
+.q legend{font-weight:600;padding:0 .4rem;line-height:1.45}
+.q .opt{margin:.55rem 0;display:flex;gap:.6rem;align-items:flex-start}
+.q .opt input{margin-top:.3rem;width:1.05rem;height:1.05rem;flex:none}
+.q .opt label{cursor:pointer;line-height:1.5}
+.q .fb[hidden]{display:none}
+.q .fb{margin:.9rem 0 0;padding:.7rem .85rem;border-radius:5px;font-size:.95rem;border-left:4px solid}
+.q .fb.ok{background:#e7f4ea;border-left-color:#1a6b32;color:#12401f}
+.q .fb.no{background:#fdf0e6;border-left-color:#8a4b10;color:#5a2f08}
+.q .fb:focus{outline:3px solid var(--focus);outline-offset:2px}
+#quiz-status{font-weight:600}
+#quiz-status:focus{outline:3px solid var(--focus);outline-offset:3px}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.alt:hover{background:#f2f2ef}
+.warn{background:#fdf0e6;border-left:4px solid #8a4b10;padding:.7rem .85rem;border-radius:5px}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:1rem 1.3rem;margin:1.5rem 0;max-width:46rem}
+.toc h2{font-size:.9375rem;margin:0 0 .45rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem}
+.toc li{margin:.25rem 0}
+
+
+nav.pager a:hover{background:var(--soft);border-left-color:var(--accent2)}
+
+
+
+
+@media (max-width:40rem){}
+.fmt{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.6rem 1rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><div class="hdr">
+<a class="brand" href="../index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+<nav class="site" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../course/index.html" aria-current="true">Free Course</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../case-studies.html">Case Studies</a></li><li><a href="../about.html">About</a></li></ul></nav>
+</div></div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Free Course</a></li><li>Module 1</li></ol></nav>
+<p class="badge">Module 1 &middot; 7 minutes</p>
+<h1>Accessibility Overview</h1>
+<p class="lede">What accessibility means in a learning space, the principles behind the standard, and the vocabulary you will need for the rest of the course.</p>
+
+<nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol><li><a href="#about-this-module">About this module</a></li><li><a href="#what-you-will-be-able-to-do">What you will be able to do</a></li><li><a href="#video-lesson">Video lesson</a></li><li><a href="#key-points">Key points</a></li><li><a href="#quiz">Knowledge check</a></li><li><a href="#module-materials">Module materials</a></li></ol></nav>
+<h2 id="about-this-module">About this module</h2>
+<p>This module starts where accessibility actually starts: with the message a course sends before a student has read a word of it. It introduces the perceivable, operable, understandable and robust principles and the key terms used throughout.</p>
+
+<h2 id="what-you-will-be-able-to-do">What you will be able to do</h2><p>By the end of this module you will be able to:</p><ul><li>Identify the four core principles of WCAG: Perceivable, Operable, Understandable, Robust</li><li>Recognise features within a document that align with the POUR principles</li><li>Use the accessibility vocabulary applied throughout the rest of the course</li></ul>
+
+<div class="note"><p><strong>Before you watch.</strong> The module overview sets out the context and learning outcomes in one page.</p><ul class="dl"><li><a href="docs/module-1-overview.html">Module 1 Overview</a> <span class="meta">(read on this page, or <a href="files/Module%201%20Overview.docx">download the Word file</a>)</span></li></ul></div>
+<h2 id="video-lesson">Video lesson</h2>
+<video controls preload="metadata" poster="media/module-1-poster.jpg" width="100%" style="max-width:46rem;border:1px solid var(--line);border-radius:6px">
+  <source src="media/module-1.mp4" type="video/mp4">
+  <track kind="captions" src="data:text/vtt;base64,V0VCVlRUCgowMDowMDowMS41NjYgLS0+IDAwOjAwOjA1LjQ5OQotW05hcnJhdG9yXSBXZWxjb21lIHRvIE1vZHVsZSAxIEFjY2Vzc2liaWxpdHkgT3ZlcnZpZXcuCgowMDowMDowNy42NjYgLS0+IDAwOjAwOjEwLjk5OQpJbWFnaW5lIG9wZW5pbmcgYSBuZXcgb25saW5lIGNvdXJzZS4KCjAwOjAwOjExLjAwMCAtLT4gMDA6MDA6MTIuNzY2ClRoZXJlIGFyZSBubyBjYXB0aW9ucy4KCjAwOjAwOjEyLjc2NiAtLT4gMDA6MDA6MTUuMDY2ClRoZSB0ZXh0IGlzIGhhcmQgdG8gcmVhZC4KCjAwOjAwOjE1LjA2NiAtLT4gMDA6MDA6MTcuMzY2CkJ1dHRvbnMgZG9uJ3QgdGVsbCB5b3Ugd2hhdCB0aGV5IGRvLgoKMDA6MDA6MTcuMzY2IC0tPiAwMDowMDoxOS40NjYKWW91IHRyeSB0byBtYWtlIGl0IHdvcmssCgowMDowMDoxOS40NjYgLS0+IDAwOjAwOjIxLjY2NgpidXQgdGhlIG1lc3NhZ2UgaXMgYWxyZWFkeSBjbGVhcjsKCjAwOjAwOjIxLjY2NiAtLT4gMDA6MDA6MjUuMzY2CnRoaXMgc3BhY2Ugd2FzIG5vdCBkZXNpZ25lZCB3aXRoIHlvdSBpbiBtaW5kLgoKMDA6MDA6MjUuMzY2IC0tPiAwMDowMDoyNy41MzIKVGhhdCBpcyB0aGUgcG93ZXIgb2YgZGVzaWduLgoKMDA6MDA6MjcuNTMzIC0tPiAwMDowMDoyOS41OTkKSXQgY29tbXVuaWNhdGVzIGluc3RhbnRseS4KCjAwOjAwOjI5LjYwMCAtLT4gMDA6MDA6MzEuMjMzCkFuZCBpbiBsZWFybmluZyBzcGFjZXMsCgowMDowMDozMS4yMzMgLS0+IDAwOjAwOjMzLjY5OQp0aGF0IG1lc3NhZ2Ugc2hvdWxkIGFsd2F5cyBiZToKCjAwOjAwOjMzLjcwMCAtLT4gMDA6MDA6MzUuNDY2CllvdSBiZWxvbmcgaGVyZS4KCjAwOjAwOjM1LjQ2NiAtLT4gMDA6MDA6MzguNzMyCkFjY2Vzc2liaWxpdHkgaXNuJ3Qgc29tZXRoaW5nIHdlIGFkZCBhdCB0aGUgZW5kLgoKMDA6MDA6MzkuMDAwIC0tPiAwMDowMDo0Mi4xNjYKSXQgc3RhcnRzIGF0IHRoZSB2ZXJ5IGJlZ2lubmluZywgCgowMDowMDo0Mi4xNjYgLS0+IDAwOjAwOjQ2LjE5OQp3aGVuIHdlIGNob29zZSBmb250cywgd3JpdGUgYWx0ZXJuYXRpdmUgdGV4dCwKCjAwOjAwOjQ2LjIwMCAtLT4gMDA6MDA6NDguNDY2CmFuZCBzZXQgdXAgY2FwdGlvbnMuCgowMDowMDo0OS45MDAgLS0+IDAwOjAwOjUyLjgwMApBY2Nlc3NpYmlsaXR5IGlzIG1vcmUgdGhhbiBhIGNoZWNrbGlzdC4KCjAwOjAwOjUzLjEzMyAtLT4gMDA6MDA6NTQuNDY2Ckl0J3MgYSBtaW5kc2V0OwoKMDA6MDA6NTQuNDY2IC0tPiAwMDowMDo1Ni45OTkKYSBjb21taXRtZW50IHRoYXQgbm8gbGVhcm5lciBzaG91bGQgYmUgbGVmdCBvdXQKCjAwOjAwOjU3LjAwMCAtLT4gMDA6MDA6NTkuNTMzCmJlY2F1c2Ugb2YgaG93IGEgY291cnNlIGlzIGJ1aWx0LgoKMDA6MDA6NTkuODMzIC0tPiAwMDowMTowMi41OTkKVGhhdCdzIHdoZXJlIFdDQUcsIAoKMDA6MDE6MDIuNjAwIC0tPiAwMDowMTowNi41MzMKdGhlIFdlYiBDb250ZW50IEFjY2Vzc2liaWxpdHkgR3VpZGVsaW5lcywgY29tZXMgaW4uCgowMDowMTowNy4yMDAgLS0+IDAwOjAxOjEyLjAwMApXQ0FHIHR1cm5zIHRoZSBpZGVhIG9mIGFjY2VzcyBmb3IgYWxsCgowMDowMToxMi4wMDAgLS0+IDAwOjAxOjEzLjYzMwppbnRvIHByYWN0aWNhbCBzdGVwcy4KCjAwOjAxOjE0LjMwMCAtLT4gMDA6MDE6MTcuNTMzCkhvdyB3ZSBjYXB0aW9uIG91ciB2aWRlb3MsIHN0cnVjdHVyZSB0ZXh0LAoKMDA6MDE6MTcuNTMzIC0tPiAwMDowMToyMC40NjYKY2hvb3NlIGNvbnRyYXN0LCBhbmQgZGVzaWduIGZvciBzY3JlZW4gcmVhZGVycwoKMDA6MDE6MjAuNDY2IC0tPiAwMDowMToyMS41MzIKYW5kIGtleWJvYXJkcy4KCjAwOjAxOjIyLjEzMyAtLT4gMDA6MDE6MjUuMDMzClRoZSBXZWIgQ29udGVudCBBY2Nlc3NpYmlsaXR5IEd1aWRlbGluZXMKCjAwOjAxOjI1LjAzMyAtLT4gMDA6MDE6MjkuMDMzCmhhcyBvcmdhbml6ZWQgdGhlaXIgZ3VpZGVsaW5lcyB1bmRlciBmb3VyIHByaW5jaXBsZXMKCjAwOjAxOjI5LjAzMyAtLT4gMDA6MDE6MzAuNTk5CmNvbW1vbmx5IGtub3duIGFzOgoKMDA6MDE6MzAuNjAwIC0tPiAwMDowMTozNi4xNjYKUGVyY2VpdmFibGUsIE9wZXJhYmxlLCBVbmRlcnN0YW5kYWJsZSwgYW5kIFJvYnVzdC4KCjAwOjAxOjM2LjE2NiAtLT4gMDA6MDE6MzkuMjY2CkZvbGxvd2luZyB0aGVzZSBndWlkZWxpbmVzIGVuc3VyZXMgdGhhdCBkaWdpdGFsIG1hdGVyaWFscwoKMDA6MDE6MzkuMjY2IC0tPiAwMDowMTo0My40MzIKYXJlIGluY2x1c2l2ZSBhbmQgY29uc3VtYWJsZSBmb3IgYWxsIHVzZXJzLgoKMDA6MDE6NDUuMDMzIC0tPiAwMDowMTo0Ny4wNjYKV2hlbiB3ZSBkZXNpZ24gb3VyIGNvdXJzZXMgdGhpcyB3YXksCgowMDowMTo0Ny4wNjYgLS0+IDAwOjAxOjQ5Ljg2NgppdCBkb2Vzbid0IGp1c3QgaGVscCBsZWFybmVycyB3aXRoIGRpc2FiaWxpdGllcywgCgowMDowMTo0OS44NjYgLS0+IDAwOjAxOjUyLjQzMgppdCBoZWxwcyBzZWNvbmQgbGFuZ3VhZ2UgbGVhcm5lcnMsCgowMDowMTo1Mi40MzMgLS0+IDAwOjAxOjU1LjczMwpzb21lb25lIGxlYXJuaW5nIG9uIGEgcGhvbmUsIGFuZCBzaW1wbHkgcHV0LAoKMDA6MDE6NTUuNzMzIC0tPiAwMDowMTo1OS4xMzMKaXQgbWFrZXMgb3VyIGNvdXJzZXMgYmV0dGVyIGZvciBldmVyeW9uZS4KCjAwOjAyOjAxLjM2NiAtLT4gMDA6MDI6MDQuMDY2CkFjY2Vzc2libGUgZGVzaWduIGlzbid0IGp1c3QgcmVxdWlyZWQuCgowMDowMjowNC4wNjYgLS0+IDAwOjAyOjA1LjM5OQpJdCdzIHJlc3BvbnNpYmxlLgoKMDA6MDI6MDUuNDAwIC0tPiAwMDowMjowNy4xMzMKSXQncyBodW1hbi4KCjAwOjAyOjA3LjEzMyAtLT4gMDA6MDI6MTAuMzk5CkFzIHlvdSBtb3ZlIHRocm91Z2ggdGhpcyBjb3Vyc2UsIHN0YXJ0IHdpdGggb25lIGludGVudGlvbjsKCjAwOjAyOjEwLjQwMCAtLT4gMDA6MDI6MTMuODY2CmRlc2lnbiBzbyB0aGF0IGV2ZXJ5b25lIGJlbG9uZ3MuCgowMDowMjoxNC4zNjYgLS0+IDAwOjAyOjE4LjA5OQpQZXJjZWl2YWJsZSBkZXNpZ247IG1ha2luZyBjb250ZW50IHJlYWNoYWJsZQoKMDA6MDI6MTguMTAwIC0tPiAwMDowMjoxOS45NjYKZm9yIGV2ZXJ5IGxlYXJuZXIuCgowMDowMjoxOS45NjYgLS0+IDAwOjAyOjIyLjY5OQpQZXJjZWl2YWJsZSBkZXNpZ24gbWF0dGVycyBiZWNhdXNlCgowMDowMjoyMi43MDAgLS0+IDAwOjAyOjI2LjIzMwpub3QgZXZlcnlvbmUgZXhwZXJpZW5jZXMgY29udGVudCBpbiB0aGUgc2FtZSB3YXkuCgowMDowMjoyNi4yMzMgLS0+IDAwOjAyOjI5LjUzMwpTb21lIGxlYXJuZXJzIHNlZSwgc29tZSBsaXN0ZW4uCgowMDowMjoyOS41MzMgLS0+IDAwOjAyOjMyLjM2NgpPdGhlcnMgcmVseSBvbiBhc3Npc3RpdmUgdGVjaG5vbG9naWVzLAoKMDA6MDI6MzIuMzY2IC0tPiAwMDowMjozNS45MzIKbGlrZSBzY3JlZW4gcmVhZGVycyBvciB2b2ljZSByZWNvZ25pdGlvbiB0b29scy4KCjAwOjAyOjM1LjkzMyAtLT4gMDA6MDI6MzkuNTk5CklmIHlvdXIgY291cnNlIG9ubHkgd29ya3MgaW4gb25lIGZvcm1hdCwKCjAwOjAyOjM5LjYwMCAtLT4gMDA6MDI6NDQuNDY2CnN1Y2ggYXMgc2xpZGVzIHdpdGggb25seSB2aXN1YWxzIG9yIGF1ZGlvIHdpdGhvdXQgY2FwdGlvbnMsCgowMDowMjo0NC40NjYgLS0+IDAwOjAyOjQ3LjYzMgp5b3UgdW5pbnRlbnRpb25hbGx5IHBsYWNlIHNvbWUgbGVhcm5lcnMKCjAwOjAyOjQ3LjYzMyAtLT4gMDA6MDI6NTEuMDMzCm91dHNpZGUgdGhlIGxlYXJuaW5nIGV4cGVyaWVuY2UuCgowMDowMjo1MS4wMzMgLS0+IDAwOjAyOjUzLjEzMwpUbyBjcmVhdGUgcGVyY2VpdmFibGUgY29udGVudCwKCjAwOjAyOjUzLjQwMCAtLT4gMDA6MDI6NTYuNzY2CndlIG5lZWQgdG8gcHJlc2VudCBpbmZvcm1hdGlvbiBpbiBtdWx0aXBsZSB3YXlzCgowMDowMjo1Ni43NjYgLS0+IDAwOjAyOjU4Ljk5OQpzbyBhbGwgbGVhcm5lcnMgY2FuIGFjY2VzcyBpdC4KCjAwOjAzOjAwLjQ2NiAtLT4gMDA6MDM6MDIuMzY2CkFzIHlvdSBkZXNpZ24geW91ciBjb3Vyc2UsCgowMDowMzowMi4zNjYgLS0+IDAwOjAzOjA1LjM2NgprZWVwIHRoZXNlIHF1ZXN0aW9ucyBpbiBtaW5kLgoKMDA6MDM6MDUuMzY2IC0tPiAwMDowMzoxMC4xOTkKSWYgc29tZW9uZSBjYW4ndCBzZWUgaXQsIGNhbiB0aGV5IGhlYXIgb3IgcmVhZCBpdD8KCjAwOjAzOjEwLjIwMCAtLT4gMDA6MDM6MTIuMDMzCklmIHNvbWVvbmUgY2FuJ3QgaGVhciBpdCwKCjAwOjAzOjEyLjAzMyAtLT4gMDA6MDM6MTQuNjY2CmNhbiB0aGV5IHNlZSBvciByZWFkIGl0PwoKMDA6MDM6MTQuNjY2IC0tPiAwMDowMzoxNi44NjYKSWYgc29tZW9uZSBjYW4ndCBzdHJlYW0gaXQsCgowMDowMzoxNi44NjYgLS0+IDAwOjAzOjIwLjU5OQpkbyB0aGV5IGhhdmUgYW5vdGhlciB3YXkgdG8gYWNjZXNzIGl0PwoKMDA6MDM6MjAuNjAwIC0tPiAwMDowMzoyMi44MzMKVGhhdCdzIHBlcmNlaXZhYmxlIGRlc2lnbiwgCgowMDowMzoyMi44MzMgLS0+IDAwOjAzOjI1Ljc5OQplbnN1cmluZyB0aGF0IGVzc2VudGlhbCBpbmZvcm1hdGlvbiBpcyBhdmFpbGFibGUKCjAwOjAzOjI1LjgwMCAtLT4gMDA6MDM6MjkuNTAwCnRvIGV2ZXJ5IGxlYXJuZXIsIHJlZ2FyZGxlc3Mgb2YgaG93IHRoZXkgYWNjZXNzIGl0LgoKMDA6MDM6MzEuNTY2IC0tPiAwMDowMzozNC40OTkKT3BlcmFibGUgZGVzaWduOiBtYWtpbmcgY29udGVudCB1c2FibGUKCjAwOjAzOjM0LjUwMCAtLT4gMDA6MDM6MzYuMjMzCmZvciBldmVyeSBsZWFybmVyLgoKMDA6MDM6MzcuNDMzIC0tPiAwMDowMzo0MC45NjYKT3BlcmFiaWxpdHkgbWVhbnMgbGVhcm5lcnMgc2hvdWxkIGJlIGFibGUgdG8gbmF2aWdhdGUKCjAwOjAzOjQwLjk2NiAtLT4gMDA6MDM6NDQuODMyCmFuZCB1c2UgYSBjb3Vyc2Ugd2l0aG91dCBndWVzc2luZyBvciBzdHJ1Z2dsaW5nLAoKMDA6MDM6NDQuODMzIC0tPiAwMDowMzo0Ny4zNjYKcmVnYXJkbGVzcyBvZiB3aGV0aGVyIHRoZXkgdXNlIGEgbW91c2UsCgowMDowMzo0Ny4zNjYgLS0+IDAwOjAzOjUwLjE2NgprZXlib2FyZCwgb3IgYXNzaXN0aXZlIHRlY2hub2xvZ3kuCgowMDowMzo1MC4xNjYgLS0+IDAwOjAzOjUzLjc5OQpLZXlib2FyZCBuYXZpZ2F0aW9uIGlzIGEga2V5IHBhcnQgb2YgdGhpcy4KCjAwOjAzOjUzLjgwMCAtLT4gMDA6MDM6NTkuNDMzCkxpbmtzLCBidXR0b25zLCBmb3JtcywgYW5kIG1lZGlhIGNvbnRyb2xzCgowMDowMzo1OS40MzMgLS0+IDAwOjA0OjAyLjI5OQptdXN0IGJlIGFjY2Vzc2libGUgdGhyb3VnaCB0aGUgVGFiIGtleQoKMDA6MDQ6MDIuMzAwIC0tPiAwMDowNDowNi4wNjYKaW4gYSBjbGVhciBsb2dpY2FsIG9yZGVyIHdpdGggYSB2aXNpYmxlIGZvY3VzLAoKMDA6MDQ6MDYuMDY2IC0tPiAwMDowNDowOS41MzIKc28gbGVhcm5lcnMga25vdyB3aGVyZSB0aGV5IGFyZSBvbiB0aGUgc2NyZWVuLgoKMDA6MDQ6MDkuNTMzIC0tPiAwMDowNDoxMi43NjYKQ29udHJvbHMgYWxzbyBuZWVkIG1lYW5pbmdmdWwgbGFiZWxzCgowMDowNDoxMi43NjYgLS0+IDAwOjA0OjE1LjU5OQp0aGF0IGRlc2NyaWJlIHRoZWlyIGZ1bmN0aW9uLCBsaWtlCgowMDowNDoxNS42MDAgLS0+IDAwOjA0OjE5Ljk2NgoiU3VibWl0IEFzc2lnbm1lbnQiIG9yICJQbGF5IFZpZGVvLCIKCjAwOjA0OjE5Ljk2NiAtLT4gMDA6MDQ6MjQuMDk5Cmluc3RlYWQgb2YgdmFndWUgdGVybXMsIGxpa2UgIkNsaWNrIEhlcmUuIgoKMDA6MDQ6MjUuMjY2IC0tPiAwMDowNDoyNi45MzIKRGVzaWduaW5nIGZvciBvcGVyYWJpbGl0eQoKMDA6MDQ6MjYuOTMzIC0tPiAwMDowNDoyOS40NjYKZG9lc24ndCByZXF1aXJlIHJlaW52ZW50aW5nIHlvdXIgY291cnNlLgoKMDA6MDQ6MjkuNzY2IC0tPiAwMDowNDozMi4zNjYKSXQgbWVhbnMgbWFraW5nIGV4aXN0aW5nIHRvb2xzCgowMDowNDozMi4zNjYgLS0+IDAwOjA0OjM2LjA5OQp1c2FibGUgYWNyb3NzIGRpZmZlcmVudCBpbnB1dCBtZXRob2RzLgoKMDA6MDQ6MzYuNzAwIC0tPiAwMDowNDozOS4xMzMKV2hlbiB3ZSBkZXNpZ24gd2l0aCB0aGVzZSBpbiBtaW5kLAoKMDA6MDQ6MzkuMTMzIC0tPiAwMDowNDo0MC42NjYKd2UgcmVtb3ZlIGJhcnJpZXJzIGFuZAoKMDA6MDQ6NDAuNjY2IC0tPiAwMDowNDo0Mi45MzIKd2VsY29tZSBtb3JlIGxlYXJuZXJzIGZyb20gdGhlIHN0YXJ0LgoKMDA6MDQ6NDMuNDMzIC0tPiAwMDowNDo0NS4yNjYKS2VlcCB0aGVzZSBxdWVzdGlvbnMgaW4gbWluZAoKMDA6MDQ6NDUuMjY2IC0tPiAwMDowNDo0OC44MzIKYXMgeW91IGFyZSBpbmNsdWRpbmcgZGlyZWN0aXZlcyBpbiB5b3VyIGNvdXJzZS4KCjAwOjA0OjQ5LjgzMyAtLT4gMDA6MDQ6NTEuOTMzCklmIHNvbWVvbmUgY2FuJ3QgdXNlIGEgbW91c2UsCgowMDowNDo1MS45MzMgLS0+IDAwOjA0OjU1LjE5OQpjYW4gdGhleSBzdGlsbCBjb21wbGV0ZSB0aGUgYWN0aXZpdHk/CgowMDowNDo1NS4yMDAgLS0+IDAwOjA0OjU3LjYwMApJZiBzb21lb25lIGNhbid0IHNlZSB0aGUgc2NyZWVuLAoKMDA6MDQ6NTcuNjAwIC0tPiAwMDowNTowMC4wMzMKY2FuIHRoZXkgc3RpbGwgc3VibWl0IHRoZSBmb3JtPwoKMDA6MDU6MDIuOTMzIC0tPiAwMDowNTowNS41MzMKVW5kZXJzdGFuZGFibGUgZGVzaWduOiBtYWtpbmcgY29udGVudAoKMDA6MDU6MDUuNTMzIC0tPiAwMDowNTowOC4xNjYKZWFzeSB0byBmb2xsb3cgZm9yIGV2ZXJ5IGxlYXJuZXIuCgowMDowNTowOC43MDAgLS0+IDAwOjA1OjExLjYwMApOb3QgYWxsIGJhcnJpZXJzIHRvIGxlYXJuaW5nIGFyZSB0ZWNobmljYWwuCgowMDowNToxMS42MDAgLS0+IDAwOjA1OjE1LjkwMApTb21ldGltZXMgdGhlIGNvdXJzZSBmdW5jdGlvbnMsIGJ1dCBpdCBpcyBjb25mdXNpbmcsCgowMDowNToxNS45MDAgLS0+IDAwOjA1OjE5LjIzMwp1bnByZWRpY3RhYmxlIG9yIGhhcmQgdG8gZm9sbG93LgoKMDA6MDU6MTkuMjMzIC0tPiAwMDowNToyMS42OTkKVW5kZXJzdGFuZGFibGUgZGVzaWduIG1lYW5zCgowMDowNToyMS43MDAgLS0+IDAwOjA1OjIzLjIzMwpjcmVhdGluZyBjb3Vyc2UgY29udGVudAoKMDA6MDU6MjMuMjMzIC0tPiAwMDowNToyOC41OTkKdGhhdCBpcyBjbGVhciwgc3RyYWlnaHRmb3J3YXJkLCBhbmQgZWFzeSB0byBmb2xsb3cuCgowMDowNToyOC42MDAgLS0+IDAwOjA1OjMxLjQwMApTbyBsZWFybmVycyBhbHdheXMga25vdyB3aGF0IHRvIGRvLAoKMDA6MDU6MzEuNDAwIC0tPiAwMDowNTozNC4yMzMKd2hlcmUgdG8gZ28sIGFuZCB3aGF0IHRvIGV4cGVjdC4KCjAwOjA1OjM0Ljk2NiAtLT4gMDA6MDU6MzkuNjMyCkluc3RydWN0aW9ucyBzaG91bGQgYmUgcGxhaW4sIHNwZWNpZmljLCBhbmQgYWN0aW9uYWJsZS4KCjAwOjA1OjQwLjE2NiAtLT4gMDA6MDU6NDIuMDk5CldoaWxlIGxheW91dHMgc2hvdWxkIGZvbGxvdyBhCgowMDowNTo0Mi4xMDAgLS0+IDAwOjA1OjQ2LjMwMApjbGVhciB2aXN1YWwgc3RydWN0dXJlIGFuZCBjb25zaXN0ZW50IG5hdmlnYXRpb24uCgowMDowNTo0Ni4zMDAgLS0+IDAwOjA1OjUwLjcwMApXaGVuIGNsYXJpdHksIGNvbnNpc3RlbmN5LCBhbmQgZ3VpZGFuY2UgYXJlIGJ1aWx0IGluLAoKMDA6MDU6NTAuNzAwIC0tPiAwMDowNTo1My4yNjYKbGVhcm5lcnMgY2FuIGZvY3VzIG9uIGxlYXJuaW5nLAoKMDA6MDU6NTMuMjY2IC0tPiAwMDowNTo1NS43OTkKbm90IGZpZ3VyaW5nIG91dCB0aGUgY291cnNlLgoKMDA6MDU6NTcuMDY2IC0tPiAwMDowNjowMC41MzIKUm9idXN0IGNvbnRlbnQgaXMgYWJvdXQgbWFraW5nIHN1cmUgeW91cgoKMDA6MDY6MDAuNTMzIC0tPiAwMDowNjowNC41OTkKY291cnNlIHdvcmtzIHNtb290aGx5IG9uIGFueSBkZXZpY2UsIGJyb3dzZXIsCgowMDowNjowNC42MDAgLS0+IDAwOjA2OjA2LjcwMApvciBvcGVyYXRpbmcgc3lzdGVtLgoKMDA6MDY6MDYuNzAwIC0tPiAwMDowNjoxMS43NjYKVGhpcyBwcmluY2lwbGUgaXMgZXNzZW50aWFsIGZvciB3ZWItYmFzZWQgY29udGVudCwKCjAwOjA2OjExLjc2NiAtLT4gMDA6MDY6MTQuODMyCmJ1dCBpdCBoYXMgbGVzcyBkaXJlY3QgcmVsZXZhbmNlCgowMDowNjoxNC44MzMgLS0+IDAwOjA2OjE3LjkzMwpmb3Igc3RhbmRhcmQgV29yZCBkb2N1bWVudHMuCgowMDowNjoxNy45MzMgLS0+IDAwOjA2OjI0LjQ5OQpFeGFtcGxlcyBpbmNsdWRlIHZpZGVvcywgbGlua3MsIHF1aXp6ZXMsIGRvd25sb2FkcywKCjAwOjA2OjI0LjUwMCAtLT4gMDA6MDY6MjYuMjAwCm9yIGludGVyYWN0aXZlIGFjdGl2aXRpZXMuCgowMDowNjoyOC42NjYgLS0+IDAwOjA2OjMxLjc5OQpJbiB0aGUgZm9sbG93aW5nIG1vZHVsZXMsIHlvdSB3aWxsIGxlYXJuIHRvIGNyZWF0ZSBkb2N1bWVudHMKCjAwOjA2OjMxLjgwMCAtLT4gMDA6MDY6MzMuNTY2CnRoYXQgYXJlIHJlZmxlY3RpdmUgb2YKCjAwOjA2OjMzLjU2NiAtLT4gMDA6MDY6MzguNDMyCnBlcmNlaXZhYmxlLCBvcGVyYWJsZSwgYW5kIHVuZGVyc3RhbmRhYmxlIHByaW5jaXBsZXMsCgowMDowNjozOC40MzMgLS0+IDAwOjA2OjQwLjg2NgphZGhlcmluZyB0byBhY2Nlc3NpYmlsaXR5IGd1aWRlbGluZXMKCjAwOjA2OjQwLjg2NiAtLT4gMDA6MDY6NDMuOTk5CmFuZCBwcm92aWRpbmcgbW9yZSBzdWl0YWJsZSBleHBlcmllbmNlcwoKMDA6MDY6NDQuMDAwIC0tPiAwMDowNjo0NS40NjYKZm9yIHlvdXIgc3R1ZGVudHMuCgowMDowNjo0Ni43MDAgLS0+IDAwOjA2OjUyLjMwMApJbiBkaWdpdGFsIGxlYXJuaW5nLCB0aGF0IGlzIG5vdCBqdXN0IGEgYmVzdCBwcmFjdGljZSwgCgowMDowNjo1Mi4zMDAgLS0+IDAwOjA2OjU0LjM2NgppdCdzIG91ciByZXNwb25zaWJpbGl0eS4K" srclang="en" label="English" default>
+  <p>Your browser cannot play this video. <a href="media/module-1.mp4">Download the video (MP4)</a>, <a href="media/module-1.vtt">download the captions (VTT)</a>, or read the full transcript below.</p>
+</video>
+<p class="meta">Duration approximately 7 minutes. Captions are on by default and can be turned off with the CC button in the player controls. Full transcript below. <a href="files/module-1-transcript.txt">Download the transcript (TXT)</a></p>
+
+<details>
+<summary>Read the full transcript</summary>
+<div class="dbody"><p><span class="ts">00:00</span> [On-screen title: Module 1 Accessibility Overview]</p><p>Narrator: Welcome to Module 1 Accessibility Overview.</p><p class="stage">[On-screen: Canvas dashboard is displayed]</p><p>Imagine opening a new online course. There are no captions. The text is hard to read. Buttons don&#x27;t tell you what they do. You try to make it work, but the message is already clear; this space was not designed with you in mind. That is the power of design.</p><p class="stage">[Visual: Icons of a variety of accessibility tools]</p><p>It communicates instantly. And in learning spaces, that message should always be: You belong here. Accessibility isn&#x27;t something we add at the end. It starts at the very beginning.</p><p class="stage">[Visual: Icons of fonts, alternative text, and a video with no captions]</p><p>When we choose fonts, write alternative text, and set up captions. Accessibility is more than a checklist. It&#x27;s a mindset; a commitment that no learner should be left out because of how a course is built. That&#x27;s where WCAG, the Web Content Accessibility Guidelines, comes in. WCAG turns the idea of access for all into practical steps.</p><p class="stage">[Visual: Icons of closed captions, fonts, color contrast, and a keyboard]</p><p>How we caption our videos, structure text, choose contrast, and design for screen readers and keyboards.</p><p class="stage">[Visual: Graphic of the acronym POUR: Perceivable, Operable, Understandable, and Robust]</p><p>The Web Content Accessibility Guidelines has organized their guidelines under four principles commonly known as: Perceivable, Operable, Understandable, and Robust. Following these guidelines ensures that digital materials are inclusive and consumable for all users.</p><p>When we design our courses this way, it doesn&#x27;t just help learners with disabilities, it helps second language learners, someone learning on a phone, and simply put, it makes our courses better for everyone. Accessible design isn&#x27;t just required. It&#x27;s responsible. It&#x27;s human.</p><p>As you move through this course, start with one intention; design so that everyone belongs.</p><p><span class="ts">02:15</span> Perceivable design; making content reachable for every learner. Perceivable design matters because not everyone experiences content in the same way.</p><p class="stage">[Visual: Icons of a magnifying glass, an ear, and a gear with a cell phone]</p><p>Some learners see, some listen. Others rely on assistive technologies, like screen readers or voice recognition tools. If your course only works in one format, such as slides with only visuals or audio without captions, you unintentionally place some learners outside the learning experience.</p><p>To create perceivable content, we need to present information in multiple ways so all learners can access it. As you design your course, keep these questions in mind. If someone can&#x27;t see it, can they hear or read it? If someone can&#x27;t hear it, can they see or read it? If someone can&#x27;t stream it, do they have another way to access it?</p><p><span class="ts">03:32</span> Operable design: making content usable for every learner.</p><p>Operability means learners should be able to navigate and use a course without guessing or struggling, regardless of whether they use a mouse, keyboard, or assistive technology.</p><p>Keyboard navigation is a key part of this. Links, buttons, forms, and media controls must be accessible through the Tab key in a clear logical order with a visible focus, so learners know where they are on the screen.</p><p>Controls also need meaningful labels that describe their function, like &quot;Submit Assignment&quot; or &quot;Play Video,&quot; instead of vague terms, like &quot;Click Here.&quot;</p><p><span class="ts">05:03</span> Understandable design: making content easy to follow for every learner.</p><p>Not all barriers to learning are technical. Sometimes the course functions, but it is confusing, unpredictable, or hard to follow. Understandable design means creating course content that is clear, straightforward, and easy to follow.</p><p><span class="ts">05:57</span> Robust content is about making sure your course works smoothly on any device, browser, or operating system.</p><p class="stage">[Visual: Icons of MS Word, MS PowerPoint, and Adobe Acrobat PDF]</p><p>In the following modules, you will learn to create documents that are reflective of perceivable, operable, and understandable principles, adhering to accessibility guidelines and providing more suitable experiences for your students.</p><p><span class="ts">06:57</span> [On-screen: Technology Innovation and Digital Education (TIDE), Texas A&amp;M University-Texarkana]</p></div>
+</details>
+
+<h2 id="key-points">Key points</h2><ul><li>Accessibility is a design decision made at the start, not a repair made at the end</li><li>Roughly 1 in 4 students has a documented or undocumented disability affecting their access to course content</li><li>WCAG 2.1 AA is organised under four principles: perceivable, operable, understandable, robust</li></ul>
+
+<h2 id="quiz">Knowledge check</h2>
+<p>5 questions. Answer as many times as you like, in any order. Your answers are saved in this browser so you can come back to them.</p>
+<div id="quiz-app" data-module="1"></div>
+<script type="application/json" id="quiz-data">[{"q": "Which four principles organise the WCAG 2.1 standard?", "a": ["Perceivable, Operable, Understandable, Robust", "Portable, Open, Universal, Readable", "Presentable, Optimised, Usable, Reliable", "Perceivable, Optional, Understandable, Reviewable"], "c": 0, "e": "POUR: Perceivable, Operable, Understandable, Robust. Every success criterion sits under one of these four."}, {"q": "Roughly what proportion of students has a documented or undocumented disability affecting access to course content?", "a": ["1 in 4", "1 in 40", "1 in 100", "1 in 12"], "c": 0, "e": "About 1 in 4. Many are undocumented, which is why designing accessibly from the start matters more than responding to individual requests."}, {"q": "When is the right time to consider accessibility in course design?", "a": ["From the beginning, as a design decision", "After the course is built, as a review step", "Only when a student requests an accommodation", "At the end of the term when there is time"], "c": 0, "e": "Accessibility is a design decision made at the start. Retrofitting is slower, more expensive, and usually incomplete."}, {"q": "A student cannot operate your course with a keyboard alone. Which principle does this fail?", "a": ["Operable", "Perceivable", "Understandable", "Robust"], "c": 0, "e": "Operable covers whether a user can navigate and interact, including by keyboard alone."}, {"q": "Which best describes 'robust' in the POUR framework?", "a": ["Content works reliably with current and future assistive technologies", "Content loads quickly on slow connections", "Content is written in plain language", "Content has high colour contrast"], "c": 0, "e": "Robust means content is coded so that a range of user agents and assistive technologies, now and in future, can interpret it reliably."}]</script>
+<script>
+(function(){
+ var d=JSON.parse(document.getElementById('quiz-data').textContent),
+     root=document.getElementById('quiz-app'),
+     key='a11y-course-m'+root.getAttribute('data-module'), saved={};
+ try{ saved=JSON.parse(localStorage.getItem(key)||'{}') }catch(e){ saved={} }
+ function save(){ try{ localStorage.setItem(key,JSON.stringify(saved)) }catch(e){} }
+ function answered(){ return Object.keys(saved).length }
+ function correct(){ var c=0,i; for(i in saved){ if(saved[i]===d[i].c) c++ } return c }
+ var status=document.createElement('p');
+ status.id='quiz-status'; status.className='meta';
+ status.setAttribute('role','status'); status.setAttribute('aria-live','polite'); status.tabIndex=-1;
+ root.appendChild(status);
+ function updateStatus(){
+  status.textContent = answered()
+    ? 'Answered '+answered()+' of '+d.length+'. Correct: '+correct()+'.'
+    : 'Not started. Choose an answer to see feedback.';
+ }
+ d.forEach(function(item,i){
+  var fs=document.createElement('fieldset'); fs.className='q';
+  var lg=document.createElement('legend'); lg.textContent=(i+1)+'. '+item.q; fs.appendChild(lg);
+  var fb=document.createElement('p'); fb.className='fb'; fb.id='fb'+i;
+  fb.setAttribute('role','status'); fb.setAttribute('aria-live','polite'); fb.hidden=true;
+  item.a.forEach(function(text,j){
+   var id='m'+root.getAttribute('data-module')+'q'+i+'o'+j;
+   var w=document.createElement('div'); w.className='opt';
+   var r=document.createElement('input');
+   r.type='radio'; r.name='q'+i; r.id=id; r.value=j;
+   r.setAttribute('aria-describedby','fb'+i);
+   if(saved[i]===j) r.checked=true;
+   r.addEventListener('change',function(){ saved[i]=j; save(); show(i,fb); updateStatus(); });
+   var l=document.createElement('label'); l.htmlFor=id; l.textContent=text;
+   w.appendChild(r); w.appendChild(l); fs.appendChild(w);
+  });
+  fs.appendChild(fb);
+  if(saved[i]!==undefined) show(i,fb);
+  root.appendChild(fs);
+ });
+ function show(i,fb){
+  var ok=saved[i]===d[i].c;
+  fb.className='fb '+(ok?'ok':'no');
+  fb.textContent=(ok?'Correct. ':'Not quite. ')+d[i].e;
+  fb.hidden=false;
+ }
+ var b=document.createElement('button');
+ b.type='button'; b.className='btn alt'; b.textContent='Clear my answers and start again';
+ b.addEventListener('click',function(){
+  saved={}; save();
+  root.querySelectorAll('input[type=radio]').forEach(function(r){ r.checked=false });
+  root.querySelectorAll('.fb').forEach(function(p){ p.hidden=true; p.textContent=''; p.className='fb' });
+  updateStatus(); status.focus();
+ });
+ root.appendChild(b);
+ updateStatus();
+})();
+</script>
+<noscript><p class="warn">This knowledge check needs JavaScript. The same questions are in the module materials below as a printable PDF.</p></noscript>
+
+<h2 id="module-materials">Module materials</h2><h3>Check yourself</h3><p class="meta">Confirm you have it</p><ul class="dl"><li><a href="#quiz">Interactive knowledge check</a> <span class="meta">(on this page, unlimited attempts, answers saved in your browser)</span></li><li><a href="docs/accessibility-overview-knowledge-check.html">Accessibility Overview Knowledge Check</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20Overview%20Knowledge%20Check.docx">download the Word file</a>)</span></li></ul><h3>Course-wide tools and resources</h3><p class="meta">These apply to every module, not only this one</p><ul class="dl"><li><a href="docs/accessibility-best-practices.html">Accessibility Best Practices</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20-%20Best%20Practices.docx">download the Word file</a>)</span></li><li><a href="docs/accessibility-key-terms.html">Accessibility Key Terms</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20Key%20Terms.docx">download the Word file</a>)</span></li><li><a href="docs/ai-use-in-course-development.html">AI Use in Course Development</a> <span class="meta">(read on this page, or <a href="files/AI%20Use%20in%20Course%20Development.docx">download the Word file</a>)</span></li><li><a href="../resources.html">The four open frameworks</a> <span class="meta">(audit protocol, STEM notation, diagram alt text, Bloom's-AI model)</span></li></ul><h3>References</h3><ul class="dl refs"><li><a href="https://www.w3.org/TR/WCAG21/" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.1</a><br><span class="meta">W3C. The standard itself. Start with the four principles rather than the success criteria.</span></li><li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" rel="noopener">Introduction to Web Accessibility</a><br><span class="meta">W3C WAI. The clearest plain-language explanation of what accessibility means and why.</span></li><li><a href="https://www.federalregister.gov/documents/2024/04/24/2024-08038/nondiscrimination-on-the-basis-of-disability-accessibility-of-web-information-and-services-of-state" rel="noopener">Title II Web Accessibility Rule (28 CFR Part 35)</a><br><span class="meta">U.S. Department of Justice. The rule that creates the obligation for public institutions.</span></li><li><a href="https://www.federalregister.gov/documents/2026/04/20/2026-07663/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web" rel="noopener">Extension of Compliance Dates, April 2026</a><br><span class="meta">U.S. Department of Justice. The one-year extension, and the Department's findings on why institutions could not meet the original date.</span></li><li><a href="https://webaim.org/projects/million/" rel="noopener">WebAIM Million: annual accessibility of the top 1,000,000 home pages</a><br><span class="meta">WebAIM. Evidence of how widespread these failures are, updated annually.</span></li></ul>
+
+<div class="note" id="feedback">
+<p><strong>Something unclear, or wrong?</strong> Reports are welcome and corrections are credited. <a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p>
+</div>
+<nav class="pager" aria-label="Module navigation"><a rel="prev" href="index.html"><span class="lbl">← Back</span><span class="ttl">Course overview</span></a><a rel="next" href="module-2.html"><span class="lbl">Next →</span><span class="ttl">Module 2: Accessible Microsoft Word Documents</span></a></nav>
+</div>
+</main>
+<script>
+(function(){
+ var v=document.querySelector('video'); if(!v) return;
+ function on(){
+  for(var i=0;i<v.textTracks.length;i++){
+   if(v.textTracks[i].kind==='captions') v.textTracks[i].mode='showing';
+  }
+ }
+ on();
+ v.addEventListener('loadedmetadata',on);
+ v.addEventListener('play',on);
+ setTimeout(on,400);
+})();
+</script>
+
+
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it</a> and it will be fixed.</p>
+<p><strong>Use and attribution.</strong> The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so to redistribute the course itself or host a copy under another institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane</a> and the current position will be confirmed.</p>
+
+<p><a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p>
+</div></footer>
+</body></html>
