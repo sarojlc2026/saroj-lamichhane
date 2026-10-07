@@ -1,0 +1,84 @@
+00:00
+[On-screen title: Module 4 Accessible PDF Documents]
+ 
+Narrator: Welcome to Module 4 Accessible PDF Documents. In this video, you will learn how to make your PDF documents accessible to all learners.
+ 
+00:13
+[On-screen title: Document Title and Language]
+ 
+In this section, we will set the PDF's document title and language.
+ 
+[On-screen: An Adobe PDF file is open for demonstration]
+ 
+As with Word and PowerPoint, PDFs need a descriptive title and language setting for accessibility. To set a document title in Adobe PDF, click Menu, then select Document Properties. Locate the Description section. Click on the space indicated to the right of Title.
+ 
+Enter a descriptive title here, such as "Teaching Students About Self Efficacy." Click OK to apply your settings.
+ 
+To set the document language, right-click on the document; select Document Properties. Click Advanced, and under Reading Options to the right of language, select English, and then click OK to apply your settings.
+ 
+01:13
+[On-screen title: Reading Order]
+ 
+In this section, we will check the reading order in a PDF.
+ 
+[On-screen: An Adobe PDF file is open, and the Reading Order panel is on the right, showing the numeric order of the content on Page 1.]
+ 
+Reading order is important because it tells assistive technologies like screen readers what to read first, second, and so on. If the order is incorrect, the content may read out of sequence, making it confusing for learners.
+ 
+To check reading order, open the Order panel from the right side panel. Expand the page to view the numbered items. '1' is the first item read by a screen reader, '2' is next, and so on.
+ 
+You cannot edit reading order directly here, but you can fix it in the Tags panel.
+ 
+01:58
+[On-screen title: PDF Tags]
+ 
+In this section, we will add tags to give the PDF a clear structure.
+ 
+[On-screen: An Adobe PDF file is open with the Accessibility tags panel open on the right, showing the tags tree with tags such as <Document>, <Sect>, <H1>, <P>, <table>, <Figure>, and <L>.]
+ 
+Tags are hidden labels that identify the structure of your document, such as headings, paragraphs, lists, tables, sections. These tags help assistive technology understand how the document is organized.
+ 
+To view and edit tags, right-click on the side panel and make sure Tags is selected. Open the Tags panel. Expand the tags to see how each element is labeled.
+ 
+[On-screen: The Tags panel on the right shows that the first heading of the document, “Teaching Students About Self-Efficacy,” is tagged as <P>.]
+ 
+In this example, my headings are incorrectly tagged as paragraphs. Here is how to fix them.
+ 
+Right-click the P tag. Select Properties. Under Type, change it to Heading Level 1 or the appropriate level. Repeat for all headings to ensure that they are correctly tagged.
+ 
+03:21
+[On-screen title: Alternative Text]
+ 
+In this section, we will add alternative text to images.
+ 
+[On-screen: An Adobe PDF file is open, showing an image on Page 2. The Accessibility tags panel is open on the right, with the Figure tag selected.]
+ 
+Any meaningful image in your PDF should include alternative text that explain its purpose, not just what it looks like.
+ 
+To begin adding alt text, right-click the Figure tag. Select Properties. Enter your description in the Alternative Text field.
+ 
+An example of alternative text for this image would be "Smiling teacher sitting with the student working on a laptop showing collaboration and growth." Click Close.
+ 
+04:03
+[On-screen title: Accessibility Checker and Manual Review]
+ 
+In this section, we will run the Accessibility Checker and do a quick manual review for accessibility.
+ 
+[On-screen: An Adobe PDF file is open]
+ 
+Let's identify any additional accessibility issues in our document. Go to All Tools, then Prepare for Accessibility, then Check for Accessibility. Make sure all options are selected; then click Start Checking.
+ 
+[On-screen: The Accessibility Checker is open on the right.]
+ 
+Review the results in the Accessibility Checker panel. Some items like reading order and color contrast always require manual review.
+ 
+After checking manually, you can right-click and select Pass.
+ 
+[On-screen: The file is saved by going to Menu and Save.]
+ 
+Finally, save your document.
+ 
+04:59
+[On-screen: Technology Innovation and Digital Education (TIDE) – Texas A&M University-Texarkana logo]
+
+

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 2: Accessible Microsoft Word Documents, Saroj Lamichhane</title>
+<link rel="canonical" href="https://slamichhane.vercel.app/course/module-2.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Accessible and AI-Enhanced Course Design">
+<meta property="og:title" content="Module 2: Accessible Microsoft Word Documents, Saroj Lamichhane">
+<meta property="og:description" content="Document title and language, heading styles, lists, tables, alt text, links, colour, and the built-in accessibility checker, and what the checker misses.">
+<meta property="og:url" content="https://slamichhane.vercel.app/course/module-2.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Module 2: Accessible Microsoft Word Documents, Saroj Lamichhane">
+<meta name="twitter:description" content="Document title and language, heading styles, lists, tables, alt text, links, colour, and the built-in accessibility checker, and what the checker misses.">
+
+<meta name="description" content="Document title and language, heading styles, lists, tables, alt text, links, colour, and the built-in accessibility checker, and what the checker misses.">
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
+.skip:focus{left:0}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
+nav.site a:hover{border-bottom-color:var(--line)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+main{padding:2.5rem 0 4rem}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
+.dl{margin:1rem 0 0;padding:0;list-style:none}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"\2610";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
+footer.site a{color:var(--link)}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}
+.q{border:1px solid var(--line);border-radius:6px;padding:1rem 1.1rem;margin:1.1rem 0;background:#fff}
+.q legend{font-weight:600;padding:0 .4rem;line-height:1.45}
+.q .opt{margin:.55rem 0;display:flex;gap:.6rem;align-items:flex-start}
+.q .opt input{margin-top:.3rem;width:1.05rem;height:1.05rem;flex:none}
+.q .opt label{cursor:pointer;line-height:1.5}
+.q .fb[hidden]{display:none}
+.q .fb{margin:.9rem 0 0;padding:.7rem .85rem;border-radius:5px;font-size:.95rem;border-left:4px solid}
+.q .fb.ok{background:#e7f4ea;border-left-color:#1a6b32;color:#12401f}
+.q .fb.no{background:#fdf0e6;border-left-color:#8a4b10;color:#5a2f08}
+.q .fb:focus{outline:3px solid var(--focus);outline-offset:2px}
+#quiz-status{font-weight:600}
+#quiz-status:focus{outline:3px solid var(--focus);outline-offset:3px}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.alt:hover{background:#f2f2ef}
+.warn{background:#fdf0e6;border-left:4px solid #8a4b10;padding:.7rem .85rem;border-radius:5px}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:1rem 1.3rem;margin:1.5rem 0;max-width:46rem}
+.toc h2{font-size:.9375rem;margin:0 0 .45rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem}
+.toc li{margin:.25rem 0}
+
+
+nav.pager a:hover{background:var(--soft);border-left-color:var(--accent2)}
+
+
+
+
+@media (max-width:40rem){}
+.fmt{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.6rem 1rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
+
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a[target="_blank"]::after{content:"↗";font-size:.8em;line-height:1;margin-left:.15em;display:inline-block;text-decoration:none;vertical-align:super}
+
+/* contact fallback for computers with no mail application configured */
+.contact-copy{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.copy-email{font:inherit;padding:.2rem .6rem;border:1px solid currentColor;border-radius:.25rem;background:transparent;color:inherit;cursor:pointer}
+.copy-email:hover{background:rgba(0,0,0,.07)}
+.copy-email:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.copy-status:not(:empty){font-size:.9em;padding:.1rem .4rem;border-radius:.2rem;background:rgba(0,0,0,.06)}
+
+/* theme-agnostic tint so the control reads on both light and soft backgrounds */
+.copy-email:hover{background:rgba(127,127,127,.18)}
+.copy-status:not(:empty){background:rgba(127,127,127,.15)}
+/* in print the footer is hidden, so keep the contact address on the page */
+@media print{
+  footer.site{display:block;border-top:1pt solid #000;padding:.5rem 0 0;margin-top:1rem}
+  footer.site p{display:none}
+  footer.site p.contact-copy{display:block}
+  footer.site .copy-email,footer.site .copy-status{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><div class="hdr">
+<a class="brand" href="../index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+<nav class="site" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../course/index.html" aria-current="true">Free Course</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../case-studies.html">Case Studies</a></li><li><a href="../about.html">About</a></li></ul></nav>
+</div></div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Free Course</a></li><li>Module 2</li></ol></nav>
+<p class="badge">Module 2 &middot; 7 minutes</p>
+<h1>Accessible Microsoft Word Documents</h1>
+<p class="lede">Document title and language, heading styles, lists, tables, alt text, links, colour, and the built-in accessibility checker, and what the checker misses.</p>
+
+<nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol><li><a href="#about-this-module">About this module</a></li><li><a href="#what-you-will-be-able-to-do">What you will be able to do</a></li><li><a href="#video-lesson">Video lesson</a></li><li><a href="#key-points">Key points</a></li><li><a href="#apply-it">Apply it to a real file</a></li><li><a href="#self-check">How to know you got it right</a></li><li><a href="#quiz">Knowledge check</a></li><li><a href="#module-materials">Module materials</a></li></ol></nav>
+<h2 id="about-this-module">About this module</h2>
+<p>Word is where most course material begins. This module walks through the settings and habits that make a Word document usable by assistive technology, and shows why the automated checker is a starting point rather than a verdict.</p>
+
+<h2 id="what-you-will-be-able-to-do">What you will be able to do</h2><p>By the end of this module you will be able to:</p><ul><li>Set document title and language in Microsoft Word</li><li>Apply heading styles, lists and table headers so structure is machine-readable</li><li>Write alternative text and descriptive link text</li><li>Run the built-in accessibility checker and identify what it misses</li></ul>
+
+<div class="note"><p><strong>Before you watch.</strong> The module overview sets out the context and learning outcomes in one page.</p><ul class="dl"><li><a href="docs/module-2-overview.html">Module 2 Overview</a> <span class="meta">(read on this page, or <a href="files/Module%202%20Overview.docx">download the Word file</a>)</span></li></ul></div>
+<div class="note"><p><strong>What you need.</strong> Microsoft Word, any version from 2016 onward, on Windows or macOS, or Word on the web. The menus differ slightly between versions and the module names the differences where they matter. If you use Google Docs or LibreOffice Writer instead, the principles transfer exactly and the menu locations do not; both have a Styles gallery and both export tagged PDF.</p></div>
+<h2 id="video-lesson">Video lesson</h2>
+<video controls preload="metadata" poster="media/module-2-poster.jpg" width="100%" style="max-width:46rem;border:1px solid var(--line);border-radius:6px">
+  <source src="media/module-2.mp4" type="video/mp4">
+  <track kind="captions" src="data:text/vtt;base64,V0VCVlRUCgowMDowMDowMS44NjYgLS0+IDAwOjAwOjA0LjYzMgotW05hcnJhdG9yXSBXZWxjb21lIHRvIE1vZHVsZSAyIEFjY2Vzc2libGUgTWljcm9zb2Z0IFdvcmQKCjAwOjAwOjA0LjYzMyAtLT4gMDA6MDA6MDcuODMzCkRvY3VtZW50cy4gSW4gdGhpcyB2aWRlbywgeW91IHdpbGwgbGVhcm4gaG93IHRvCgowMDowMDowNy44MzMgLS0+IDAwOjAwOjEwLjA2NgptYWtlIHlvdXIgTWljcm9zb2Z0IFdvcmQgZG9jdW1lbnRzIGFjY2Vzc2libGUgdG8KCjAwOjAwOjEwLjA2NiAtLT4gMDA6MDA6MTAuODMyCmFsbCBsZWFybmVycy4KCjAwOjAwOjEyLjkzMyAtLT4gMDA6MDA6MTUuODY2CkluIHRoaXMgc2VjdGlvbiwgd2Ugd2lsbCBzZXQgeW91ciBkb2N1bWVudCB0aXRsZQoKMDA6MDA6MTUuODY2IC0tPiAwMDowMDoxNi41OTkKYW5kIGxhbmd1YWdlLgoKMDA6MDA6MTkuMDAwIC0tPiAwMDowMDoyMS43NjYKVG8gc2V0IGEgZG9jdW1lbnQgdGl0bGUgaW4gTWljcm9zb2Z0IFdvcmQsIHlvdSB3aWxsCgowMDowMDoyMS43NjYgLS0+IDAwOjAwOjI2LjE2NgpjbGljayBGaWxlLCB0aGVuIHNlbGVjdCBJbmZvLiBGcm9tIHRoZSByaWdodC1oYW5kCgowMDowMDoyNi4xNjYgLS0+IDAwOjAwOjI5LjY5OQpwYW5lbCwgbG9jYXRlIHRoZSBQcm9wZXJ0aWVzIHNlY3Rpb24uIENsaWNrIG9uIHRoZQoKMDA6MDA6MjkuNzAwIC0tPiAwMDowMDozMS44MzMKc3BhY2UgaW5kaWNhdGVkIHRvIHRoZSByaWdodCBvZiBUaXRsZS4gRW50ZXIgYQoKMDA6MDA6MzEuODMzIC0tPiAwMDowMDozNS43MzMKZGVzY3JpcHRpdmUgdGl0bGUgaGVyZSwgc3VjaCBhcyAiQWNjZXNzaWJpbGl0eQoKMDA6MDA6MzUuODY2IC0tPiAwMDowMDozOC41NjYKVHJhaW5pbmcgTW9kdWxlIDEuMC4iCgowMDowMDo0MS4zMzMgLS0+IDAwOjAwOjQ0LjAzMwpUbyBzZXQgdGhlIGRvY3VtZW50IGxhbmd1YWdlLCBnbyB0byB0aGUgUmV2aWV3IHRhYi4KCjAwOjAwOjQ0Ljc2NiAtLT4gMDA6MDA6NDcuNzMyClNlbGVjdCBMYW5ndWFnZSwgYW5kIGNob29zZSBTZXQgUHJvb2ZpbmcgTGFuZ3VhZ2UuCgowMDowMDo0OC44NjYgLS0+IDAwOjAwOjUxLjQzMgpGcm9tIHRoZSBsaXN0LCBzZWxlY3QgeW91ciBkZXNpcmVkIGxhbmd1YWdlLCBzdWNoCgowMDowMDo1MS40MzMgLS0+IDAwOjAwOjU1LjAzMwphcyBFbmdsaXNoIChVbml0ZWQgU3RhdGVzKS4gQ2hlY2sgdGhlIGJveCBsYWJlbGVkLAoKMDA6MDA6NTUuMzY2IC0tPiAwMDowMDo1OC43OTkKIkRvIG5vdCBjaGVjayBzcGVsbGluZyBvciBncmFtbWFyLCIgYW5kIHRoZW4gY2xpY2sKCjAwOjAwOjU4LjgwMCAtLT4gMDA6MDE6MDIuODMzCk9LIHRvIGFwcGx5IHlvdXIgc2V0dGluZ3MuIE5vdyB5b3VyIGRvY3VtZW50IGhhcwoKMDA6MDE6MDIuODMzIC0tPiAwMDowMTowNC45MzMKYSB0aXRsZSB0aGF0IHdpbGwgYXNzaXN0IHRoZSBzY3JlZW4gcmVhZGVyIGluCgowMDowMTowNC45MzMgLS0+IDAwOjAxOjA3LjQzMwphbm5vdW5jaW5nIHRoZSB0aXRsZSBhbmQgZG9jdW1lbnQgY2xlYXJseSwgYW5kCgowMDowMTowNy40MzMgLS0+IDAwOjAxOjA5LjU5OQpwcm9wZXIgZG9jdW1lbnQgbGFuZ3VhZ2UgdG8gcHJvbm91bmNlIHdvcmRzCgowMDowMTowOS42MDAgLS0+IDAwOjAxOjEyLjA2Ngpjb3JyZWN0bHkgYW5kIGVuc3VyZSBhc3Npc3RpdmUgdGVjaG5vbG9naWVzCgowMDowMToxMi4wNjYgLS0+IDAwOjAxOjEzLjY5OQpkZWxpdmVyIHlvdXIgY29udGVudCBhY2N1cmF0ZWx5LgoKMDA6MDE6MTUuODMzIC0tPiAwMDowMToxOC43OTkKSW4gdGhpcyBzZWN0aW9uLCB3ZSB3aWxsIHVzZSBXb3JkIFN0eWxlcyBhbmQKCjAwOjAxOjE4LjgwMCAtLT4gMDA6MDE6MjMuMDMzCnJldmlldyBoeXBlcmxpbmtzIGZvciBhY2Nlc3NpYmlsaXR5LiBMZXQncwoKMDA6MDE6MjMuMDMzIC0tPiAwMDowMToyNS40OTkKc3RydWN0dXJlIGEgZG9jdW1lbnQgd2l0aCBhY2Nlc3NpYmxlIGh5cGVybGlua3MsCgowMDowMToyNS44MDAgLS0+IDAwOjAxOjI4Ljc2NgpjbGVhciBoZWFkaW5ncywgYW5kIHByb3Blcmx5IGZvcm1hdHRlZCBsaXN0cyBzbwoKMDA6MDE6MjguNzY2IC0tPiAwMDowMTozMi4xNjYKc2NyZWVuIHJlYWRlcnMgY2FuIG5hdmlnYXRlIHdpdGggZWFzZS4gVG8gaW5zZXJ0CgowMDowMTozMi4xNjYgLS0+IDAwOjAxOjM0Ljk5OQphbiBhY2Nlc3NpYmxlIGh5cGVybGluaywgd2UgbmVlZCB0byBlbnN1cmUgdGhhdCBpdAoKMDA6MDE6MzUuMDAwIC0tPiAwMDowMTozOC43MzMKaXMgY2xlYXIgYW5kIGFjdGlvbmFibGUgYW5kIG5vdCBqdXN0IGEgbGluay4gU3RhcnQKCjAwOjAxOjM4LjczMyAtLT4gMDA6MDE6NDEuMjk5CmJ5IHNlbGVjdGluZyBJbnNlcnQgZnJvbSB0aGUgbWVudSwgZm9sbG93ZWQgYnkgdGhlCgowMDowMTo0MS4zMDAgLS0+IDAwOjAxOjQ1LjIwMApMaW5rcyB0YWIuIEZyb20gdGhhdCBkcm9wZG93biBtZW51LCB5b3Ugd2lsbCBzZWxlY3QKCjAwOjAxOjQ1LjIwMCAtLT4gMDA6MDE6NDguOTAwCkxpbmsuIFRoZW4sIGFub3RoZXIgZHJvcGRvd24gbWVudSB3aWxsIGFwcGVhcjsKCjAwOjAxOjQ5LjcwMCAtLT4gMDA6MDE6NTMuNzAwCnNlbGVjdCBJbnNlcnQgTGluayBmcm9tIHRoZSBib3R0b20gb2YgdGhhdCBtZW51LiBBCgowMDowMTo1My43MDAgLS0+IDAwOjAxOjU3LjIwMAp3aW5kb3cgcG9wcyB1cCB0byBjdXN0b21pemUgeW91ciBoeXBlcmxpbmsuIFBhc3RlCgowMDowMTo1Ny4yMDAgLS0+IDAwOjAxOjU5LjczMwp0aGUgbGluayBpbiB0aGUgc3BhY2UgaW5kaWNhdGVkIHRvIHRoZSByaWdodCBvZgoKMDA6MDE6NTkuNzMzIC0tPiAwMDowMjowMy4yNjYKQWRkcmVzcyBhdCB0aGUgYm90dG9tIG9mIHRoZSB3aW5kb3cuIFRoZSBpbXBvcnRhbnQKCjAwOjAyOjAzLjI2NiAtLT4gMDA6MDI6MDUuNzk5CnBhcnQgaXMgYXQgdGhlIHRvcCBvZiB0aGUgd2luZG93LCB3aGVyZSB5b3Ugd2lsbAoKMDA6MDI6MDUuODAwIC0tPiAwMDowMjowOC44MzMKZW50ZXIgYSBkZXNjcmlwdGl2ZSB0aXRsZSBzdWNoIGFzLCAiVmlzaXQgdGhlCgowMDowMjowOC44MzMgLS0+IDAwOjAyOjEzLjM2NgpMaWJyYXJ5IFdlYnNpdGUiIGluc3RlYWQgb2YgIkNsaWNrIEhlcmUuIiAiVmlzaXQgdGhlCgowMDowMjoxMy4zNjYgLS0+IDAwOjAyOjE1LjczMgpMaWJyYXJ5IFdlYnNpdGUiIGFsZXJ0cyBzb21lb25lIGxpc3RlbmluZyB0byBhCgowMDowMjoxNS43MzMgLS0+IDAwOjAyOjE4LjEzMwpzY3JlZW4gcmVhZGVyIHRoYXQgdGhlcmUgaXMgYW4gYWN0aW9uYWJsZSBpdGVtIGluCgowMDowMjoxOC4xMzMgLS0+IDAwOjAyOjE4LjY5OQp0aGUgZG9jdW1lbnQuCgowMDowMjoyMS45NjYgLS0+IDAwOjAyOjI0LjY2NgpSYXRoZXIgdGhhbiBqdXN0IGNoYW5naW5nIHRoZSBmb250IHNpemUsIGl0IGlzCgowMDowMjoyNC42NjYgLS0+IDAwOjAyOjI2Ljg2NgppbXBvcnRhbnQgdG8gYXBwbHkgdHJ1ZSBoZWFkaW5nIHN0eWxlLgoKMDA6MDI6MjkuMjAwIC0tPiAwMDowMjozMS44MzMKU3RhcnQgYXQgdGhlIEhvbWUgdGFiLCBvcGVuIHRoZSBTdHlsZXMgZ3JvdXAsIGFuZAoKMDA6MDI6MzEuODMzIC0tPiAwMDowMjozNC4xOTkKc2VsZWN0IHRoZSBoZWFkaW5nIGxldmVsIHRoYXQgZml0cyB5b3VyIGRvY3VtZW50CgowMDowMjozNC4yMDAgLS0+IDAwOjAyOjM4LjQwMApzdHJ1Y3R1cmUuIEZvciBleGFtcGxlLCB1c2UgSGVhZGluZyAxIGZvciB5b3VyCgowMDowMjozOC40MDAgLS0+IDAwOjAyOjQzLjAzMwptYWluIHRpdGxlLCBIZWFkaW5nIDIgZm9yIHlvdXIgbWFqb3Igc2VjdGlvbnMsIGFuZAoKMDA6MDI6NDMuMDMzIC0tPiAwMDowMjo0NC42OTkKSGVhZGluZyAzIGZvciB5b3VyIHN1Yi1zZWN0aW9ucy4KCjAwOjAyOjUwLjc2NiAtLT4gMDA6MDI6NTMuOTk5CkJ1bGxldGVkIG9yIG51bWJlcmVkIGxpc3RzIHNob3VsZCBiZSBmb3JtYXR0ZWQgZnJvbQoKMDA6MDI6NTQuMDAwIC0tPiAwMDowMjo1Ny4xNjYKdGhlIFBhcmFncmFwaCBncm91cC4gQ2hvb3NlIHlvdXIgbGlzdCB0eXBlIGZyb20KCjAwOjAyOjU3LjE2NiAtLT4gMDA6MDM6MDIuNzk5CnRoZSBkcm9wZG93biBtZW51OiBidWxsZXQsIG51bWJlcmVkLCBvciBtdWx0aWxldmVsLgoKMDA6MDM6MDUuMjY2IC0tPiAwMDowMzowOC4zNjYKRm9yIGxpc3RzLCBhbHdheXMgdXNlIGEgYnVsbGV0ZWQgb3IgbnVtYmVyZWQgbGlzdAoKMDA6MDM6MDguMzY2IC0tPiAwMDowMzoxMC43NjYKdG9vbCBpbnN0ZWFkIG9mIHR5cGluZyBzeW1ib2xzIG1hbnVhbGx5LgoKMDA6MDM6MTQuMzMzIC0tPiAwMDowMzoxNy4wMzMKSW4gdGhpcyBzZWN0aW9uLCB3ZSB3aWxsIGZpeCB0aGUgY29sb3IgY29udHJhc3QKCjAwOjAzOjE3LjAzMyAtLT4gMDA6MDM6MjEuODk5Cmlzc3VlIGFuZCBtYWtlIHRoZSB0YWJsZSBhY2Nlc3NpYmxlLiBEZXNpZ24KCjAwOjAzOjIxLjkwMCAtLT4gMDA6MDM6MjQuODY2CmNob2ljZXMgY2FuIG1ha2Ugb3IgYnJlYWsgYWNjZXNzaWJpbGl0eS4gV2l0aCBjb2xvcgoKMDA6MDM6MjQuODY2IC0tPiAwMDowMzoyNy4yOTkKY29udHJhc3QsIHRleHQgc2hvdWxkIGNsZWFybHkgc3RhbmQgb3V0IGZyb20gdGhlCgowMDowMzoyNy4zMDAgLS0+IDAwOjAzOjMxLjMzMwpiYWNrZ3JvdW5kLCBhdCBsZWFzdCBhIDQuNSB0byAxIHJhdGlvIGZvciBub3JtYWwKCjAwOjAzOjMxLjMzMyAtLT4gMDA6MDM6MzUuMDk5CnRleHQuIFRoZXNlIGFyZSBhIGZldyB0aXBzIHRvIGtlZXAgaW4gbWluZDogV29yZCdzCgowMDowMzozNS4xMDAgLS0+IDAwOjAzOjM3LjczMwpkZWZhdWx0IHRoZW1lIGNvbG9ycywgYmxhY2sgdGV4dCBvbiB3aGl0ZQoKMDA6MDM6MzcuNzMzIC0tPiAwMDowMzo0MC40MzMKYmFja2dyb3VuZCwgYWxyZWFkeSBtZWV0IGFjY2Vzc2liaWxpdHkgY29udHJhc3QKCjAwOjAzOjQwLjQzMyAtLT4gMDA6MDM6NDEuMDY2CnJlcXVpcmVtZW50cy4KCjAwOjAzOjQ0LjI2NiAtLT4gMDA6MDM6NDYuNDMyCkFkZGluZyBhIHRhYmxlIHRvIHlvdXIgZG9jdW1lbnQgYWx3YXlzIHJlcXVpcmVzCgowMDowMzo0Ni40MzMgLS0+IDAwOjAzOjUwLjczMwp1c2luZyB0aGUgSW5zZXJ0IHRhYiBmcm9tIHRoZSBtZW51LiBEbyBub3QgZHJhdyBvcgoKMDA6MDM6NTAuNzMzIC0tPiAwMDowMzo1My45MzMKcGFzdGUgYSB0YWJsZSBmcm9tIGFub3RoZXIgcHJvZ3JhbS4gV2hlbiB5b3UKCjAwOjAzOjUzLjkzMyAtLT4gMDA6MDM6NTYuOTk5Cmluc2VydCB5b3VyIHRhYmxlIGZyb20gdGhlIFRhYmxlIG1lbnUgdGFiLCBhbHdheXMKCjAwOjAzOjU3LjAwMCAtLT4gMDA6MDQ6MDAuMzMzCmFkZCBjbGVhciBoZWFkZXIgcm93IGFuZCBjb2x1bW4gZGF0YSBzbyBzY3JlZW4KCjAwOjA0OjAwLjMzMyAtLT4gMDA6MDQ6MDIuNzY2CnJlYWRlcnMgY2FuIGlkZW50aWZ5IGNvbHVtbnMgaW4gY29udGV4dC4KCjAwOjA0OjA3LjkwMCAtLT4gMDA6MDQ6MTEuMDMzClJlbWVtYmVyLCBhY2Nlc3NpYmlsaXR5IGlzbid0IGp1c3QgY29tcGxpYW5jZSwgCgowMDowNDoxMS4wMzMgLS0+IDAwOjA0OjE0LjE2NgppdCdzIGNsYXJpdHkuIFlvdXIgc3R1ZGVudHMgYmVuZWZpdCB3aGVuIGNvbnRlbnQKCjAwOjA0OjE0LjE2NiAtLT4gMDA6MDQ6MTYuOTY2CmlzIGVhc3kgdG8gc2VlLCBmb2xsb3csIGFuZCB1bmRlcnN0YW5kLgoKMDA6MDQ6MjEuMDMzIC0tPiAwMDowNDoyNC4wMzMKSW4gdGhpcyBzZWN0aW9uLCB3ZSB3aWxsIGFkZCBhbHRlcm5hdGl2ZSB0ZXh0IHRvCgowMDowNDoyNC4wMzMgLS0+IDAwOjA0OjI1LjQ5OQppbWFnZXMgYW5kIG90aGVyIG9iamVjdHMuCgowMDowNDoyOC4wMzMgLS0+IDAwOjA0OjMwLjE5OQpXaGVuIHVzaW5nIGltYWdlcyBvciBncmFwaGljcywgYWx3YXlzCgowMDowNDozMC4yMDAgLS0+IDAwOjA0OjM0LjcwMAppbmNsdWRlIGFsdGVybmF0aXZlIHRleHQgb3IgYWx0IHRleHQuIEZvciBzdHVkZW50cwoKMDA6MDQ6MzQuNzAwIC0tPiAwMDowNDozNy41MDAKcmVxdWlyaW5nIGEgc2NyZWVuIHJlYWRlciwgYWx0IHRleHQgcHJvdmlkZXMKCjAwOjA0OjM3LjUwMCAtLT4gMDA6MDQ6MzkuODY2CmFzc2lzdGl2ZSB0ZWNobm9sb2dpZXMgYSBkZXNjcmlwdGlvbiBvZiB0aGUgaW1hZ2UKCjAwOjA0OjM5Ljg2NiAtLT4gMDA6MDQ6NDMuMjk5CnJlcHJlc2VudGVkIGluIHRoZSBkb2N1bWVudC4gVGhpcyBpcyBlc3BlY2lhbGx5CgowMDowNDo0My4zMDAgLS0+IDAwOjA0OjQ2LjczMwpoZWxwZnVsIGZvciBzdHVkZW50cyB3aXRoIHZpc3VhbCBpbXBhaXJtZW50cy4gQmUKCjAwOjA0OjQ2LjczMyAtLT4gMDA6MDQ6NDguODY2CnN1cmUgdG8ga2VlcCB0aGUgZGVzY3JpcHRpb24gY29uY2lzZSBidXQKCjAwOjA0OjQ4Ljg2NiAtLT4gMDA6MDQ6NTIuMzY2Cm1lYW5pbmdmdWwuIElmIG5vIGFsdCB0ZXh0IGlzIHByb3ZpZGVkIG9mIGEgY2hhcnQKCjAwOjA0OjUyLjM2NiAtLT4gMDA6MDQ6NTUuOTMyCm9yIGdyYXBoLCBmb3IgZXhhbXBsZSwgdGhlIHNjcmVlbiByZWFkZXIgd2lsbCBvbmx5CgowMDowNDo1NS45MzMgLS0+IDAwOjA0OjU5LjU5OQpzYXksICJJbWFnZSBvZiBhIGNoYXJ0LiIgVGhpcyBpcyB1c2VsZXNzIGZvciBhCgowMDowNDo1OS42MDAgLS0+IDAwOjA1OjAyLjcwMAp2aXN1YWxseSBpbXBhaXJlZCBzdHVkZW50LiBSYXRoZXIsIGluc2VydGluZyBhCgowMDowNTowMi43MDAgLS0+IDAwOjA1OjA2LjMzMwpkZXNjcmlwdGlvbiBsaWtlLCAiQ2hhcnQgc2hvd2luZyBlbnJvbGxtZW50CgowMDowNTowNi4zMzMgLS0+IDAwOjA1OjA4Ljg5OQppbmNyZWFzZXMgYnkgMjAlIG92ZXIgZml2ZSB5ZWFycy4iCgowMDowNToxMS44MzMgLS0+IDAwOjA1OjE2LjM5OQpGb3IgU21hcnRBcnQsIGNoYXJ0cywgYW5kIGVxdWF0aW9ucywgcmlnaHQtY2xpY2sgYW5kCgowMDowNToxNi40MDAgLS0+IDAwOjA1OjIwLjYwMApzZWxlY3QgRWRpdCBBbHQgVGV4dCB0byBkZXNjcmliZSB3aGF0J3Mgc2hvd24uIElmCgowMDowNToyMC42MDAgLS0+IDAwOjA1OjIzLjAwMAp0aGUgdmlzdWFsIGlzIGRlY29yYXRpdmUsIG1hcmsgaXQgYXMgc3VjaC4KCjAwOjA1OjI2LjQzMyAtLT4gMDA6MDU6MjkuMDY2CkFjY2Vzc2libGUgdmlzdWFscyBlbnN1cmUgbm8gbGVhcm5lciBtaXNzZXMgdGhlCgowMDowNToyOS4wNjYgLS0+IDAwOjA1OjMwLjc5OQptZXNzYWdlIHlvdXIgY29udGVudCBjb252ZXlzLgoKMDA6MDU6MzMuNjAwIC0tPiAwMDowNTozNi41MzMKSW4gdGhpcyBzZWN0aW9uLCB3ZSB3aWxsIHJ1biB0aGUgYWNjZXNzaWJpbGl0eQoKMDA6MDU6MzYuNTMzIC0tPiAwMDowNTozOS40OTkKY2hlY2tlciBhbmQgZG8gYSBxdWljayBtYW51YWwgcmV2aWV3IGZvciBhY2Nlc3NpYmlsaXR5LgoKMDA6MDU6NDEuMDMzIC0tPiAwMDowNTo0NS44OTkKT25jZSB5b3VyIGRvY3VtZW50IGlzIGNvbXBsZXRlLCBnbyB0byB0aGUgUmV2aWV3IHRhYiBhbmQgY2xpY2sgQ2hlY2sgQWNjZXNzaWJpbGl0eS4KCjAwOjA1OjQ2LjUwMCAtLT4gMDA6MDU6NDkuOTAwClRoZSBpbnNwZWN0aW9uIHBhbmVsIHdpbGwgc2hvdyBlcnJvcnMsIHdhcm5pbmdzLAoKMDA6MDU6NTAuMjAwIC0tPiAwMDowNTo1NC40NjYKYW5kIHRpcHMuIFdoaWxlIHRoZSBpbnNwZWN0aW9uIHBhbmVsIHNob3dzIGlzc3VlcwoKMDA6MDU6NTQuNDY2IC0tPiAwMDowNTo1Ny43NjYKbGlrZSBtaXNzaW5nIGFsdCB0ZXh0LCBoYXJkIHRvIHJlYWQgY29sb3IKCjAwOjA1OjU3Ljc2NiAtLT4gMDA6MDY6MDEuNTY2CmNvbnRyYXN0IHdhcm5pbmcsIG9yIHRhYmxlIHVzaW5nIG1lcmdlZC9zcGxpdCBjZWxscwoKMDA6MDY6MDEuNTY2IC0tPiAwMDowNjowNC42OTkKd2FybmluZ3MsIGl0IGRvZXMgbm90IGluY2x1ZGUgYWxsIHJlcXVpcmVtZW50cyBieQoKMDA6MDY6MDQuNzAwIC0tPiAwMDowNjowNi45MzMKdGhlIFdlYiBDb250ZW50IEFjY2Vzc2liaWxpdHkgR3VpZGVsaW5lcy4KCjAwOjA2OjA4LjkwMCAtLT4gMDA6MDY6MTEuODMzClRoZXJlZm9yZSwgaXQgaXMgaW1wb3J0YW50IHRvIG1hbnVhbGx5IHJldmlldyB5b3VyCgowMDowNjoxMS44MzMgLS0+IDAwOjA2OjE0Ljc2Ngpkb2N1bWVudCBjb250ZW50IHRvIGlkZW50aWZ5IGFuZCBmaXggYWNjZXNzaWJpbGl0eQoKMDA6MDY6MTQuNzY2IC0tPiAwMDowNjoxNy4zOTkKaXNzdWVzIHRoZSBjaGVja2VyIG1heSBtaXNzLgoKMDA6MDY6MTkuNTMzIC0tPiAwMDowNjoyMS43OTkKSGVhZGVycyBhbmQgZm9vdGVycyBzaG91bGQgbm90IGluY2x1ZGUgZXNzZW50aWFsCgowMDowNjoyMS44MDAgLS0+IDAwOjA2OjI0LjUwMAppbmZvcm1hdGlvbiBiZWNhdXNlIG1vc3Qgc2NyZWVuIHJlYWRlcnMgbWF5IG5vdAoKMDA6MDY6MjQuNTAwIC0tPiAwMDowNjoyNy45MDAKbmF2aWdhdGUgdG8gdGhvc2UgYXJlYXMuIEFzIGEgcmVzdWx0LCB1c2VycyB3aG8KCjAwOjA2OjI3LjkwMCAtLT4gMDA6MDY6MzAuMTMzCnJlbHkgb24gdGhlbSBtYXkgbWlzcyBpbXBvcnRhbnQgY29udGVudC4K" srclang="en" label="English" default>
+  <p>Your browser cannot play this video. <a href="media/module-2.mp4">Download the video (MP4)</a>, <a href="media/module-2.vtt">download the captions (VTT)</a>, or read the full transcript below.</p>
+</video>
+<p class="meta">Duration approximately 7 minutes. Captions are on by default and can be turned off with the CC button in the player controls. Full transcript below. <a href="files/module-2-transcript.txt">Download the transcript (TXT)</a></p>
+
+<details>
+<summary>Read the full transcript</summary>
+<div class="dbody"><p><span class="ts">00:00</span> [On-screen title: Module 2 Accessible Microsoft Word Documents]</p><p>Narrator: Welcome to Module 2 Accessible Microsoft Word Documents. In this video, you will learn how to make your Microsoft Word documents accessible to all learners.</p><p><span class="ts">00:13</span> [On-screen title: Document Title and Language]</p><p class="stage">[On-screen: Microsoft Word interface is displayed]</p><p>To set a document title in Microsoft Word, you will click File, then select Info. From the right-hand panel, locate the Properties section. Click on the space indicated to the right of Title. Enter a descriptive title here, such as &quot;Accessibility Training Module 1.0.&quot;</p><p>To set the document language, go to the Review tab. Select Language, and choose Set Proofing Language. From the list, select your desired language, such as English (United States). Check the box labeled, &quot;Do not check spelling or grammar,&quot; and then click OK to apply your settings.</p><p>Now your document has a title that will assist the screen reader in announcing the title and document clearly, and proper document language to pronounce words correctly and ensure assistive technologies deliver your content accurately.</p><p><span class="ts">01:16</span> [On-screen title: Word Styles and Hyperlinks]</p><p>In this section, we will use Word Styles and review hyperlinks for accessibility. Let&#x27;s structure a document with accessible hyperlinks, clear headings, and properly formatted lists so screen readers can navigate with ease.</p><p>To insert an accessible hyperlink, we need to ensure that it is clear and actionable and not just a link.</p><p>Start by selecting Insert from the menu, followed by the Links tab. From that dropdown menu, you will select Link. Then, another dropdown menu will appear; select Insert Link from the bottom of that menu.</p><p>A window pops up to customize your hyperlink. Paste the link in the space indicated to the right of address at the bottom of the window. The important part is at the top of the window, where you will enter a descriptive title such as, &quot;Visit the Library Website&quot; instead of &quot;Click Here.&quot;</p><p><span class="ts">02:21</span> [On-screen title: Headings]</p><p>Rather than just changing the font size, it is important to apply true heading style.</p><p>Start at the Home tab, open the Styles group, and select the heading level that fits your document structure. For example, use Heading 1 for your main title, Heading 2 for your major sections, and Heading 3 for your sub-sections.</p><p><span class="ts">02:50</span> [On-screen title: Lists]</p><p>Bulleted or numbered lists should be formatted from the Paragraph group. Choose your list type from the dropdown menu: bullet, numbered, or multilevel. For lists, always use a bulleted or numbered list tool instead of typing symbols manually.</p><p><span class="ts">03:14</span> [On-screen title: Color Contrast and Table Properties]</p><p>Design choices can make or break accessibility. With color contrast, text should clearly stand out from the background, at least a 4.5 to 1 ratio for normal text.</p><p><span class="ts">03:44</span> [On-screen title: Tables]</p><p>Adding a table to your document always requires using the Insert tab from the menu. Do not draw or paste a table from another program. When you insert your table from the Table menu tab, always add clear header row and column data so screen readers can identify columns in context.</p><p><span class="ts">04:20</span> [On-screen title: Alternative Text]</p><p>In this section, we will add alternative text to images and other objects. When using images or graphics, always include alternative text or alt text.</p><p>For SmartArt, charts, and equations, right-click and select Edit Alt Text to describe what&#x27;s shown. If the visual is decorative, mark it as such.</p><p><span class="ts">05:33</span> [On-screen title: Accessibility Checker and Manual Review]</p><p>Once your document is complete, go to the Review tab and click Check Accessibility. The inspection panel will show errors, warnings, and tips.</p><p>While the inspection panel shows issues like missing alt text or hard to read color contrast warnings, it does not include all requirements by the Web Content Accessibility Guidelines.</p><p>Therefore, it is important to manually review your document content to identify and fix accessibility issues the checker may miss.</p><p><span class="ts">06:35</span> [On-screen: Technology Innovation and Digital Education (TIDE), Texas A&amp;M University-Texarkana]</p></div>
+</details>
+
+<h2 id="key-points">Key points</h2><ul><li>Structure has to be applied with styles; visual formatting alone tells assistive technology nothing</li><li>The accessibility checker is a starting point, not a verdict, it passes documents that still fail students</li><li>Title and language are two settings that take seconds and are almost always missed</li></ul>
+
+<h2 id="apply-it">Apply it to a real file</h2>
+<p>This document represents a blog post shared with students. Use Word’s Accessibility Checker together with the practices in the video to bring it up to standard while preserving the original content.</p>
+<p>Work on the practice file first if you like, but the version that matters is the one you do on <strong>your own course material</strong>. A skill practised only on someone else's document does not transfer.</p>
+<h3>Find and fix</h3>
+<ul>
+  <li>document title and language</li>
+  <li>heading styles applied from the Styles gallery</li>
+  <li>list formatting using the real list tools</li>
+  <li>alternative text, or marking images decorative</li>
+  <li>true lists in place of plain text typed to look like a list</li>
+  <li>descriptive link text</li>
+  <li>emoji use that produces screen reader noise</li>
+</ul>
+<ul class="fmt">
+  <li><a href="files/Apply It - Word practice file.docx">Download the Word practice file (DOCX)</a></li>
+</ul>
+
+<h2 id="self-check">How to know you got it right</h2>
+<p>Do the Apply It on a real document of your own, then verify it four ways. The first three take a minute each. The fourth is the one that actually tells you.</p>
+<ol>
+  <li><strong>Navigation pane.</strong> View, then tick Navigation Pane. Your headings should appear as an outline you could use as a table of contents. If the pane is empty, or if a line that looks like a heading is missing from it, that line is bold text rather than a heading.</li>
+  <li><strong>Accessibility checker.</strong> Review, then Check Accessibility. Zero errors. Warnings need judgment; errors do not.</li>
+  <li><strong>Document properties.</strong> File, then Info. Title filled in. Then Review, Language, Set Proofing Language, and confirm the language is correct.</li>
+  <li><strong>Read it aloud.</strong> Review, then Read Aloud, or use NVDA or VoiceOver. Listen to one table and one image. If you hear a bare number with no column name, the header row is not marked. If you hear "graphic" or silence, the alternative text is missing or empty.</li>
+</ol>
+<p class="meta">A document that passes all four is not certified compliant, and no single document ever is. It does mean the structural work is done, which is the part that takes knowledge rather than time.</p>
+
+<h2 id="quiz">Knowledge check</h2>
+<p>6 questions. Answer as many times as you like, in any order. Your answers are saved in this browser so you can come back to them.</p>
+<div id="quiz-app" data-module="2"></div>
+<script type="application/json" id="quiz-data">[{"q": "How do you make a line of text a real heading in Microsoft Word?", "a": ["Apply a Heading style from the Styles gallery", "Make the text bold and increase the font size", "Underline it and centre it", "Put it in a text box"], "c": 0, "e": "Only a Heading style creates structure. Visual formatting looks like a heading but tells assistive technology nothing."}, {"q": "Where do you set a Word document's title?", "a": ["File, then Info, then the Title field under Properties", "Insert, then Header", "Home, then Styles, then Title", "Layout, then Page Setup"], "c": 0, "e": "File, Info, Properties, Title. It takes seconds and is almost always missed."}, {"q": "Where do you set the document language?", "a": ["Review, then Language, then Set Proofing Language", "File, then Options, then General", "Home, then Font", "View, then Read Mode"], "c": 0, "e": "Review, Language, Set Proofing Language. Assistive technology uses this to choose pronunciation."}, {"q": "Why should a data table have a marked header row?", "a": ["So a screen reader announces the column name with each value", "So the table prints on one page", "So the header repeats in the table of contents", "So the table can be sorted"], "c": 0, "e": "With a marked header row, a student hears 'Trial 2, mass 4.1 grams' rather than an unattached '4.1'."}, {"q": "Which link text is accessible?", "a": ["Download the lab safety guide (PDF)", "Click here", "https://example.edu/files/doc12.pdf", "Read more"], "c": 0, "e": "Link text should describe the destination, because screen reader users often navigate by a list of links out of context."}, {"q": "What is the correct conclusion about the built-in Accessibility Checker?", "a": ["It is a starting point; some failures must be found manually", "It finds every accessibility problem", "It only works on documents under ten pages", "It replaces the need for alternative text"], "c": 0, "e": "The checker catches structural omissions. It cannot judge whether alt text is meaningful or whether contrast is adequate in every case."}]</script>
+<script>
+(function(){
+ var d=JSON.parse(document.getElementById('quiz-data').textContent),
+     root=document.getElementById('quiz-app'),
+     key='a11y-course-m'+root.getAttribute('data-module'), saved={};
+ try{ saved=JSON.parse(localStorage.getItem(key)||'{}') }catch(e){ saved={} }
+ function save(){ try{ localStorage.setItem(key,JSON.stringify(saved)) }catch(e){} }
+ function answered(){ return Object.keys(saved).length }
+ function correct(){ var c=0,i; for(i in saved){ if(saved[i]===d[i].c) c++ } return c }
+ var status=document.createElement('p');
+ status.id='quiz-status'; status.className='meta';
+ status.setAttribute('role','status'); status.setAttribute('aria-live','polite'); status.tabIndex=-1;
+ root.appendChild(status);
+ function updateStatus(){
+  status.textContent = answered()
+    ? 'Answered '+answered()+' of '+d.length+'. Correct: '+correct()+'.'
+    : 'Not started. Choose an answer to see feedback.';
+ }
+ d.forEach(function(item,i){
+  var fs=document.createElement('fieldset'); fs.className='q';
+  var lg=document.createElement('legend'); lg.textContent=(i+1)+'. '+item.q; fs.appendChild(lg);
+  var fb=document.createElement('p'); fb.className='fb'; fb.id='fb'+i;
+  fb.setAttribute('role','status'); fb.setAttribute('aria-live','polite'); fb.hidden=true;
+  item.a.forEach(function(text,j){
+   var id='m'+root.getAttribute('data-module')+'q'+i+'o'+j;
+   var w=document.createElement('div'); w.className='opt';
+   var r=document.createElement('input');
+   r.type='radio'; r.name='q'+i; r.id=id; r.value=j;
+   r.setAttribute('aria-describedby','fb'+i);
+   if(saved[i]===j) r.checked=true;
+   r.addEventListener('change',function(){ saved[i]=j; save(); show(i,fb); updateStatus(); });
+   var l=document.createElement('label'); l.htmlFor=id; l.textContent=text;
+   w.appendChild(r); w.appendChild(l); fs.appendChild(w);
+  });
+  fs.appendChild(fb);
+  if(saved[i]!==undefined) show(i,fb);
+  root.appendChild(fs);
+ });
+ function show(i,fb){
+  var ok=saved[i]===d[i].c;
+  fb.className='fb '+(ok?'ok':'no');
+  fb.textContent=(ok?'Correct. ':'Not quite. ')+d[i].e;
+  fb.hidden=false;
+ }
+ var b=document.createElement('button');
+ b.type='button'; b.className='btn alt'; b.textContent='Clear my answers and start again';
+ b.addEventListener('click',function(){
+  saved={}; save();
+  root.querySelectorAll('input[type=radio]').forEach(function(r){ r.checked=false });
+  root.querySelectorAll('.fb').forEach(function(p){ p.hidden=true; p.textContent=''; p.className='fb' });
+  updateStatus(); status.focus();
+ });
+ root.appendChild(b);
+ updateStatus();
+})();
+</script>
+<noscript><p class="warn">This knowledge check needs JavaScript. The same questions are in the module materials below as a Word file.</p></noscript>
+
+<h2 id="module-materials">Module materials</h2><h3>Check yourself</h3><p class="meta">Confirm you have it</p><ul class="dl"><li><a href="#quiz">Interactive knowledge check</a> <span class="meta">(on this page, unlimited attempts, answers saved in your browser)</span></li><li><a href="docs/m2-knowledge-check.html">M2 Knowledge Check</a> <span class="meta">(read on this page, or <a href="files/M2%20Knowledge%20Check.docx">download the Word file</a>)</span></li></ul><h3>Course handouts</h3><p class="meta">Keep these to hand while you work</p><ul class="dl"><li><a href="docs/microsoft-word-quick-guide.html">Microsoft Word Quick Guide</a> <span class="meta">(read on this page, or <a href="files/Microsoft%20Word%20Quick%20Guide.docx">download the Word file</a>)</span></li></ul><h3>Course-wide tools and resources</h3><p class="meta">These apply to every module, not only this one</p><ul class="dl"><li><a href="docs/accessibility-best-practices.html">Accessibility Best Practices</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20-%20Best%20Practices.docx">download the Word file</a>)</span></li><li><a href="docs/accessibility-key-terms.html">Accessibility Key Terms</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20Key%20Terms.docx">download the Word file</a>)</span></li><li><a href="docs/ai-use-in-course-development.html">AI Use in Course Development</a> <span class="meta">(read on this page, or <a href="files/AI%20Use%20in%20Course%20Development.docx">download the Word file</a>)</span></li><li><a href="../resources.html">The four open frameworks</a> <span class="meta">(audit protocol, STEM notation, diagram alt text, Bloom's-AI model)</span></li></ul><h3>References</h3><ul class="dl refs"><li><a href="https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d" rel="noopener noreferrer" target="_blank">Make your Word documents accessible to people with disabilities<span class="visually-hidden"> (opens in a new tab)</span></a><br><span class="meta">Microsoft. The official, continuously updated reference for everything in this module.</span></li><li><a href="https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f" rel="noopener noreferrer" target="_blank">Improve accessibility with the Accessibility Checker<span class="visually-hidden"> (opens in a new tab)</span></a><br><span class="meta">Microsoft. What the checker tests, and what it does not.</span></li><li><a href="https://webaim.org/techniques/word/" rel="noopener noreferrer" target="_blank">Microsoft Word accessibility techniques<span class="visually-hidden"> (opens in a new tab)</span></a><br><span class="meta">WebAIM. Independent guidance, more direct than the vendor documentation.</span></li><li><a href="https://www.w3.org/WAI/tutorials/tables/" rel="noopener noreferrer" target="_blank">Tutorial: tables<span class="visually-hidden"> (opens in a new tab)</span></a><br><span class="meta">W3C WAI. Why header cells matter and how they are read aloud.</span></li><li><a href="https://www.w3.org/WAI/test-evaluate/preliminary/" rel="noopener noreferrer" target="_blank">Easy Checks: a first review of web accessibility<span class="visually-hidden"> (opens in a new tab)</span></a><br><span class="meta">W3C WAI. A short set of checks you can run without any tools.</span></li></ul>
+
+<div class="note" id="feedback">
+<p><strong>Something unclear, or wrong?</strong> Reports are welcome and corrections are credited. <a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a></p>
+</div>
+<nav class="pager" aria-label="Module navigation"><a rel="prev" href="module-1.html"><span class="lbl">← Previous</span><span class="ttl">Module 1: Accessibility Overview</span></a><a rel="next" href="module-3.html"><span class="lbl">Next →</span><span class="ttl">Module 3: Accessible Microsoft PowerPoint Documents</span></a></nav>
+</div>
+</main>
+<script>
+(function(){
+ var v=document.querySelector('video'); if(!v) return;
+ function on(){
+  for(var i=0;i<v.textTracks.length;i++){
+   if(v.textTracks[i].kind==='captions') v.textTracks[i].mode='showing';
+  }
+ }
+ on();
+ v.addEventListener('loadedmetadata',on);
+ v.addEventListener('play',on);
+ setTimeout(on,400);
+})();
+</script>
+
+
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it<span class="visually-hidden"> (opens your email application)</span></a> and it will be fixed.</p>
+<p><strong>Use and attribution.</strong> The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so to redistribute the course itself or host a copy under another institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a> and the current status will be confirmed.</p>
+
+<p class="contact-copy">Contact Saroj Lamichhane: <a href="mailto:slamichhane2024@gmail.com">slamichhane2024@gmail.com<span class="visually-hidden"> (opens your email application)</span></a> <button type="button" class="copy-email" data-email="slamichhane2024@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></p>
+<p class="meta">The address above is a link and also plain text. If selecting the link does nothing, no email application is set up on that computer; copy the address and use it in webmail instead.</p>
+</div></footer>
+<script>
+/* Reveals the copy button only when scripting is available, so no dead control appears without it. */
+(function(){
+  var btns = document.querySelectorAll('.copy-email');
+  Array.prototype.forEach.call(btns, function(btn){
+    btn.hidden = false;
+    btn.addEventListener('click', function(){
+      var addr = btn.getAttribute('data-email');
+      var out = btn.parentNode.querySelector('.copy-status');
+      function say(msg){ if(out){ out.textContent = msg; } }
+      function ok(){ say('Address copied to the clipboard.'); }
+      function no(){ say('Could not copy automatically &#8212; select the address and copy it.'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(ok, no);
+      } else {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = addr; ta.setAttribute('readonly','');
+          ta.style.position='absolute'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); ok();
+        } catch(e){ no(); }
+      }
+    });
+  });
+})();
+</script>
+</body></html>

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Free Course: Digital Accessibility for Faculty, Saroj Lamichhane</title>
-<link rel="canonical" href="https://slamichhane.vercel.app/course/index.html">
+<title>Accessible and AI-Enhanced Course Design, Saroj Lamichhane</title>
+<link rel="canonical" href="https://slamichhane.vercel.app/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Accessible and AI-Enhanced Course Design">
-<meta property="og:title" content="Free Course: Digital Accessibility for Faculty, Saroj Lamichhane">
-<meta property="og:description" content="Four free video modules teaching faculty to build accessible Word documents, PowerPoint slides and PDFs, with transcripts, quick guides and practice activities.">
-<meta property="og:url" content="https://slamichhane.vercel.app/course/index.html">
+<meta property="og:title" content="Accessible and AI-Enhanced Course Design, Saroj Lamichhane">
+<meta property="og:description" content="Open, faculty-executable systems for digital accessibility compliance and structured AI integration in higher education course design. Free self-paced course and open resources.">
+<meta property="og:url" content="https://slamichhane.vercel.app/index.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Free Course: Digital Accessibility for Faculty, Saroj Lamichhane">
-<meta name="twitter:description" content="Four free video modules teaching faculty to build accessible Word documents, PowerPoint slides and PDFs, with transcripts, quick guides and practice activities.">
+<meta name="twitter:title" content="Accessible and AI-Enhanced Course Design, Saroj Lamichhane">
+<meta name="twitter:description" content="Open, faculty-executable systems for digital accessibility compliance and structured AI integration in higher education course design. Free self-paced course and open resources.">
 
-<meta name="description" content="Four free video modules teaching faculty to build accessible Word documents, PowerPoint slides and PDFs, with transcripts, quick guides and practice activities.">
+<meta name="description" content="Open, faculty-executable systems for digital accessibility compliance and structured AI integration in higher education course design. Free self-paced course and open resources.">
 <style>
 :root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
 --line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
@@ -103,14 +103,9 @@ footer.site a{color:var(--link)}
 footer.site p{max-width:52rem}
 @media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
 @media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
-.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}
-
-nav.pager a:hover{background:var(--soft);border-left-color:var(--accent2)}
-
-
-
-
-@media (max-width:40rem){}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}blockquote.pull{border:0;border-left:5px solid var(--accent2);background:var(--soft);margin:2rem 0;padding:1.4rem 1.6rem;max-width:46rem}
+blockquote.pull p{margin:0;font-size:1.3125rem;line-height:1.45;font-weight:600;color:var(--accent);letter-spacing:-.012em;max-width:none}
+p.why{background:var(--soft);border-left:4px solid var(--line);padding:.85rem 1.1rem;margin:.7rem 0 1.6rem;font-size:.9875rem}
 nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
 nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
 nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
@@ -123,121 +118,123 @@ nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125
 
 .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 a[target="_blank"]::after{content:"↗";font-size:.8em;line-height:1;margin-left:.15em;display:inline-block;text-decoration:none;vertical-align:super}
+
+/* contact fallback for computers with no mail application configured */
+.contact-copy{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.copy-email{font:inherit;padding:.2rem .6rem;border:1px solid currentColor;border-radius:.25rem;background:transparent;color:inherit;cursor:pointer}
+.copy-email:hover{background:rgba(0,0,0,.07)}
+.copy-email:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.copy-status:not(:empty){font-size:.9em;padding:.1rem .4rem;border-radius:.2rem;background:rgba(0,0,0,.06)}
+
+/* theme-agnostic tint so the control reads on both light and soft backgrounds */
+.copy-email:hover{background:rgba(127,127,127,.18)}
+.copy-status:not(:empty){background:rgba(127,127,127,.15)}
+/* in print the footer is hidden, so keep the contact address on the page */
+@media print{
+  footer.site{display:block;border-top:1pt solid #000;padding:.5rem 0 0;margin-top:1rem}
+  footer.site p{display:none}
+  footer.site p.contact-copy{display:block}
+  footer.site .copy-email,footer.site .copy-status{display:none}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site"><div class="wrap"><div class="hdr">
-<a class="brand" href="../index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
-<nav class="site" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../course/index.html" aria-current="true">Free Course</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../case-studies.html">Case Studies</a></li><li><a href="../about.html">About</a></li></ul></nav>
+  <a class="brand" href="index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+  <nav class="site" aria-label="Main"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="course/index.html">Free Course</a></li><li><a href="resources.html">Resources</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li></ul></nav>
 </div></div></header>
 <main id="main">
-<div class="hero"><div class="wrap">
-<p class="badge">Free and open</p>
-<h1>Digital Accessibility for Faculty</h1>
-<p class="lede">Four video modules teaching you to build accessible Word documents, PowerPoint slides and PDFs. These three formats carry the large majority of the instructional material faculty produce, and they are where most accessibility failures actually live. About half an hour of video, with captions, transcripts, quick guides, practice files and knowledge checks. No login, no cost.</p>
-<p><a class="btn" href="module-1.html">Start Module 1</a> <a class="btn alt" href="#materials">Download everything</a></p>
-</div></div>
+    <div class="hero"><div class="wrap">
+      <p class="badge">Free and open</p>
+      <h1>Accessible and AI-Enhanced Course Design</h1>
+      <p class="lede">Open, faculty-executable systems that let institutions bring their own digital courses into compliance with federal accessibility standards, and integrate generative AI into coursework in a way that requires student thinking rather than replacing it.</p>
+      <p class="meta">Curriculum Coordinator, Institutional Effectiveness, Research, and Planning<br>Texas A&amp;M University-Texarkana</p>
+      <p><a class="btn" href="course/index.html">Take the free course</a> <a class="btn alt" href="resources.html">Browse the resources</a></p>
+    </div></div>
 <div class="wrap">
+<ul class="stats">
+      <li><b>34</b><span>post-secondary courses audited against WCAG 2.1 Level AA</span></li>
+      <li><b>136</b><span>faculty trained to build accessible courses themselves</span></li>
+      <li><b>22</b><span>course sections redesigned to WCAG 2.1 Level AA</span></li>
+    </ul>
 
-<p><strong>How long this takes.</strong> Four video modules, about 27 minutes of video in total. Allow roughly two hours to watch them, read the guides and take the knowledge checks. Allow about four hours if you do the Apply It activities on your own files, which is where the learning actually happens and is the part worth protecting when time is short. The six companion guides add roughly twenty minutes altogether.</p>
- <p><strong>Short on time?</strong> If you have twenty minutes, watch Module 1 and read the best-practices sheet. If you have an hour, do Modules 1 and 2 and fix one real document.</p>
-<h2 id="who-this-is-for">Who this is for</h2>
-<p>Instructors, tenured and non-tenured faculty, adjuncts, graduate teaching assistants, and anyone else who builds and maintains their own courses in a learning management system such as Canvas, D2L Brightspace, Blackboard or Moodle. Instructional designers and faculty developers who need something to hand people are welcome to take it and use it.</p>
-<p>You teach, and you build your own materials. Nobody has shown you how to make them work for a student using a screen reader, and there is now a federal deadline. This course assumes no technical background and no budget, and every module ends with an activity on your own files.</p>
-<p>It works equally at high school and university level, and it is not only about online courses. The document practices taught here apply to anything you hand a student: a printed lab manual, a slide deck projected in a lecture hall, a PDF emailed before class. Federal accessibility obligations attach to the material, not to the delivery mode.</p>
+    <div class="note">
+      <p><strong>A free, self-paced course.</strong> Four video modules covering Word, PowerPoint and PDF, the three formats faculty actually build instructional materials in, with captions, full transcripts, practice files and knowledge checks. Five companion guides extend it to alternative text, captioning, LMS structure, auditing and generative AI in assignment design. No login, no cost, no institutional agreement.</p>
+      <p><a class="btn" href="course/index.html">Start the course</a></p>
+    </div>
 
-<h2 id="why-this-matters">Why this is worth your time, beyond compliance</h2>
-<p>Compliance is the deadline. It is not the reason.</p>
-<p>Roughly one student in four has a disability affecting access to course content, and most do not disclose it, so accommodation letters systematically undercount who is affected. The same structural work also helps the student reading on a phone between shifts, the student whose first language is not English using a translation tool, and the student searching a document the night before an exam. Heading structure is what makes a reading navigable rather than a wall. Real captions are used far more by students in noisy environments than by students who are deaf.</p>
-<p>The practical effects show up as engagement and persistence rather than as compliance scores: material students can actually get into is material they are more likely to complete. An accessible course is usually a better organised course, because the structure assistive technology needs and the structure a confused student needs are the same structure.</p>
-<h2>What you will be able to do</h2>
-<ul>
-<li>Set up Word documents, PowerPoint slides and PDFs so assistive technology can read them</li>
-<li>Apply heading structure, alternative text, table headers and reading order correctly</li>
-<li>Run the built-in accessibility checkers, and recognise the failures they miss</li>
-<li>Judge whether a file you have been handed is usable, and fix it if not</li>
-</ul>
+    <h2 id="problem">The problem</h2>
+    <p>Every public college, university and school district in the United States must bring its digital course materials to <a href="https://www.w3.org/TR/WCAG21/" rel="noopener noreferrer" target="_blank">WCAG 2.1 Level AA<span class="visually-hidden"> (opens in a new tab)</span></a>, the W3C standard adopted as the technical benchmark in the Department of Justice's <a href="https://www.ada.gov/resources/2024-03-08-web-rule/" rel="noopener noreferrer" target="_blank">Title II web and mobile accessibility rule<span class="visually-hidden"> (opens in a new tab)</span></a>. The deadlines are April 26, 2027 for entities serving populations of 50,000 or more, and April 26, 2028 for smaller entities and special district governments.</p>
+    <p>Most institutions will not make it with the staff they have. When the Department extended those deadlines in April 2026, it said why: covered entities lacked sufficient staff, and available technology could not close the gap. The Department found that current technology, including generative AI, cannot reliably automate the remediation of STEM materials at scale, and that human oversight is required to ensure accessibility.</p>
+    <p>Commercial remediation is priced per document and recurs every term. The institutions furthest from compliance are the least able to buy it, and nothing they buy accumulates: an institution in its third year of paying a vendor is no more capable than it was in its first.</p>
 
-<h2>The course</h2>
-<ul class="mods"><li><a class="mod" href="module-1.html">
-<span class="n">Module 1 &middot; video &amp; transcript</span>
-<span class="t">Accessibility Overview</span><span class="d">What accessibility means in a learning space, the four principles behind the standard, and the vocabulary used throughout the course.</span>
-<span class="m">7 minutes &middot; overview, quick guide, apply-it activity, knowledge check</span></a></li><li><a class="mod" href="module-2.html">
-<span class="n">Module 2 &middot; video &amp; transcript</span>
-<span class="t">Accessible Microsoft Word Documents</span><span class="d">Title and language, heading styles, lists, tables, alt text, links, colour, and what the built-in checker misses.</span>
-<span class="m">7 minutes &middot; overview, quick guide, apply-it activity, knowledge check</span></a></li><li><a class="mod" href="module-3.html">
-<span class="n">Module 3 &middot; video &amp; transcript</span>
-<span class="t">Accessible Microsoft PowerPoint Documents</span><span class="d">Slide titles and layouts, reading order, alt text, contrast and font sizing, including failures the checker does not flag.</span>
-<span class="m">8 minutes &middot; overview, quick guide, apply-it activity, knowledge check</span></a></li><li><a class="mod" href="module-4.html">
-<span class="n">Module 4 &middot; video &amp; transcript</span>
-<span class="t">Accessible PDF Documents</span><span class="d">Document properties, tags, reading order, tables, the Adobe accessibility check, and AI use in course development.</span>
-<span class="m">5 minutes &middot; overview, quick guide, apply-it activity, knowledge check</span></a></li></ul>
+    <blockquote class="pull">
+      <p>Compliance has to be produced by the people who build courses, not purchased repeatedly from vendors.</p>
+    </blockquote>
 
-<h2>Companion guides</h2>
-<p>Written guides covering topics beyond the four video modules. These are not video modules and are not required to finish the course. Each is a walkthrough with a checklist and a practice task, roughly four minutes to read.</p>
-<ul class="mods"><li><a class="mod" href="module-5.html">
-<span class="n">Companion guide</span><span class="t">Alternative Text That Carries Meaning</span><span class="d">Classifying images, the short-alt-plus-description pattern, scientific notation, and writing alt text that does not disclose assessment answers.</span>
-<span class="m">Written guide &middot; checklist &middot; practice task</span></a></li><li><a class="mod" href="module-6.html">
-<span class="n">Companion guide</span><span class="t">Video, Captions, and Transcripts</span><span class="d">Why automatic captions fail on your discipline&#x27;s vocabulary, and how to correct them efficiently.</span>
-<span class="m">Written guide &middot; checklist &middot; practice task</span></a></li><li><a class="mod" href="module-7.html">
-<span class="n">Companion guide</span><span class="t">Structuring Your Course in the LMS</span><span class="d">Heading levels inside pages, link text, predictable module organisation, and keyboard traps.</span>
-<span class="m">Written guide &middot; checklist &middot; practice task</span></a></li><li><a class="mod" href="module-8.html">
-<span class="n">Companion guide</span><span class="t">Auditing Your Own Course</span><span class="d">Classifying findings, ranking by student impact, sequencing the work, and recording before-and-after state.</span>
-<span class="m">Written guide &middot; checklist &middot; practice task</span></a></li><li><a class="mod" href="module-9.html">
-<span class="n">Companion guide</span><span class="t">Generative AI in Assignment Design</span><span class="d">Restructuring assignments so the graded artifact is engagement with output rather than the output itself.</span>
-<span class="m">Written guide &middot; checklist &middot; practice task</span></a></li></ul>
+    <h2 id="approach">The approach</h2>
+    <p>That principle produces four things, all of them open and free to use, and each published here in full. They share one design idea: intervene before a barrier is created rather than after somebody finds it.</p>
 
-<h2 id="materials">Course-wide materials</h2>
-<ul class="dl">
-<li><a href="docs/course-home-page.html">Course home page</a> <span class="meta">(read on this page, or <a href="files/Course%20Home%20Page.docx">download the Word file</a>)</span></li>
-<li><a href="docs/accessibility-key-terms.html">Accessibility key terms</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20Key%20Terms.docx">download the Word file</a>)</span></li>
-<li><a href="docs/accessibility-best-practices.html">Accessibility best practices</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20-%20Best%20Practices.docx">download the Word file</a>)</span></li>
-<li><a href="docs/accessibility-word-checklist.html">Word accessibility checklist</a> <span class="meta">(read on this page, or <a href="files/Accessibility%20-%20Word%20Checklist.docx">download the Word file</a>)</span></li>
-<li><a href="docs/microsoft-word-quick-guide.html">Microsoft Word quick guide</a> <span class="meta">(read on this page, or <a href="files/Microsoft%20Word%20Quick%20Guide.docx">download the Word file</a>)</span></li>
-<li><a href="docs/microsoft-powerpoint-quick-guide.html">Microsoft PowerPoint quick guide</a> <span class="meta">(read on this page, or <a href="files/Microsoft%20PowerPoint%20Quick%20Guide.docx">download the Word file</a>)</span></li>
-<li><a href="docs/adobe-pdf-quick-guide.html">Adobe PDF quick guide</a> <span class="meta">(read on this page, or <a href="files/Adobe%20PDF%20Quick%20Guide.docx">download the Word file</a>)</span></li>
-<li><a href="files/Syllabus Template.docx">Accessible syllabus template</a> <span class="meta">(DOCX)</span></li>
-<li><a href="files/TEMPLATE COURSE MAP.xlsx">Course map template</a> <span class="meta">(XLSX)</span></li>
-</ul>
+    <h3>An audit protocol</h3>
+    <p>Turns WCAG 2.1 Level AA into a course-by-course remediation sequence an institution can run with its own staff.</p>
+    <p class="why"><strong>Why it helps.</strong> Automated checkers return thousands of undifferentiated errors, which tells a dean nothing and tells a faculty member only that they have failed. This classifies every finding by consequence to students and records who can actually fix it, so remediation starts with the locked midterm rather than with a missing document title, and so the work goes to the person able to do it.</p>
 
-<h2>How to use this</h2>
-<p>Work through Modules 1 to 4 in order; each builds on the last and together they take under an hour of video. Then use the companion guides for whatever your discipline throws at you, scientific notation, captions, LMS structure.</p>
-<p>Every video has a full transcript. If you would rather read than watch, you lose nothing.</p>
+    <h3>A faculty training curriculum</h3>
+    <p>Transfers remediation capability to instructors, so compliance is produced by the people building courses. Published in full as a <a href="course/index.html">free self-paced course</a> covering Word, PowerPoint and PDF, the three formats faculty actually build in. Excellent free training already exists for <em>web</em> accessibility, including the <a href="https://www.w3.org/WAI/courses/foundations-course/" rel="noopener noreferrer" target="_blank">W3C Foundations course<span class="visually-hidden"> (opens in a new tab)</span></a>. Equivalent open training for the document formats is scarce, and that is the gap this fills.</p>
+    <p class="why"><strong>Why it works where other training does not.</strong> It is organised by the file types faculty already make, not by the success criteria of the standard, so nobody has to learn a compliance vocabulary before fixing their first document. Every module ends on a real file of the participant's own rather than a sample, because nobody transfers a skill they only practised on someone else's work. And nothing in it depends on a particular institution's LMS, branding or policy, which is why it can be published openly and used anywhere.</p>
 
-<h2>A suggested path</h2>
-<ol>
-<li><strong>Watch Module 1</strong> for the principles and vocabulary. Everything else assumes it.</li>
-<li><strong>Pick the format you use most</strong>Word, PowerPoint or PDF, and do that module next.</li>
-<li><strong>Do the Apply It activity</strong> on one of your own files, not a sample. The activity only works if the file matters to you.</li>
-<li><strong>Take the knowledge check</strong> to confirm it stuck.</li>
-<li><strong>Come back for the other formats</strong> when you next build in them.</li>
-</ol>
+    <h3>The Bloom's-AI Integration Model</h3>
+    <p>A human-in-the-loop protocol for course design, applied to how assignments are built rather than to how students are policed.</p>
+    <p class="why"><strong>Why it matters now.</strong> The same Department of Justice finding that drove the deadline extension, that automated tools cannot be relied on without human oversight, is the argument this model makes about coursework: the value is in the human judgment applied to machine output, not in the output. So the model changes what is assessed. If the graded artifact is the answer, a model can produce it. If it is the student's engagement with an answer, finding its error, adapting it to a new constraint, judging it against criteria, the model cannot, because that requires holding the subject in your head.</p>
 
-<h2>After the course</h2>
-<p>Fix your materials in this order: assessments and anything with a safety implication first, because a student who cannot read a quiz question or a lab step is harmed immediately. Then whatever students need in the next fortnight. Then core content. Then archives.</p>
-<p>The <a href="module-8.html">auditing guide</a> covers doing this across a whole course systematically, including how to record before-and-after state so you can show what improved.</p>
+    <h3>STEM remediation templates</h3>
+    <p>For the document types automation handles worst: chemical structures, mathematical notation, database schemas, anatomical diagrams.</p>
+    <p class="why"><strong>Why faculty need them.</strong> General accessibility guidance was written for photographs and simple charts, and applied to a structural formula it produces "diagram of a benzene ring", which is accurate and useless. These give the notation routes and description templates for the material that general guidance leaves an instructor to invent alone, including how to describe a diagram without handing students the answer it is meant to assess.</p>
 
-<h2 id="why-this-course">Why this course exists when free accessibility training already does</h2>
-<p>Good free accessibility training exists, and the best of it is worth taking. The W3C's own <a href="https://www.w3.org/WAI/courses/foundations-course/" rel="noopener noreferrer" target="_blank">Digital Accessibility Foundations<span class="visually-hidden"> (opens in a new tab)</span></a> course, produced with UNESCO and delivered through edX, is free to audit, runs 16 to 20 hours, and is genuinely excellent.</p>
-<p>It is also, by its own description, about the web. Its stated audience is developers, designers, content authors and project managers, and its syllabus covers web accessibility principles, standards, and checking web pages. That is what it sets out to do, and it does it well.</p>
-<p>What it does not cover, because it is not trying to, is the work most faculty actually face: a Word document, a PowerPoint deck and a PDF, uploaded to a learning management system.</p>
-<p>That gap matters more than it sounds. Those three formats carry the large majority of instructional material in higher education, and they are where the failures that genuinely lock students out concentrate: the scanned reading with no text layer, the deck whose slides carry no titles, the untagged handout, the equation pasted in as a picture. An instructor who completes an excellent web accessibility course still does not know how to mark a header row in Word or correct reading order in Acrobat.</p>
-<p>Free, practical, faculty-facing training on those three formats specifically is scarce. Vendor documentation covers features rather than teaching practice. Institutional training is usually behind a login and tied to one campus's systems, which is exactly why it cannot be shared. This course is the document-side complement to the web-side training that already exists, built to be worked through by an instructor with no technical background, no budget and no instructional design office to call, and published openly so that being at a well-resourced institution is not a prerequisite.</p>
+    <h3>What comes next</h3>
+    <p>All four operate at the point where courses are built or checked. There is a stage before that, and it is where the decisions actually get made.</p>
+    <p class="why"><strong>Where accessibility currently enters.</strong> Institutions offering distance education across state lines must adhere to the Council of Regional Accrediting Commissions' <a href="https://www.nc-sara.org/sites/default/files/files/2019-08/C-RAC%20Guidelines(2011).pdf" rel="noopener noreferrer" target="_blank">Interregional Guidelines for the Evaluation of Distance Education<span class="visually-hidden"> (opens in a new tab)</span></a>, the instrument behind reciprocity agreements covering some 2,200 institutions across 49 states. Across nine hallmarks of quality, including one devoted entirely to curricula, the guidelines do not mention accessibility, disability or assistive technology. They were last updated in 2011, seven years before WCAG 2.1 existed. The <a href="https://download.hlcommission.org/EvalofDistanceEducation_STA_2021.pdf" rel="noopener noreferrer" target="_blank">proposed 2021 replacement<span class="visually-hidden"> (opens in a new tab)</span></a> mentions accessibility twice in twenty-three guidelines, once listing it among student support services alongside tutoring and coaching.</p>
+    <p>So accessibility is not ignored. It arrives late, after programs are approved and courses are built, which is why the work is done repeatedly and by the institutions least able to afford it. A program-level framework, addressing accessibility during academic program design rather than after it, is in development and will be published here alongside the others.</p>
+    <p><a class="btn alt" href="resources.html">Browse the open resources</a></p>
 
-<h2>Where this course comes from</h2>
-<p>This is the open version of a training programme built and taught at Texas A&amp;M University-Texarkana, produced with Technology Innovation and Digital Education (TIDE). The institutional version runs in Canvas, where 136 faculty across STEM, education, humanities and nursing are enrolled and 121 hours of instruction have been logged.</p>
-<p>The method behind it came out of a systematic accessibility audit of 34 courses across four disciplinary areas, and the course was then taught to 136 faculty at Texas A&amp;M University-Texarkana before being published here. <a href="../case-studies.html">See the case studies</a> for how both were carried out.</p>
-
-<h2>Licence and reuse</h2>
-<p>The four frameworks on the <a href="../resources.html">Resources</a> pages are the work of Saroj Lamichhane and are offered under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener noreferrer" target="_blank">CC BY 4.0<span class="visually-hidden"> (opens in a new tab)</span></a>: adapt them, teach with them, attribution appreciated and permission not required.</p>
-<p>This course is a different case, and the distinction is worth stating plainly. It was produced with Technology Innovation and Digital Education at Texas A&amp;M University-Texarkana, and institutional sign-off on a formal open licence for it is still in progress. It is published here at no cost and without registration, for you to work through and to use with faculty on your own campus, with attribution to all three contributors. If you want to redistribute the course itself, or host a copy under your own institution's name, <a href="mailto:slamichhane2024@gmail.com">get in touch</a> and the current status will be confirmed. Reports of how it has been adapted are welcome.</p>
+    <h2 id="published">What is published here</h2>
+    <p>Everything described above is on this site, at no cost and with no login. The <a href="course/index.html">course</a> is the training curriculum in full, with video, captions, transcripts, practice files and knowledge checks. The <a href="resources.html">resources</a> are the frameworks as readable pages, as Word files for anyone who wants to print or adapt them. The <a href="case-studies.html">case studies</a> describe four pieces of work in enough detail to judge the method.</p>
+    <p class="meta">These are working documents rather than finished publications. They are revised as the underlying research develops, as the regulatory picture changes, and whenever someone using them reports a problem. Version numbers are on each one, and corrections are credited. If something here is wrong or unclear, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a>.</p>
 </div>
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it</a> and it will be fixed.</p>
-<p><strong>Use and attribution.</strong> The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so to redistribute the course itself or host a copy under another institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane</a> and the current status will be confirmed.</p>
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it<span class="visually-hidden"> (opens your email application)</span></a> and it will be fixed.</p>
+<p><strong>Use and attribution.</strong> The four frameworks published on the Resources pages, the audit protocol, the STEM remediation protocol, the diagram alternative text guide and the Bloom's-AI Integration Model, are the work of Saroj Lamichhane and are offered under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener noreferrer" target="_blank">CC BY 4.0<span class="visually-hidden"> (opens in a new tab)</span></a>: adapt them, teach with them, attribution appreciated and permission not required.</p><p>The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so if you intend to redistribute the course itself, or host a copy under your own institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a> and the current status will be confirmed.</p>
 
-<p><a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane</a></p>
+<p class="contact-copy">Contact Saroj Lamichhane: <a href="mailto:slamichhane2024@gmail.com">slamichhane2024@gmail.com<span class="visually-hidden"> (opens your email application)</span></a> <button type="button" class="copy-email" data-email="slamichhane2024@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></p>
+<p class="meta">The address above is a link and also plain text. If selecting the link does nothing, no email application is set up on that computer; copy the address and use it in webmail instead.</p>
 </div></footer>
+<script>
+/* Reveals the copy button only when scripting is available, so no dead control appears without it. */
+(function(){
+  var btns = document.querySelectorAll('.copy-email');
+  Array.prototype.forEach.call(btns, function(btn){
+    btn.hidden = false;
+    btn.addEventListener('click', function(){
+      var addr = btn.getAttribute('data-email');
+      var out = btn.parentNode.querySelector('.copy-status');
+      function say(msg){ if(out){ out.textContent = msg; } }
+      function ok(){ say('Address copied to the clipboard.'); }
+      function no(){ say('Could not copy automatically &#8212; select the address and copy it.'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(ok, no);
+      } else {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = addr; ta.setAttribute('readonly','');
+          ta.style.position='absolute'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); ok();
+        } catch(e){ no(); }
+      }
+    });
+  });
+})();
+</script>
 </body></html>

@@ -1,0 +1,11 @@
+# Keep media and Office files binary; avoid line-ending rewrites
+*.mp4 binary
+*.jpg binary
+*.png binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.vtt text eol=lf
+*.html text eol=lf
+*.css text eol=lf

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessible Syllabus Template, Digital Accessibility for Faculty</title>
+<link rel="canonical" href="https://slamichhane.vercel.app/course/docs/accessible-syllabus-template.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Accessible and AI-Enhanced Course Design">
+<meta property="og:title" content="Accessible Syllabus Template, Digital Accessibility for Faculty">
+<meta property="og:description" content="Accessible Syllabus Template. Course document, readable in full on this page.">
+<meta property="og:url" content="https://slamichhane.vercel.app/course/docs/accessible-syllabus-template.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Accessible Syllabus Template, Digital Accessibility for Faculty">
+<meta name="twitter:description" content="Accessible Syllabus Template. Course document, readable in full on this page.">
+
+<meta name="description" content="Accessible Syllabus Template. Course document, readable in full on this page.">
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
+.skip:focus{left:0}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
+nav.site a:hover{border-bottom-color:var(--line)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+main{padding:2.5rem 0 4rem}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
+.dl{margin:1rem 0 0;padding:0;list-style:none}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"\2610";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
+footer.site a{color:var(--link)}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}
+.q{border:1px solid var(--line);border-radius:6px;padding:1rem 1.1rem;margin:1.1rem 0;background:#fff}
+.q legend{font-weight:600;padding:0 .4rem;line-height:1.45}
+.q .opt{margin:.55rem 0;display:flex;gap:.6rem;align-items:flex-start}
+.q .opt input{margin-top:.3rem;width:1.05rem;height:1.05rem;flex:none}
+.q .opt label{cursor:pointer;line-height:1.5}
+.q .fb[hidden]{display:none}
+.q .fb{margin:.9rem 0 0;padding:.7rem .85rem;border-radius:5px;font-size:.95rem;border-left:4px solid}
+.q .fb.ok{background:#e7f4ea;border-left-color:#1a6b32;color:#12401f}
+.q .fb.no{background:#fdf0e6;border-left-color:#8a4b10;color:#5a2f08}
+.q .fb:focus{outline:3px solid var(--focus);outline-offset:2px}
+#quiz-status{font-weight:600}
+#quiz-status:focus{outline:3px solid var(--focus);outline-offset:3px}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.alt:hover{background:#f2f2ef}
+.warn{background:#fdf0e6;border-left:4px solid #8a4b10;padding:.7rem .85rem;border-radius:5px}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:1rem 1.3rem;margin:1.5rem 0;max-width:46rem}
+.toc h2{font-size:.9375rem;margin:0 0 .45rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem}
+.toc li{margin:.25rem 0}
+
+
+nav.pager a:hover{background:var(--soft);border-left-color:var(--accent2)}
+
+
+
+
+@media (max-width:40rem){}
+.fmt{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.6rem 1rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
+
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a[target="_blank"]::after{content:"↗";font-size:.8em;line-height:1;margin-left:.15em;display:inline-block;text-decoration:none;vertical-align:super}
+
+/* contact fallback for computers with no mail application configured */
+.contact-copy{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.copy-email{font:inherit;padding:.2rem .6rem;border:1px solid currentColor;border-radius:.25rem;background:transparent;color:inherit;cursor:pointer}
+.copy-email:hover{background:rgba(0,0,0,.07)}
+.copy-email:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.copy-status:not(:empty){font-size:.9em;padding:.1rem .4rem;border-radius:.2rem;background:rgba(0,0,0,.06)}
+
+/* theme-agnostic tint so the control reads on both light and soft backgrounds */
+.copy-email:hover{background:rgba(127,127,127,.18)}
+.copy-status:not(:empty){background:rgba(127,127,127,.15)}
+/* in print the footer is hidden, so keep the contact address on the page */
+@media print{
+  footer.site{display:block;border-top:1pt solid #000;padding:.5rem 0 0;margin-top:1rem}
+  footer.site p{display:none}
+  footer.site p.contact-copy{display:block}
+  footer.site .copy-email,footer.site .copy-status{display:none}
+}
+</style>
+<style>
+.docprev{max-width:46rem}
+.docprev table{width:100%}
+.docprev h2{font-size:1.3125rem;margin:2.2rem 0 .6rem}
+.docprev h3{font-size:1.0625rem;margin:1.6rem 0 .4rem}
+.fmt{list-style:none;padding:0;margin:1.4rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.55rem .95rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><div class="hdr">
+  <a class="brand" href="../../index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+  <nav class="site" aria-label="Main"><ul><li><a href="../../index.html">Home</a></li><li><a href="../index.html" aria-current="true">Free Course</a></li><li><a href="../../resources.html">Resources</a></li><li><a href="../../case-studies.html">Case Studies</a></li><li><a href="../../about.html">About</a></li></ul></nav>
+</div></div></header>
+<main id="main">
+  <div class="wrap narrow">
+    <nav class="crumb" aria-label="Breadcrumb"><ol><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Free Course</a></li><li aria-current="page">Accessible Syllabus Template</li></ol></nav>
+    <h1>Accessible Syllabus Template</h1>
+    <p class="lede">Course document, readable in full below. Nothing needs to be downloaded to read it.</p>
+    <div class="docprev">
+<p>University Logo</p><h2>SYLLABUS FOR [COURSE TITLE]</h2><p>[Credits]</p><p>[Course Department and Number]</p><p>[Semester]</p><h2>INSTRUCTOR INFORMATION</h2><p>Instructor:</p><p>Office Location:</p><p>Office Hours:</p><p>Office Phone:</p><p>Office Fax:</p><p>University Email Address:</p><p>Course Delivery Method:</p><h2>COURSE DESCRIPTION</h2><p>Introduction to Psychology is a survey course that explores the major psychological theories and concepts, research methods, and applications of psychology to everyday life. Topics include learning, memory, personality, social behavior, and psychological disorders. <em><strong>Customize or remove this text.</strong></em></p><h2>BASIC NEEDS STATEMENT</h2><p><strong>University Name</strong> understands that students may face challenges with housing, food security, or finances. To support your success, the following resources are available: Student Affairs <span class="meta">(link to be inserted)</span> for general support, the Charlotte Sharp Food Pantry <span class="meta">(link to be inserted)</span> for food assistance, and Counseling Services <span class="meta">(link to be inserted)</span> for confidential support.</p><h2>LEARNING OBJECTIVES</h2><p>Upon successful completion of this course, students will be able to:</p><ol type="1"><li><p>Describe the major theoretical perspectives in psychology.</p></li><li><p>Apply psychological concepts to explain human behavior.</p></li><li><p>Evaluate the strengths and weaknesses of various research methods used in psychology.</p></li><li><p>Identify the symptoms and cause of common psychological disorders.</p></li><li><p>Demonstrate an understanding of social and cultural influences on behavior.</p></li><li><p>Communicate effectively using psychological terminology and principles.</p></li></ol><p><em><strong>Customize or remove this text.</strong></em></p><h2>CO/PREREQUISITES</h2><p>[Include prerequisites if applicable]. Remove this text.</p><h2>COURSE MATERIALS</h2><p>This course utilizes a variety of materials to support your learning. Below is the list of required texts and resources:</p><ol type="1"><li><p><strong>Required Texts</strong>:</p><ol type="a"><li><p><strong><em>[Insert Title of Textbook]</em> by [Author Name], [Publisher], [Year]. ISBN: [Insert ISBN]. Remove this text.</strong></p></li><li><p><strong><em>[Insert Title of Another Textbook]</em> by [Author Name], [Publisher], [Year]. ISBN: [Insert ISBN]. Remove this text.</strong></p></li></ol></li><li><p><strong>Open Educational Resources (OER)</strong>:</p><ol type="a"><li><p>This course also incorporates Open Educational Resources (OER) to reduce costs. OER materials are freely available and openly licensed, ensuring accessibility for all students. Review the University Name OER Initiative <span class="meta">(link to be inserted)</span> for more information about these resources.</p></li></ol></li><li><p><strong>Supplementary Resources</strong>:</p><ol type="a"><li><p>Additional resources will be provided via Canvas or other platforms as needed. These may include articles, videos, and other readings that support course objectives.</p></li></ol></li></ol><p>For any inquiries regarding textbook availability, OER resources or research support, please contact Library Services <span class="meta">(link to be inserted)</span> or your course instructor.</p><h2>TECHNOLOGY REQUIREMENTS</h2><h3>Canvas Learning Management System</h3><p>All course sections offered by <strong>University Name</strong> are hosted on Canvas, the university’s Learning Management System (LMS). Please ensure that you meet the technical requirements for Canvas to participate fully in the course.</p><p>Canvas supports the latest versions of the following browsers:</p><ul><li><p>Chrome</p></li><li><p>Firefox</p></li><li><p>Safari</p></li><li><p>Edge</p></li></ul><p>You can find detailed technical requirements for Canvas here: <a href="https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-the-browser-and-computer-requirements-for-Instructure/ta-p/66" rel="noopener noreferrer" target="_blank">Canvas System Requirements.<span class="visually-hidden"> (opens in a new tab)</span></a></p><h3>Internet</h3><p>A high-speed internet connection is required, preferably with the computer directly connected via an Ethernet cable rather than using a wireless connection.</p><h2>REGULAR AND SUBSTANTIVE INTERACTION</h2><p>As your instructor, I plan to interact and engage with each of you on a regular basis throughout the term to support your learning. I will provide direct instruction related to the course’s learning objectives, respond to your questions, grade and/or provide feedback on your submitted coursework, post regular announcements, and engage in the course discussion areas regarding academic course content when appropriate. Customize or remove this text. <em><strong>Customize or remove this text.</strong></em></p><h2>LEARNING ACTIVITIES AND ASSESSMENTS</h2><p>This course incorporates various learning activities and assessments designed to help you master the course objectives while providing multiple opportunities to demonstrate your understanding. <em><strong>Customize or remove this text.</strong></em></p><h3>Learning Activities</h3><ul><li><p><strong>Weekly Readings:</strong> Complete all assigned textbook chapters and supplemental readings before participating in discussions and activities. Readings provide the foundation for successful completion of all assessments. <em><strong>Customize or remove this text.</strong></em></p></li><li><p><strong>Video Lectures:</strong> Review weekly lecture videos that explain key psychological concepts and theories before completing related videos. <em><strong>Customize or remove this text.</strong></em></p></li><li><p><strong>Online Discussions:</strong> Engage in weekly discussions forums where you will apply psychological principles in current events and analyze controversial issues. Initial posts are due by Thursday at 11:59 PM, with two thoughtful peer response due by Sunday at 11:59 PM each week. <em><strong>Customize or remove this text.</strong></em></p></li></ul><h3>Assessments</h3><ul><li><p><strong>Class Participation ,  10%:</strong> Active participation in the online learning community is essential. Your participation grade reflects the quality and frequency of your contributions in discussions, virtual collaborative activities, and respectful engagement with classmates. <em><strong>Customize or remove this text.</strong></em></p></li><li><p><strong>Assignment 1: Research Article Analysis ,  30%:</strong> Select a peer-reviewed research article from a psychology journal, summarize its main points, findings, and discuss its implications and applications. Due at the end of Week 5. <em><strong>Customize or remove this text.</strong></em></p></li><li><p><strong>Assignment 2: Case Study Analysis ,  30%:</strong> Analyze a case study of an individual experiencing a psychological disorder. Apply relevant concepts and theories from the course to explain behaviors, suggest appropriate interventions, and discuss ethical considerations. Due at the end of Week 10. <em><strong>Customize or remove this text.</strong></em></p></li><li><p><strong>Quizzes ,  10%:</strong> There will be three quizzes throughout the course, covering key concepts and theories (Week 5,6, and 10). Each quiz covers key concepts and theories from the preceding weeks and includes multiple-choice, short answers, and application questions. <em><strong>Customize or remove this text.</strong></em></p></li><li><p><strong>Final Project ,  30%:</strong> Develop a comprehensive project that synthesizes major course concepts. Students will choose from several options including creating an intervention plan, designing a research proposal, or developing a psychoeducational resource. Dur during finals week. <em><strong>Customize or remove this text.</strong></em></p></li></ul><h2>EVALUATION AND GRADING</h2><h3>Grading Weights</h3><table><caption>Grading Weights</caption><th scope="col"ead><tr class="header"><th scope="col"><strong>Assignments/Activities</strong></th><th scope="col"><strong>% of Final Grade</strong></th></tr></thead><tbody><tr class="odd"><td><strong>[Example: Class participation]</strong></td><td><strong>[10%]</strong></td></tr><tr class="even"><td><strong>[Example: Assignment 1]</strong></td><td><strong>[30%]</strong></td></tr><tr class="odd"><td><strong>[Example: Assignment 2]</strong></td><td><strong>[30%]</strong></td></tr><tr class="even"><td><strong>[Example: Quizzes]</strong></td><td><strong>[10%]</strong></td></tr><tr class="odd"><td>[<strong>Example: Final Project]</strong></td><td><strong>[30%]</strong></td></tr></tbody></table><p>&lt;Add Alt Text to Table: Right click on the above table, select ‘Table properties’, and then select the Alt text tab. Enter text in the description window to describe the intended meaning of the table. Create a simple structure for your table so that it can be easily read. Avoid blank rows, columns, &amp; merged cells.&gt; Remove this text.</p><h3>Grading Scale</h3><p>The Deans’ Council has established a university-wide Common Grading Scale to be used in ALL courses effective fall 2010. Final Grades will be based on the final point scale: e.g., <em>the total number of points earned</em> <em>during the semester/divided by the total possible points that could be earned.</em> The percentage will be translated to a letter grade according to university guidelines.</p><p>A = 90-100%, B = 80-89%, C = 70-79%, D = 60-69%, F = 0-59%</p><p>Your final grade is based on the number of points earned as shown below:</p><p>A: 617.50 ,  685 points</p><p>B: 548 ,  617.49 points</p><p>C: 479 ,  547.99 points</p><p>D: 411 ,  478.99 points</p><p>F: &lt;410.99 points</p><h2>COURSE SCHEDULE</h2><h3>Topics and Assignments</h3><table><caption>Topics and Assignments</caption><th scope="col"ead><tr class="header"><th scope="col"><strong>Week/Date</strong></th><th scope="col"><strong>Activities/Projects/Assessments</strong></th><th scope="col"><strong>Due Date</strong></th></tr></thead><tbody><tr class="odd"><td><em><strong>[Week 1, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 2, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 3, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 4, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 5, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 6, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 7, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 8, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 9, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 10, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 11, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 12, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 13, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 14, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="odd"><td><em><strong>[Week 15, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr><tr class="even"><td><em><strong>[Week 16, insert date]</strong></em></td><td><em><strong>[Insert topic]</strong></em></td><td><em><strong>[Insert assignment]</strong></em></td></tr></tbody></table><p><strong><em>&lt;Add Alt Text to Table: Right click on the above table, select ‘Table properties’, and then select the Alt text tab. Enter text in the description window to describe the intended meaning o</em>f the table. Create a simple structure for your table.&gt; Remove this text.</strong></p><h2>COURSE POLICIES</h2><h3>Attendance Policy: </h3><p>Regular attendance and participation are expected. In online classes, attendance is defined as active engagement with course materials and timely completion of assignments. Students are responsible for all information covered, regardless of absence. Specific expectations for online participation include <em><strong>[list examples, e.g., discussion forum posts, quiz completion].</strong></em> In accordance with university policy, the instructor will report students who have not logged into the online course by the census date to the Registrar's Office. <em><strong>Customize or remove this text.</strong></em></p><h3>Participation Expectations:</h3><p>Students are responsible for active and consistent participation in this course. Participation grades will be based on <em><strong>[list specific activities, e.g., in-class engagement, online discussions, and timely submissions]</strong></em>. Participation also includes clear and respectful communication. The instructor will respond to emails within <em><strong>[state timeframe, e.g., 48 hours]</strong></em> and provide feedback on assignments within <em><strong>[state timeframe, e.g., one week]</strong></em>. <em><strong>Customize or remove this text.</strong></em></p><h3>Late Work Policy:</h3><p>Assignments are due on the dates specified in the course schedule. To ensure timely feedback and maintain course pace, late submissions will be penalized as follows: <em><strong>[Instructor specifies penalty, e.g., 10% deduction per day, up to a maximum of 3 days late].</strong></em> Assignments submitted more than <em><strong>[number]</strong></em> days late will not be accepted unless prior arrangements have been made with the instructor. It is the student's responsibility to contact the instructor before the due date to request an extension. Extensions may be granted at the instructor's discretion for valid reasons. <em><strong>Customize or remove this text.</strong></em></p><h3>Class Conduct and Netiquette: </h3><p>Students are expected to maintain a respectful and productive learning environment in all interactions, both in person and online. This includes:</p><ul><li><p>Respectful and civil communication</p></li><li><p>Constructive participation</p></li><li><p>Appropriate language</p></li></ul><p>Online interactions should also follow basic netiquette principles. Inappropriate conduct or online behavior may result in consequences such as deduction of participation points, temporary removal from discussions, or lowering of an assignment grade. The instructor will determine the appropriate consequence based on the severity and frequency of the violation.</p><h3>Incomplete Grade Policy:</h3><p>An incomplete grade ("X") may be assigned if a student's work is satisfactory but is incomplete due to circumstances beyond their control. Students must contact the instructor to request an incomplete and discuss completing the remaining work. The "Incomplete Grade" form, which details the requirements and deadline, must be completed and signed by the student, instructor, and dean. The deadline for completing the coursework is the last class day of the next long term. Incomplete grades will convert to an "F" if the work is not completed by the deadline, except in cases of pregnancy or medical emergencies.</p><h2>ARTIFICIAL INTELLIGENCE (AI) USAGE POLICY</h2><p>The use of generative Artificial Intelligence (AI) tools (e.g., ChatGPT, Grammarly, GitHub Copilot, etc.) is becoming increasingly common in academic settings. In this course, AI tools may be used <strong>only when explicitly permitted</strong> by the instructor. Students must follow all instructions regarding the appropriate use of these tools, as the ability to independently demonstrate understanding and critical thinking remains a core learning objective.</p><h3>Guidelines for AI Use in Coursework</h3><ol type="1"><li><p><strong>Instructor-Guided Use Only</strong></p></li></ol><blockquote><p>AI tools may only be used for assignments where the instructor has given clear permission. For example, AI might be permitted to assist with brainstorming, proofreading, or, in technical courses, to support logic-checking or debugging, <strong>but only under the instructor’s guidance</strong>. Students should never assume AI use is allowed unless stated explicitly.</p></blockquote><ol start="2" type="1"><li><p><strong>Mandatory AI Disclosure Requirement</strong></p></li></ol><blockquote><p>Any use of AI tools must be fully disclosed in writing and submitted along with the assignment. The disclosure must include:</p><p>The name(s) of all AI tool(s) used</p></blockquote><ul><li><blockquote><p>A description of <strong>how</strong> and to <strong>what extent</strong> each tool was used</p></blockquote></li><li><blockquote><p>A clear statement that the student has reviewed and edited the AI-assisted content and accepts full responsibility for the final work</p></blockquote></li></ul><blockquote><p><strong>Example Disclosure Statement:</strong></p><p>“For this assignment, I used ChatGPT to generate possible research paper titles and Grammarly to check grammar and spelling. I critically reviewed all AI-generated content and revised it to reflect my understanding. I take full responsibility for the final submission.”</p><p>A single disclosure per assignment is sufficient, even if multiple AI tools are used, <strong>as long as each tool is clearly identified and its use described.</strong></p></blockquote><ol start="3" type="1"><li><p><strong>Academic Integrity Expectations</strong></p></li></ol><blockquote><p>Submitting AI-generated content without disclosure, or representing AI-generated content as entirely one’s own original work, is considered academic dishonesty. Such actions are subject to the same consequences as plagiarism or any other violation of the academic integrity policy outlined by the university.</p><p>All students are expected to engage honestly in their learning. Misuse of AI tools undermine your own education and may result in serious academic consequences.</p></blockquote><h3>Note for Technical and Analytical Work</h3><p>In fields such as computer science, data analysis, or mathematics, students must demonstrate the ability to independently write, debug, and explain code or logic. Use of AI tools for these tasks, even when allowed, must not replace the student’s own engagement and problem-solving. Students may be asked to reproduce or explain their work without AI assistance.</p><h3>When in Doubt</h3><p>If you are unsure whether AI use is appropriate for an assignment, <strong>ask before you act.</strong> Transparency, integrity, and clear communication are essential in all coursework<strong>.</strong></p><h2>ADDITIONAL COURSE POLICIES AND PROCEDURES</h2><p>[Instructor will provide expectations for communication, including email response times. Remove this text.]</p><h2>UNIVERSITY POLICIES</h2><p>For University policies on Academic Integrity, <strong>University Name</strong> Email Address, and the Drop Policy, please refer to the Syllabus Policies <span class="meta">(link to be inserted)</span>.</p><h2>INFORMATION TECHNOLOGY (IT) SUPPORT</h2><ul><li><p><strong>Information Technology (IT) Helpdesk:</strong> For assistance with passwords, login issues, software, and other technology-related problems, contact the IT Helpdesk <span class="meta">(link to be inserted)</span>. You can also submit a TeamDynamix <span class="meta">(link to be inserted)</span> ticket for support.</p></li><li><p><strong>Technology Innovation and Digital Education (TIDE):</strong> TIDE <span class="meta">(link to be inserted)</span> supports all web-enhanced and online courses and can assist with questions about Canvas and other online learning technologies. To contact TIDE, please submit a support ticket through the TeamDynamix <span class="meta">(link to be inserted)</span>.</p></li><li><p><strong>Zoom Support:</strong> Zoom may be used for virtual meetings or live sessions. Students can access Zoom through their Canvas course shell. Visit the Zoom Access at University Name <span class="meta">(link to be inserted)</span> link for information on signing up, accessing, and using Zoom.</p></li><li><p><strong>Third Party Tools:</strong> This course may utilize third-party tools or software, such as LinkedIn Learning, Pearson products, or others. For support with accessing or using these tools, please contact your instructor or the representatives of the specific third-party tool.</p></li></ul><h2>DISABILITY ACCOMMODATIONS </h2><p>The Americans with Disabilities Act (ADA) is a federal non-discrimination statute that provides comprehensive civil rights protection for persons with disabilities. Among other things, this law requires that all students with disabilities be guaranteed a learning environment that provides reasonable accommodation for their disabilities. If you believe you have a disability requiring accommodation, please contact the Office of Student Life in UC room 125, or call (903) 223-1351. For additional information visit Disability Services. <span class="meta">(link to be inserted)</span></p><h2>RESOURCES</h2><ul><li><p><strong>Library Services:</strong> The University Library <span class="meta">(link to be inserted)</span> offers a wide range of resources, including books, journals, databases, and research assistance. Librarians are available to help you with your research needs.</p></li><li><p><strong>Eagle Book Bundle:</strong> The Eagle Book Bundle is a program designed to provide required course materials at a reduced cost. Information about the Eagle Book Bundle, including eligibility, included materials, access instructions, and troubleshooting, can be found on the Eagle Book Bundle website <span class="meta">(link to be inserted)</span>.</p></li><li><p><strong>The Eagle Bookstore:</strong> The Eagle Bookstore is located on the 1st Floor of the University Center and can be reached via email at <a href="mailto:xyz@gmail.com">xyz@gmail.com<span class="visually-hidden"> (opens your email application)</span></a> or by phone at (903) 334-6620.</p></li><li><p><strong>Eagle Learning Center:</strong> The Eagle Learning Center <span class="meta">(link to be inserted)</span> is your one-stop shop for academic support at <strong>University Name</strong>, including peer tutoring, 24/7 online tutoring, academic workshops, and more.</p></li><li><p><strong>Supplemental Instruction (SI):</strong> If available for this course, SI sessions <span class="meta">(link to be inserted)</span> provide peer-led review and study sessions to enhance your understanding of course material.</p></li><li><p><strong>Testing Center:</strong> The Testing Center is located in University Center 325, provides proctoring services for exams. Schedule appointments and find details on services, policies, and contact information at the Testing Center website <span class="meta">(link to be inserted)</span>. The center can be reached at (903) 223-3072.</p></li></ul>
+
+    </div>
+    <h2 id="download">Download this document</h2>
+    <p>The editable original, if you want to print it, adapt it, or work through it offline.</p>
+    <ul class="fmt"><li><a href="../files/Accessible%20Syllabus%20Template.docx">Word document (DOCX)</a></li></ul>
+    <div class="note"><p>Something unclear, or wrong? Reports are welcome and corrections are credited. <a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a></p></div>
+    <nav class="pager" aria-label="Course navigation"><a rel="prev" href="../index.html"><span class="lbl">&#8592; Back to</span><span class="ttl">The course</span></a><span></span></nav>
+  </div>
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it<span class="visually-hidden"> (opens your email application)</span></a> and it will be fixed.</p>
+<p class="contact-copy">Contact Saroj Lamichhane: <a href="mailto:slamichhane2024@gmail.com">slamichhane2024@gmail.com<span class="visually-hidden"> (opens your email application)</span></a> <button type="button" class="copy-email" data-email="slamichhane2024@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></p>
+<p class="meta">The address above is a link and also plain text. If selecting the link does nothing, no email application is set up on that computer; copy the address and use it in webmail instead.</p>
+</div></footer>
+<script>
+/* Reveals the copy button only when scripting is available, so no dead control appears without it. */
+(function(){
+  var btns = document.querySelectorAll('.copy-email');
+  Array.prototype.forEach.call(btns, function(btn){
+    btn.hidden = false;
+    btn.addEventListener('click', function(){
+      var addr = btn.getAttribute('data-email');
+      var out = btn.parentNode.querySelector('.copy-status');
+      function say(msg){ if(out){ out.textContent = msg; } }
+      function ok(){ say('Address copied to the clipboard.'); }
+      function no(){ say('Could not copy automatically &#8212; select the address and copy it.'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(ok, no);
+      } else {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = addr; ta.setAttribute('readonly','');
+          ta.style.position='absolute'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); ok();
+        } catch(e){ no(); }
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

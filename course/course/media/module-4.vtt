@@ -1,0 +1,229 @@
+WEBVTT
+
+00:00:01.666 --> 00:00:04.966
+[Narrator] Welcome to Module 4 Accessible PDF Documents.
+
+00:00:06.000 --> 00:00:08.633
+In this video, you will learn how to make your PDF
+
+00:00:08.633 --> 00:00:10.966
+documents accessible to all learners.
+
+00:00:13.500 --> 00:00:16.733
+In this section, we will set the PDF's document title
+
+00:00:16.733 --> 00:00:17.866
+and language.
+
+00:00:19.033 --> 00:00:21.366
+As with Word and PowerPoint, PDFs need
+
+00:00:21.366 --> 00:00:23.432
+a descriptive title and language setting for
+
+00:00:23.433 --> 00:00:24.433
+accessibility.
+
+00:00:25.466 --> 00:00:28.266
+To set a document title in Adobe PDF,
+
+00:00:28.266 --> 00:00:32.932
+click Menu, then select Document Properties.
+
+00:00:34.500 --> 00:00:38.433
+Locate the Description section. Click on the space
+
+00:00:38.433 --> 00:00:40.766
+indicated to the right of Title.
+
+00:00:41.833 --> 00:00:44.899
+Enter a descriptive title here, such as
+
+00:00:44.900 --> 00:00:49.533
+"Teaching Students About Self Efficacy."
+
+00:00:50.833 --> 00:00:53.499
+Click OK to apply your settings.
+
+00:00:53.500 --> 00:00:56.900
+To set the document language, right-click on the document;
+
+00:00:57.366 --> 00:00:59.199
+select Document Properties.
+
+00:01:00.400 --> 00:01:03.600
+Click Advanced, and under Reading Options
+
+00:01:03.600 --> 00:01:07.466
+to the right of language, select English,
+
+00:01:07.466 --> 00:01:10.532
+and then click OK to apply your settings.
+
+00:01:13.666 --> 00:01:17.332
+In this section, we will check the reading order in a PDF.
+
+00:01:19.833 --> 00:01:22.033
+Reading order is important because it tells
+
+00:01:22.033 --> 00:01:25.133
+assistive technologies like screen readers
+
+00:01:25.133 --> 00:01:28.466
+what to read first, second, and so on.
+
+00:01:28.466 --> 00:01:31.266
+If the order is incorrect, the content may read
+
+00:01:31.266 --> 00:01:34.632
+out of sequence, making it confusing for learners.
+
+00:01:35.366 --> 00:01:37.399
+To check reading order,
+
+00:01:37.400 --> 00:01:41.033
+open the Order panel from the right side panel.
+
+00:01:41.033 --> 00:01:43.233
+Expand the page to view the numbered items.
+
+00:01:44.500 --> 00:01:47.500
+'1' is the first item read by a screen reader,
+
+00:01:47.500 --> 00:01:50.666
+'2' is next, and so on.
+
+00:01:51.000 --> 00:01:53.900
+You cannot edit reading order directly here,
+
+00:01:53.900 --> 00:01:56.733
+but you can fix it in the Tags panel.
+
+00:01:59.300 --> 00:02:02.700
+In this section, we will add tags to give the PDF
+
+00:02:02.700 --> 00:02:03.700
+a clear structure.
+
+00:02:05.700 --> 00:02:08.133
+Tags are hidden labels that identify the structure
+
+00:02:08.133 --> 00:02:12.333
+of your document, such as headings, paragraphs,
+
+00:02:13.233 --> 00:02:13.966
+lists,
+
+00:02:15.933 --> 00:02:17.033
+tables,
+
+00:02:18.200 --> 00:02:19.500
+sections.
+
+00:02:20.066 --> 00:02:21.932
+These tags help assistive
+
+00:02:21.933 --> 00:02:25.733
+technology understand how the document is organized.
+
+00:02:25.733 --> 00:02:28.866
+To view and edit tags, right-click on
+
+00:02:28.866 --> 00:02:31.599
+the side panel and make sure Tags is selected.
+
+00:02:32.900 --> 00:02:35.500
+Open the Tags panel.
+
+00:02:35.500 --> 00:02:38.933
+Expand the tags to see how each element is labeled.
+
+00:02:41.200 --> 00:02:43.833
+In this example, my headings are incorrectly
+
+00:02:43.833 --> 00:02:46.666
+tagged as paragraphs.
+
+00:02:46.666 --> 00:02:48.966
+Here is how to fix them.
+
+00:02:48.966 --> 00:02:55.732
+Right-click the P tag. Select Properties. Under
+
+00:02:55.733 --> 00:02:59.733
+Type, change it to Heading Level 1 or the
+
+00:02:59.733 --> 00:03:03.499
+appropriate level. Repeat for all headings to
+
+00:03:03.500 --> 00:03:05.066
+ensure that they are correctly tagged.
+
+00:03:21.833 --> 00:03:24.866
+In this section, we will add alternative text to
+
+00:03:24.866 --> 00:03:25.466
+images.
+
+00:03:27.633 --> 00:03:30.033
+Any meaningful image in your PDF should include
+
+00:03:30.033 --> 00:03:33.433
+alternative text that explain its purpose, not
+
+00:03:33.433 --> 00:03:37.099
+just what it looks like. To begin adding alt text,
+
+00:03:37.766 --> 00:03:43.266
+right-click the Figure tag. Select Properties. Enter
+
+00:03:43.266 --> 00:03:45.632
+your description in the Alternative Text field.
+
+00:03:46.833 --> 00:03:49.399
+An example of alternative text for this image
+
+00:03:49.400 --> 00:03:52.800
+would be "Smiling teacher sitting with the student
+
+00:03:52.800 --> 00:03:56.000
+working on a laptop showing collaboration and
+
+00:03:56.000 --> 00:03:59.733
+growth." Click Close.
+
+00:04:03.933 --> 00:04:06.799
+In this section, we will run the Accessibility
+
+00:04:06.800 --> 00:04:09.500
+Checker and do a quick manual review for
+
+00:04:09.500 --> 00:04:13.733
+accessibility. Let's identify any additional
+
+00:04:13.733 --> 00:04:18.266
+accessibility issues in our document. Go to All
+
+00:04:18.266 --> 00:04:24.299
+Tools, then Prepare for Accessibility, then Check
+
+00:04:24.300 --> 00:04:28.500
+for Accessibility. Make sure all options are
+
+00:04:28.500 --> 00:04:33.600
+selected; then click Start Checking. Review the
+
+00:04:33.600 --> 00:04:37.633
+results in the Accessibility Checker panel. Some
+
+00:04:37.633 --> 00:04:42.033
+items like reading order and color contrast always
+
+00:04:42.033 --> 00:04:46.266
+require manual review. After checking manually,
+
+00:04:46.600 --> 00:04:48.966
+you can right-click and select Pass.
+
+00:04:51.333 --> 00:04:53.366
+Finally, save your document.

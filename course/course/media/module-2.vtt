@@ -1,0 +1,328 @@
+WEBVTT
+
+00:00:01.866 --> 00:00:04.632
+-[Narrator] Welcome to Module 2 Accessible Microsoft Word
+
+00:00:04.633 --> 00:00:07.833
+Documents. In this video, you will learn how to
+
+00:00:07.833 --> 00:00:10.066
+make your Microsoft Word documents accessible to
+
+00:00:10.066 --> 00:00:10.832
+all learners.
+
+00:00:12.933 --> 00:00:15.866
+In this section, we will set your document title
+
+00:00:15.866 --> 00:00:16.599
+and language.
+
+00:00:19.000 --> 00:00:21.766
+To set a document title in Microsoft Word, you will
+
+00:00:21.766 --> 00:00:26.166
+click File, then select Info. From the right-hand
+
+00:00:26.166 --> 00:00:29.699
+panel, locate the Properties section. Click on the
+
+00:00:29.700 --> 00:00:31.833
+space indicated to the right of Title. Enter a
+
+00:00:31.833 --> 00:00:35.733
+descriptive title here, such as "Accessibility
+
+00:00:35.866 --> 00:00:38.566
+Training Module 1.0."
+
+00:00:41.333 --> 00:00:44.033
+To set the document language, go to the Review tab.
+
+00:00:44.766 --> 00:00:47.732
+Select Language, and choose Set Proofing Language.
+
+00:00:48.866 --> 00:00:51.432
+From the list, select your desired language, such
+
+00:00:51.433 --> 00:00:55.033
+as English (United States). Check the box labeled,
+
+00:00:55.366 --> 00:00:58.799
+"Do not check spelling or grammar," and then click
+
+00:00:58.800 --> 00:01:02.833
+OK to apply your settings. Now your document has
+
+00:01:02.833 --> 00:01:04.933
+a title that will assist the screen reader in
+
+00:01:04.933 --> 00:01:07.433
+announcing the title and document clearly, and
+
+00:01:07.433 --> 00:01:09.599
+proper document language to pronounce words
+
+00:01:09.600 --> 00:01:12.066
+correctly and ensure assistive technologies
+
+00:01:12.066 --> 00:01:13.699
+deliver your content accurately.
+
+00:01:15.833 --> 00:01:18.799
+In this section, we will use Word Styles and
+
+00:01:18.800 --> 00:01:23.033
+review hyperlinks for accessibility. Let's
+
+00:01:23.033 --> 00:01:25.499
+structure a document with accessible hyperlinks,
+
+00:01:25.800 --> 00:01:28.766
+clear headings, and properly formatted lists so
+
+00:01:28.766 --> 00:01:32.166
+screen readers can navigate with ease. To insert
+
+00:01:32.166 --> 00:01:34.999
+an accessible hyperlink, we need to ensure that it
+
+00:01:35.000 --> 00:01:38.733
+is clear and actionable and not just a link. Start
+
+00:01:38.733 --> 00:01:41.299
+by selecting Insert from the menu, followed by the
+
+00:01:41.300 --> 00:01:45.200
+Links tab. From that dropdown menu, you will select
+
+00:01:45.200 --> 00:01:48.900
+Link. Then, another dropdown menu will appear;
+
+00:01:49.700 --> 00:01:53.700
+select Insert Link from the bottom of that menu. A
+
+00:01:53.700 --> 00:01:57.200
+window pops up to customize your hyperlink. Paste
+
+00:01:57.200 --> 00:01:59.733
+the link in the space indicated to the right of
+
+00:01:59.733 --> 00:02:03.266
+Address at the bottom of the window. The important
+
+00:02:03.266 --> 00:02:05.799
+part is at the top of the window, where you will
+
+00:02:05.800 --> 00:02:08.833
+enter a descriptive title such as, "Visit the
+
+00:02:08.833 --> 00:02:13.366
+Library Website" instead of "Click Here." "Visit the
+
+00:02:13.366 --> 00:02:15.732
+Library Website" alerts someone listening to a
+
+00:02:15.733 --> 00:02:18.133
+screen reader that there is an actionable item in
+
+00:02:18.133 --> 00:02:18.699
+the document.
+
+00:02:21.966 --> 00:02:24.666
+Rather than just changing the font size, it is
+
+00:02:24.666 --> 00:02:26.866
+important to apply true heading style.
+
+00:02:29.200 --> 00:02:31.833
+Start at the Home tab, open the Styles group, and
+
+00:02:31.833 --> 00:02:34.199
+select the heading level that fits your document
+
+00:02:34.200 --> 00:02:38.400
+structure. For example, use Heading 1 for your
+
+00:02:38.400 --> 00:02:43.033
+main title, Heading 2 for your major sections, and
+
+00:02:43.033 --> 00:02:44.699
+Heading 3 for your sub-sections.
+
+00:02:50.766 --> 00:02:53.999
+Bulleted or numbered lists should be formatted from
+
+00:02:54.000 --> 00:02:57.166
+the Paragraph group. Choose your list type from
+
+00:02:57.166 --> 00:03:02.799
+the dropdown menu: bullet, numbered, or multilevel.
+
+00:03:05.266 --> 00:03:08.366
+For lists, always use a bulleted or numbered list
+
+00:03:08.366 --> 00:03:10.766
+tool instead of typing symbols manually.
+
+00:03:14.333 --> 00:03:17.033
+In this section, we will fix the color contrast
+
+00:03:17.033 --> 00:03:21.899
+issue and make the table accessible. Design
+
+00:03:21.900 --> 00:03:24.866
+choices can make or break accessibility. With color
+
+00:03:24.866 --> 00:03:27.299
+contrast, text should clearly stand out from the
+
+00:03:27.300 --> 00:03:31.333
+background, at least a 4.5 to 1 ratio for normal
+
+00:03:31.333 --> 00:03:35.099
+text. These are a few tips to keep in mind: Word's
+
+00:03:35.100 --> 00:03:37.733
+default theme colors, black text on white
+
+00:03:37.733 --> 00:03:40.433
+background, already meet accessibility contrast
+
+00:03:40.433 --> 00:03:41.066
+requirements.
+
+00:03:44.266 --> 00:03:46.432
+Adding a table to your document always requires
+
+00:03:46.433 --> 00:03:50.733
+using the Insert tab from the menu. Do not draw or
+
+00:03:50.733 --> 00:03:53.933
+paste a table from another program. When you
+
+00:03:53.933 --> 00:03:56.999
+insert your table from the Table menu tab, always
+
+00:03:57.000 --> 00:04:00.333
+add clear header row and column data so screen
+
+00:04:00.333 --> 00:04:02.766
+readers can identify columns in context.
+
+00:04:07.900 --> 00:04:11.033
+Remember, accessibility isn't just compliance, 
+
+00:04:11.033 --> 00:04:14.166
+it's clarity. Your students benefit when content
+
+00:04:14.166 --> 00:04:16.966
+is easy to see, follow, and understand.
+
+00:04:21.033 --> 00:04:24.033
+In this section, we will add alternative text to
+
+00:04:24.033 --> 00:04:25.499
+images and other objects.
+
+00:04:28.033 --> 00:04:30.199
+When using images or graphics, always
+
+00:04:30.200 --> 00:04:34.700
+include alternative text or alt text. For students
+
+00:04:34.700 --> 00:04:37.500
+requiring a screen reader, alt text provides
+
+00:04:37.500 --> 00:04:39.866
+assistive technologies a description of the image
+
+00:04:39.866 --> 00:04:43.299
+represented in the document. This is especially
+
+00:04:43.300 --> 00:04:46.733
+helpful for students with visual impairments. Be
+
+00:04:46.733 --> 00:04:48.866
+sure to keep the description concise but
+
+00:04:48.866 --> 00:04:52.366
+meaningful. If no alt text is provided of a chart
+
+00:04:52.366 --> 00:04:55.932
+or graph, for example, the screen reader will only
+
+00:04:55.933 --> 00:04:59.599
+say, "Image of a chart." This is useless for a
+
+00:04:59.600 --> 00:05:02.700
+visually impaired student. Rather, inserting a
+
+00:05:02.700 --> 00:05:06.333
+description like, "Chart showing enrollment
+
+00:05:06.333 --> 00:05:08.899
+increases by 20% over five years."
+
+00:05:11.833 --> 00:05:16.399
+For SmartArt, charts, and equations, right-click and
+
+00:05:16.400 --> 00:05:20.600
+select Edit Alt Text to describe what's shown. If
+
+00:05:20.600 --> 00:05:23.000
+the visual is decorative, mark it as such.
+
+00:05:26.433 --> 00:05:29.066
+Accessible visuals ensure no learner misses the
+
+00:05:29.066 --> 00:05:30.799
+message your content conveys.
+
+00:05:33.600 --> 00:05:36.533
+In this section, we will run the accessibility
+
+00:05:36.533 --> 00:05:39.499
+checker and do a quick manual review for accessibility.
+
+00:05:41.033 --> 00:05:45.899
+Once your document is complete, go to the Review tab and click Check Accessibility.
+
+00:05:46.500 --> 00:05:49.900
+The inspection panel will show errors, warnings,
+
+00:05:50.200 --> 00:05:54.466
+and tips. While the inspection panel shows issues
+
+00:05:54.466 --> 00:05:57.766
+like missing alt text, hard to read color
+
+00:05:57.766 --> 00:06:01.566
+contrast warning, or table using merged/split cells
+
+00:06:01.566 --> 00:06:04.699
+warnings, it does not include all requirements by
+
+00:06:04.700 --> 00:06:06.933
+the Web Content Accessibility Guidelines.
+
+00:06:08.900 --> 00:06:11.833
+Therefore, it is important to manually review your
+
+00:06:11.833 --> 00:06:14.766
+document content to identify and fix accessibility
+
+00:06:14.766 --> 00:06:17.399
+issues the checker may miss.
+
+00:06:19.533 --> 00:06:21.799
+Headers and footers should not include essential
+
+00:06:21.800 --> 00:06:24.500
+information because most screen readers may not
+
+00:06:24.500 --> 00:06:27.900
+navigate to those areas. As a result, users who
+
+00:06:27.900 --> 00:06:30.133
+rely on them may miss important content.

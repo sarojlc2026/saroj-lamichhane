@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found, Saroj Lamichhane</title>
+<link rel="canonical" href="https://slamichhane.vercel.app/404.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Accessible and AI-Enhanced Course Design">
+<meta property="og:title" content="Page not found, Saroj Lamichhane">
+<meta property="og:description" content="Open, faculty-executable systems for digital accessibility and structured AI integration in higher education course design.">
+<meta property="og:url" content="https://slamichhane.vercel.app/404.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Page not found, Saroj Lamichhane">
+<meta name="twitter:description" content="Open, faculty-executable systems for digital accessibility and structured AI integration in higher education course design.">
+
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--link:#0b5394;--line:#dbe3ec;--soft:#f4f7fa;--focus:#a4530a}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding:4rem 1.5rem}
+h1{font-size:2rem;color:var(--accent);letter-spacing:-.02em;margin:0 0 .6rem}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+ul{padding-left:1.2rem}li{margin:.4rem 0}
+
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a[target="_blank"]::after{content:"↗";font-size:.8em;line-height:1;margin-left:.15em;display:inline-block;text-decoration:none;vertical-align:super}
+
+/* contact fallback for computers with no mail application configured */
+.contact-copy{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.copy-email{font:inherit;padding:.2rem .6rem;border:1px solid currentColor;border-radius:.25rem;background:transparent;color:inherit;cursor:pointer}
+.copy-email:hover{background:rgba(0,0,0,.07)}
+.copy-email:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.copy-status:not(:empty){font-size:.9em;padding:.1rem .4rem;border-radius:.2rem;background:rgba(0,0,0,.06)}
+
+/* theme-agnostic tint so the control reads on both light and soft backgrounds */
+.copy-email:hover{background:rgba(127,127,127,.18)}
+.copy-status:not(:empty){background:rgba(127,127,127,.15)}
+/* in print the footer is hidden, so keep the contact address on the page */
+@media print{
+  footer.site{display:block;border-top:1pt solid #000;padding:.5rem 0 0;margin-top:1rem}
+  footer.site p{display:none}
+  footer.site p.contact-copy{display:block}
+  footer.site .copy-email,footer.site .copy-status{display:none}
+}
+</style>
+</head>
+<body>
+<main id="main"><div class="wrap">
+<h1>That page is not here</h1>
+<p>The address may have changed, or the link that brought you here may be out of date.</p>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/course/index.html">The free course</a></li>
+<li><a href="/resources.html">Open resources</a></li>
+<li><a href="/about.html">About</a></li>
+</ul>
+<p>If a link on this site is broken, please report it and it will be fixed.</p>
+<p class="contact-copy">Contact Saroj Lamichhane: <a href="mailto:slamichhane2024@gmail.com">slamichhane2024@gmail.com<span class="visually-hidden"> (opens your email application)</span></a> <button type="button" class="copy-email" data-email="slamichhane2024@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></p>
+<p class="meta">The address above is a link and also plain text. If selecting the link does nothing, no email application is set up on that computer; copy the address and use it in webmail instead.</p>
+</div></main>
+<script>
+/* Reveals the copy button only when scripting is available, so no dead control appears without it. */
+(function(){
+  var btns = document.querySelectorAll('.copy-email');
+  Array.prototype.forEach.call(btns, function(btn){
+    btn.hidden = false;
+    btn.addEventListener('click', function(){
+      var addr = btn.getAttribute('data-email');
+      var out = btn.parentNode.querySelector('.copy-status');
+      function say(msg){ if(out){ out.textContent = msg; } }
+      function ok(){ say('Address copied to the clipboard.'); }
+      function no(){ say('Could not copy automatically &#8212; select the address and copy it.'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(ok, no);
+      } else {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = addr; ta.setAttribute('readonly','');
+          ta.style.position='absolute'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); ok();
+        } catch(e){ no(); }
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

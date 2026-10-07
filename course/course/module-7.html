@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Structuring Your Course in the LMS, Saroj Lamichhane</title>
+<link rel="canonical" href="https://slamichhane.vercel.app/course/module-7.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Accessible and AI-Enhanced Course Design">
+<meta property="og:title" content="Structuring Your Course in the LMS, Saroj Lamichhane">
+<meta property="og:description" content="Module organisation, page structure, link text, and the settings that matter.">
+<meta property="og:url" content="https://slamichhane.vercel.app/course/module-7.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Structuring Your Course in the LMS, Saroj Lamichhane">
+<meta name="twitter:description" content="Module organisation, page structure, link text, and the settings that matter.">
+
+<meta name="description" content="Module organisation, page structure, link text, and the settings that matter.">
+<style>
+:root{--ink:#16212b;--muted:#4a5866;--accent:#123a5e;--accent2:#0d6b58;--link:#0b5394;
+--line:#dbe3ec;--bg:#fff;--soft:#f4f7fa;--warm:#fff8ec;--focus:#a4530a;--maxw:74rem}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:400 1.0625rem/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.85rem 1.4rem;z-index:200;text-decoration:none;font-weight:600}
+.skip:focus{left:0}
+a{color:var(--link);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:46rem}
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+.hdr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem}
+.brand{display:block;padding:1.1rem 0 .35rem;font-size:1.1875rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:-.015em}
+.brand span{display:block;font-size:.875rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.1rem}
+nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:0 1.5rem;margin:0;padding:0 0 .5rem}
+nav.site a{display:inline-block;padding:.45rem 0;color:var(--ink);text-decoration:none;font-size:.9875rem;border-bottom:3px solid transparent}
+nav.site a:hover{border-bottom-color:var(--line)}
+nav.site a[aria-current="page"],nav.site a[aria-current="true"]{border-bottom-color:var(--accent);font-weight:600;color:var(--accent)}
+main{padding:2.5rem 0 4rem}
+h1{font-size:2.25rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 .6rem;color:var(--accent)}
+.lede{font-size:1.1875rem;color:var(--muted);max-width:46rem;margin:0 0 2rem}
+h2{font-size:1.4375rem;line-height:1.25;margin:2.75rem 0 .7rem;color:var(--accent);letter-spacing:-.012em}
+h3{font-size:1.125rem;margin:1.9rem 0 .45rem}
+p,li{max-width:46rem}
+ul,ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3rem 0 2.5rem;margin:-2.5rem 0 2.5rem}
+.hero h1{margin-bottom:.75rem}
+.hero .lede{margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.7rem 1.4rem;border-radius:5px;font-size:1rem}
+.btn:hover{background:#0d2c48}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.6rem 1.3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.1rem;margin:2rem 0;padding:0;list-style:none}
+.stats li{margin:0;max-width:none;background:var(--soft);border-left:4px solid var(--accent);padding:1.15rem}
+.stats b{display:block;font-size:1.875rem;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:.9125rem}
+.mods{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1rem}
+.mods li{margin:0;max-width:none}
+.mod{display:block;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:1.25rem 1.4rem;text-decoration:none;color:inherit;background:var(--bg)}
+.mod:hover{background:var(--soft);border-left-color:var(--accent2)}
+.mod .n{font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2)}
+.mod .t{display:block;font-size:1.1875rem;font-weight:600;color:var(--accent);margin:.15rem 0 .3rem}
+.mod .d{display:block;color:var(--muted);font-size:.9875rem;max-width:46rem}
+.mod .m{display:block;margin-top:.5rem;font-size:.875rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.card h2.card h3{margin-top:0}
+.meta{font-size:.9375rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8125rem;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;color:var(--muted);margin:0 .3rem .35rem 0}
+.dl{margin:1rem 0 0;padding:0;list-style:none}
+.dl li{margin:.45rem 0;max-width:46rem}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.warn{background:var(--warm);border-left:4px solid var(--focus);padding:1.1rem 1.3rem;margin:1.5rem 0}
+.note>:first-child.warn>:first-child{margin-top:0}
+.note>:last-child.warn>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;max-width:46rem;margin:1.25rem 0;font-size:.9875rem}
+caption{text-align:left;font-weight:600;color:var(--muted);padding-bottom:.5rem}
+th,td{border:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.vid{background:var(--soft);border:2px dashed var(--line);border-radius:6px;padding:2rem 1.5rem;text-align:center;margin:1.5rem 0;max-width:46rem}
+.vid p{margin:.3rem auto;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:6px;margin:1.25rem 0;max-width:46rem}
+summary{cursor:pointer;padding:.9rem 1.2rem;font-weight:600;color:var(--accent);list-style-position:inside}
+summary:hover{background:var(--soft)}
+details[open] summary{border-bottom:1px solid var(--line)}
+.dbody{padding:1rem 1.2rem}
+.dbody>:first-child{margin-top:0}
+.check{list-style:none;padding:0}
+.check li{padding-left:1.9rem;position:relative}
+.check li::before{content:"\2610";position:absolute;left:0;font-size:1.15rem;line-height:1.4;color:var(--accent2)}
+nav.crumb{font-size:.9125rem;color:var(--muted);margin:0 0 1.25rem}
+nav.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+nav.crumb li::after{content:"/";margin-left:.4rem;color:var(--line)}
+nav.crumb li:last-child::after{content:""}
+
+
+
+
+footer.site{border-top:1px solid var(--line);padding:2.25rem 0 3rem;color:var(--muted);font-size:.9375rem;background:var(--soft)}
+footer.site a{color:var(--link)}
+footer.site p{max-width:52rem}
+@media (max-width:40rem){h1{font-size:1.75rem}.hero{padding:2rem 0 1.75rem}.wrap{padding:0 1.15rem}header.site{position:static}}
+@media print{header.site,nav.pager.vid,footer.site{display:none}details{border:none}details>summary{display:none}.dbody{padding:0}a{text-decoration:none;color:#000}body{font-size:11pt}}
+.ts{display:inline-block;font-variant-numeric:tabular-nums;font-size:.8125rem;font-weight:600;color:var(--accent2);margin-right:.4rem}.stage{color:var(--muted);font-style:italic;font-size:.9375rem}video{background:#000}.refs li{margin:.7rem 0}.refs .meta{display:block;margin-top:.15rem}.toc{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:1rem 1.3rem;margin:1.5rem 0;max-width:46rem}
+.toc h2{font-size:.9375rem;margin:0 0 .45rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem}
+.toc li{margin:.25rem 0}
+
+
+nav.pager a:hover{background:var(--soft);border-left-color:var(--accent2)}
+
+
+
+
+@media (max-width:40rem){}
+.fmt{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.fmt li{margin:0;max-width:none}
+.fmt a{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:.6rem 1rem;text-decoration:none;background:var(--soft);font-weight:600}
+.fmt a:hover{background:#fff;border-color:var(--accent)}
+nav.pager{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;align-items:stretch}
+nav.pager a{text-decoration:none;max-width:none;display:block;border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;background:var(--bg)}
+nav.pager a[rel="prev"]{border-left:5px solid var(--accent);text-align:left}
+nav.pager a[rel="next"]{border-right:5px solid var(--accent);text-align:right}
+nav.pager a[rel="prev"]:hover{background:var(--soft);border-left-color:var(--accent2)}
+nav.pager a[rel="next"]:hover{background:var(--soft);border-right-color:var(--accent2)}
+nav.pager .lbl{display:block;font-size:.8125rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+nav.pager .ttl{display:block;font-weight:700;color:var(--accent);font-size:1.125rem;line-height:1.3;margin-top:.25rem}
+@media (max-width:40rem){nav.pager{grid-template-columns:1fr}nav.pager a[rel="next"]{text-align:left;border-right:1px solid var(--line);border-left:5px solid var(--accent)}}
+
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a[target="_blank"]::after{content:"↗";font-size:.8em;line-height:1;margin-left:.15em;display:inline-block;text-decoration:none;vertical-align:super}
+
+/* contact fallback for computers with no mail application configured */
+.contact-copy{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.copy-email{font:inherit;padding:.2rem .6rem;border:1px solid currentColor;border-radius:.25rem;background:transparent;color:inherit;cursor:pointer}
+.copy-email:hover{background:rgba(0,0,0,.07)}
+.copy-email:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.copy-status:not(:empty){font-size:.9em;padding:.1rem .4rem;border-radius:.2rem;background:rgba(0,0,0,.06)}
+
+/* theme-agnostic tint so the control reads on both light and soft backgrounds */
+.copy-email:hover{background:rgba(127,127,127,.18)}
+.copy-status:not(:empty){background:rgba(127,127,127,.15)}
+/* in print the footer is hidden, so keep the contact address on the page */
+@media print{
+  footer.site{display:block;border-top:1pt solid #000;padding:.5rem 0 0;margin-top:1rem}
+  footer.site p{display:none}
+  footer.site p.contact-copy{display:block}
+  footer.site .copy-email,footer.site .copy-status{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><div class="hdr">
+  <a class="brand" href="../index.html">Saroj Lamichhane<span>Accessible and AI-Enhanced Course Design</span></a>
+  <nav class="site" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../course/index.html" aria-current="page">Free Course</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../case-studies.html">Case Studies</a></li><li><a href="../about.html">About</a></li></ul></nav>
+</div></div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+<li><a href="../index.html">Home</a></li><li><a href="index.html">Free Course</a></li><li>Companion guide</li>
+</ol></nav>
+<p class="badge">Companion guide · 25 minutes</p>
+<h1>Structuring Your Course in the LMS</h1>
+<p class="lede">Module organisation, page structure, link text, and the settings that matter.</p>
+
+<nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol><li><a href="#why-this-matters">Why this matters</a></li><li><a href="#learning-objectives">Learning objectives</a></li><li><a href="#the-guide">The guide</a></li><li><a href="#step-by-step">Step by step</a></li><li><a href="#checklist">Checklist</a></li><li><a href="#practice-task">Practice task</a></li><li><a href="#wcag-2-1-criteria-addressed">WCAG 2.1 criteria addressed</a></li></ol></nav>
+<h2 id="why-this-matters">Why this matters</h2>
+<p>A course shell can contain perfectly accessible documents and still be unusable, because the student cannot find anything or cannot tell what a link leads to.</p>
+
+<h2 id="learning-objectives">Learning objectives</h2>
+<p>By the end of this module you will be able to:</p>
+<ul><li>Structure LMS pages with correct heading levels</li><li>Write link and file names that make sense in a list</li><li>Organise modules predictably</li><li>Use the built-in accessibility checker in your LMS</li></ul>
+
+<h2 id="the-guide">The guide</h2><p>Everything so far has been about individual files. This module is about the container, because a course full of accessible documents can still be an inaccessible course.</p><p>Start with heading levels inside pages, because this is the most common error in course shells and it is invisible unless you know to look. Your LMS page already has a title, and that title is almost always a Heading 1. So when you add content to that page and start with a Heading 1 of your own, you have created two document titles. Start at Heading 2 inside LMS pages. Every time.</p><p>Second, link text, and this matters more in an LMS than in a document because course pages are dense with links. Screen reader users pull up a list of links on the page and navigate from it. If that list reads click here, click here, this link, here, read more, the list is useless and the student has to go back and read the surrounding text for each one.</p><p>So write links that make sense alone. Week four reading, Ostrom on common pool resources, PDF. Submit the lab report. Course syllabus. Each of those tells a student what it is without any surrounding context.</p><p>Third, and related: name your files properly before you upload them. Final_v3_REVISED.docx tells a student nothing. Lab 4, Titration Procedure.docx tells them exactly what it is. Students download these into a folder and the filename is all they have.</p><p>Fourth, module organisation. Be predictable rather than clever. Use the same structure in every module: overview, readings, activity, assessment, in that order every week. Consistency is an accessibility feature, it is enormously helpful for students with attention or memory-related disabilities, and honestly for everyone. A student should never have to work out where you have put things this week.</p><p>Give modules and items descriptive names too. Module 4, Chemical Equilibrium beats Week 4. Students navigating by a list of module names should be able to find the equilibrium material without opening each one.</p><p>Fifth, avoid embedding content that traps keyboard users. Embedded documents, third-party widgets and interactive tools frequently cannot be reached or exited with a keyboard alone. Test it: put the mouse aside and tab through your page. If focus disappears, or you get stuck inside something and cannot tab out, that content needs a plain link alternative next to it.</p><p>Sixth, use the accessibility checker built into your editor. Canvas has one in the Rich Content Editor toolbar. It catches missing alt text, heading order problems, contrast issues and missing table headers, page by page. It is not comprehensive but it is right there and it takes seconds.</p><p>Finally, a course-level habit: write an accessibility statement in your syllabus telling students how to reach you and how to reach disability services if something is not working for them. It costs three sentences and it tells students you expect to be told.</p>
+
+<h2 id="step-by-step">Step by step</h2><ol><li>Change page headings so content starts at Heading 2</li><li>Rewrite link text so every link makes sense on its own</li><li>Rename files descriptively before uploading</li><li>Standardise module structure and use it every week</li><li>Give modules and items descriptive names</li><li>Tab through your pages with no mouse and fix anything that traps focus</li><li>Run the LMS accessibility checker on each page</li><li>Add an accessibility statement to your syllabus</li></ol>
+
+
+
+<h2 id="checklist">Checklist</h2>
+<ul class="check"><li>Page content starts at Heading 2</li><li>No vague link text anywhere</li><li>Files have descriptive names</li><li>Module structure is consistent week to week</li><li>Keyboard navigation works throughout</li><li>LMS checker passes on all pages</li><li>Syllabus has an accessibility statement</li></ul>
+
+<h2 id="practice-task">Practice task</h2>
+<p>Open your course as a student would see it and tab through one full module using only the keyboard. Note anywhere focus vanishes or gets stuck.</p>
+
+<h2 id="wcag-2-1-criteria-addressed">WCAG 2.1 criteria addressed</h2>
+<table>
+<caption>Success criteria covered in this module</caption>
+<thead><tr><th scope="col">Criterion</th><th scope="col">Level</th><th scope="col">How this module addresses it</th></tr></thead>
+<tbody><tr><td>1.3.1 Info and Relationships</td><td>A</td><td>Heading levels are correct in context</td></tr><tr><td>2.1.1 Keyboard</td><td>A</td><td>All functionality is keyboard operable</td></tr><tr><td>2.1.2 No Keyboard Trap</td><td>A</td><td>Focus can be moved away from any component</td></tr><tr><td>2.4.4 Link Purpose</td><td>A</td><td>Link purpose is clear from link text alone</td></tr><tr><td>3.2.3 Consistent Navigation</td><td>AA</td><td>Navigation is consistent across the course</td></tr></tbody>
+</table>
+
+<div class="note" id="feedback">
+<p><strong>Something unclear, or wrong?</strong> Reports are welcome and corrections are credited. <a href="mailto:slamichhane2024@gmail.com">Contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a></p>
+</div>
+<nav class="pager" aria-label="Course navigation"><a rel="prev" href="index.html"><span class="lbl">← Back</span><span class="ttl">Course overview</span></a><span></span></nav>
+</div>
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Accessibility of this site.</strong> Built and tested to WCAG 2.1 Level AA. If you meet a barrier here, please <a href="mailto:slamichhane2024@gmail.com">report it<span class="visually-hidden"> (opens your email application)</span></a> and it will be fixed.</p>
+<p><strong>Use and attribution.</strong> The four frameworks published on the Resources pages, the audit protocol, the STEM remediation protocol, the diagram alternative text guide and the Bloom's-AI Integration Model, are the work of Saroj Lamichhane and are offered under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener noreferrer" target="_blank">CC BY 4.0<span class="visually-hidden"> (opens in a new tab)</span></a>: adapt them, teach with them, attribution appreciated and permission not required.</p><p>The Digital Accessibility for Faculty course was designed and taught by Saroj Lamichhane, lead instructor, with Elizabeth Murphy, Instructional Designer III, and produced with Technology Innovation and Digital Education (TIDE) at Texas A&amp;M University-Texarkana. It is shared here for faculty development use with attribution to all three. Institutional sign-off on a formal open licence for the course is still in progress, so if you intend to redistribute the course itself, or host a copy under your own institution's name, <a href="mailto:slamichhane2024@gmail.com">contact Saroj Lamichhane<span class="visually-hidden"> (opens your email application)</span></a> and the current status will be confirmed.</p>
+
+<p class="contact-copy">Contact Saroj Lamichhane: <a href="mailto:slamichhane2024@gmail.com">slamichhane2024@gmail.com<span class="visually-hidden"> (opens your email application)</span></a> <button type="button" class="copy-email" data-email="slamichhane2024@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></p>
+<p class="meta">The address above is a link and also plain text. If selecting the link does nothing, no email application is set up on that computer; copy the address and use it in webmail instead.</p>
+</div></footer>
+<script>
+/* Reveals the copy button only when scripting is available, so no dead control appears without it. */
+(function(){
+  var btns = document.querySelectorAll('.copy-email');
+  Array.prototype.forEach.call(btns, function(btn){
+    btn.hidden = false;
+    btn.addEventListener('click', function(){
+      var addr = btn.getAttribute('data-email');
+      var out = btn.parentNode.querySelector('.copy-status');
+      function say(msg){ if(out){ out.textContent = msg; } }
+      function ok(){ say('Address copied to the clipboard.'); }
+      function no(){ say('Could not copy automatically &#8212; select the address and copy it.'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(ok, no);
+      } else {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = addr; ta.setAttribute('readonly','');
+          ta.style.position='absolute'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); ok();
+        } catch(e){ no(); }
+      }
+    });
+  });
+})();
+</script>
+</body></html>

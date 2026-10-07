@@ -1,0 +1,61 @@
+00:00
+[On-screen title: Module 1 Accessibility Overview]
+ 
+Narrator: Welcome to Module 1 Accessibility Overview.
+ 
+[On-screen: Canvas dashboard is displayed]
+ 
+Imagine opening a new online course. There are no captions. The text is hard to read. Buttons don't tell you what they do. You try to make it work, but the message is already clear; this space was not designed with you in mind. That is the power of design.
+ 
+[Visual: Icons of a variety of accessibility tools]
+ 
+It communicates instantly. And in learning spaces, that message should always be: You belong here. Accessibility isn't something we add at the end. It starts at the very beginning.
+ 
+[Visual: Icons of fonts, alternative text, and a video with no captions]
+ 
+When we choose fonts, write alternative text, and set up captions. Accessibility is more than a checklist. It's a mindset; a commitment that no learner should be left out because of how a course is built. That's where WCAG—the Web Content Accessibility Guidelines—comes in. WCAG turns the idea of access for all into practical steps.
+ 
+[Visual: Icons of closed captions, fonts, color contrast, and a keyboard]
+ 
+How we caption our videos, structure text, choose contrast, and design for screen readers and keyboards.
+ 
+[Visual: Graphic of the acronym POUR: Perceivable, Operable, Understandable, and Robust]
+ 
+The Web Content Accessibility Guidelines has organized their guidelines under four principles commonly known as: Perceivable, Operable, Understandable, and Robust. Following these guidelines ensures that digital materials are inclusive and consumable for all users.
+ 
+When we design our courses this way, it doesn't just help learners with disabilities—it helps second language learners, someone learning on a phone, and simply put, it makes our courses better for everyone. Accessible design isn't just required. It's responsible. It's human.
+ 
+As you move through this course, start with one intention; design so that everyone belongs.
+ 
+02:15
+Perceivable design; making content reachable for every learner. Perceivable design matters because not everyone experiences content in the same way.
+ 
+[Visual: Icons of a magnifying glass, an ear, and a gear with a cell phone]
+ 
+Some learners see, some listen. Others rely on assistive technologies, like screen readers or voice recognition tools. If your course only works in one format, such as slides with only visuals or audio without captions, you unintentionally place some learners outside the learning experience.
+ 
+To create perceivable content, we need to present information in multiple ways so all learners can access it. As you design your course, keep these questions in mind. If someone can't see it, can they hear or read it? If someone can't hear it, can they see or read it? If someone can't stream it, do they have another way to access it?
+ 
+03:32
+Operable design: making content usable for every learner.
+ 
+Operability means learners should be able to navigate and use a course without guessing or struggling, regardless of whether they use a mouse, keyboard, or assistive technology.
+ 
+Keyboard navigation is a key part of this. Links, buttons, forms, and media controls must be accessible through the Tab key in a clear logical order with a visible focus, so learners know where they are on the screen.
+ 
+Controls also need meaningful labels that describe their function, like "Submit Assignment" or "Play Video," instead of vague terms, like "Click Here."
+ 
+05:03
+Understandable design: making content easy to follow for every learner.
+ 
+Not all barriers to learning are technical. Sometimes the course functions, but it is confusing, unpredictable, or hard to follow. Understandable design means creating course content that is clear, straightforward, and easy to follow.
+ 
+05:57
+Robust content is about making sure your course works smoothly on any device, browser, or operating system.
+ 
+[Visual: Icons of MS Word, MS PowerPoint, and Adobe Acrobat PDF]
+ 
+In the following modules, you will learn to create documents that are reflective of perceivable, operable, and understandable principles, adhering to accessibility guidelines and providing more suitable experiences for your students.
+ 
+06:57
+[On-screen: Technology Innovation and Digital Education (TIDE) – Texas A&M University-Texarkana]
